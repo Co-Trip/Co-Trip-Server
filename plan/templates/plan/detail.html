@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ plan.title }} - Co-Trip</title>
+</head>
+<body>
+<h1>{{ plan.title }}</h1>
+    <p>create_time: {{ plan.create_time }}</p>
+    <p>leaving_date: {{ plan.leaving_date }}</p>
+    <p>leaving_transportation: {{ plan.leaving_transportation }}</p>
+    <p>return_date: {{ plan.return_date }}</p>
+    <p>return_transportation: {{ plan.return_transportation }}</p>
+    <p>participants_number: {{ plan.participants_number}}</p>
+    <p>creator: {{ plan.creator.user.username}}</p>
+    <p>participants:</p>
+    {% for p in plan.participants.all %}
+        <p>{{ p }}</p>
+    {% endfor %}
+    <p><a href="/plan/explore/{{ plan.id }}/edit">edit</a></p>
+
+</body>
+</html>

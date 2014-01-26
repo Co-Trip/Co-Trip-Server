@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{  user.username }}'s profile</title>
+</head>
+<body>
+    <p>this is the profile page</p>
+    <p>username {{ user.username }}</p>
+    <p>eamil {{ user.email }}</p>
+    <p>birthday {{ traveller.birthday}}</p>
+    <p>created plans:</p>
+    {% for plan in created_plans %}
+    <p><a href="plan/detail/{{ plan.id }}">{{ plan.title }}</a></p>
+    {% endfor %}
+    <p>participated plan:</p>
+    {% for plan in participated_plans %}
+    <p><a href="plan/detail/{{ plan.id }}">{{ plan.title }}</a></p>
+    {% endfor %}
+
+
+
+
+
+    <p><br><br><br><br><br><a href="edit">edit</a></p>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Activate your Co-Trip account - you have {{ expiration_days }} days!
