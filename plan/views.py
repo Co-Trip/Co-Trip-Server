@@ -93,7 +93,7 @@ def explore(request):
 
 
 
-@permission_required_or_403('Plan.view_plan')
+@permission_required_or_403('plan.view_plan', (Plan, 'id', 'plan_id'))
 def detail(request, plan_id):
     try:
         plan = Plan.objects.get(pk=plan_id)
