@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib.auth import login
 from django.contrib.sites.models import RequestSite
 from django.contrib.sites.models import Site
-
+from django.contrib.auth.models import Group
 from registration import signals
 from registration.models import RegistrationProfile
 from registration.views import ActivationView as BaseActivationView
@@ -127,6 +127,8 @@ class ActivationView(BaseActivationView):
                                         request=request)
             activated_user.backend='django.contrib.auth.backends.ModelBackend'
             login(request, activated_user)
+            group = Group.objects.get_or_create(name='all_users')[0]
+            group.user_set.add(activated_user)
         return activated_user
 
     def get_success_url(self, request, user):

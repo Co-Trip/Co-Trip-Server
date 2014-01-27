@@ -5,8 +5,10 @@ from django.views.generic import View
 from plan.models import Plan, PlanForm
 # Create your views here.
 from django.template import loader, RequestContext
-
-
+from traveller.models import Traveller
+from django.contrib.auth.models import Group
+from guardian.shortcuts import assign_perm
+from guardian.decorators import permission_required_or_403
 
 
 class PlanCreateView(View):
@@ -25,6 +27,14 @@ class PlanCreateView(View):
             plan = form.save(commit=False)
             plan.create_time = datetime.now()
             plan.creator = request.user.get_profile()
+            plan.save()
+            if plan.is_public is True:
+                group = Group.objects.get(name='all_users')
+                assign_perm('view_plan', group, plan)
+            else:
+                assign_perm('view_plan', plan.creator.user, plan)
+                for p in plan.participants.all():
+                    assign_perm('view_plan', p.user, plan)
             plan.save()
             return HttpResponseRedirect('success/')
         return render(request, self.template_name, {'form': form})
@@ -81,6 +91,8 @@ def explore(request):
 #     })
 
 
+
+@permission_required_or_403('Plan.view_plan')
 def detail(request, plan_id):
     try:
         plan = Plan.objects.get(pk=plan_id)

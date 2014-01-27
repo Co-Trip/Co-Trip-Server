@@ -115,7 +115,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 AUTH_PROFILE_MODULE = 'traveller.Traveller'
 
+GUARDIAN_RAISE_403 = True
 
 
-
-TRANSLATION_LANGUAGES = 'cmn'
+#TRANSLATION_LANGUAGES = 'cmn'

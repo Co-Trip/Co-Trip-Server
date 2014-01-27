@@ -31,7 +31,14 @@ class Plan(models.Model):
     creator = models.ForeignKey('traveller.Traveller', related_name='create_plan_set')
     is_public = models.BooleanField()
 
+    def __unicode__(self):
+        return u'%s' % (self.title)
 
+    # class Meta:
+    #     permissions = (
+    #         ('view_plan', 'View Plan'),
+    #         ('edit_plan', 'Edit Plan'),
+    #     )
 
 
 
