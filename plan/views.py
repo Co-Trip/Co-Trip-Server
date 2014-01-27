@@ -28,6 +28,7 @@ class PlanCreateView(View):
             plan.create_time = datetime.now()
             plan.creator = request.user.get_profile()
             plan.save()
+            form.save_m2m()
             if plan.is_public is True:
                 group = Group.objects.get(name='all_users')
                 assign_perm('view_plan', group, plan)

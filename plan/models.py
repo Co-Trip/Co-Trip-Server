@@ -34,11 +34,11 @@ class Plan(models.Model):
     def __unicode__(self):
         return u'%s' % (self.title)
 
-    # class Meta:
-    #     permissions = (
-    #         ('view_plan', 'View Plan'),
-    #         ('edit_plan', 'Edit Plan'),
-    #     )
+    class Meta:
+        permissions = (
+            ('view_plan', 'View Plan'),
+            ('edit_plan', 'Edit Plan'),
+        )
 
 
 
@@ -53,9 +53,7 @@ class PlanForm(ModelForm):
         super(PlanForm, self).__init__(*args, **kwargs)
         self.fields['participants'].queryset = self.fields['participants'].queryset.exclude(id=current_user.id)
 
-
-    participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude(),
-                                                  widget=CheckboxSelectMultiple())
+    participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
     home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
     destination_city = forms.ModelMultipleChoiceField(queryset=City.objects.filter(country='48').all())
     class Meta:
