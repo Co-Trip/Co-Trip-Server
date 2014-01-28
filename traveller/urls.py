@@ -10,7 +10,8 @@ from plan import views
 urlpatterns = patterns('',
 
                            url(r'^$',login_required(ProfileView.as_view()), name='profile'),
-                           url(r'^plan/detail/(?P<plan_id>\d+)/$', login_required(PlanDetailView.as_view()), name="detail"),
+                           url(r'^plan/detail/(?P<plan_id>\d+)/$',
+                               permission_required_or_403('plan.view_plan', (Plan, 'id', 'plan_id'))(PlanDetailView.as_view()), name="detail"),
                            url(r'^edit$', login_required(ProfileEditView.as_view()), name="detail"),
 
 )

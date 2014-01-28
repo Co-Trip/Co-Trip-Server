@@ -5,6 +5,7 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.views.generic import View
 from django.contrib.auth.decorators import login_required
+from guardian.decorators import permission_required_or_403
 from plan.models import Plan
 from django.template import loader
 from traveller.models import ProfileEditForm
@@ -23,18 +24,20 @@ class ProfileView(View):
 
 
 class PlanDetailView(View):
+
+
     def get(self,request, plan_id):
         try:
             plan = Plan.objects.get(pk=plan_id)
         except plan.DoesNotExist:
             raise Http404
         template = loader.get_template('plan/detail.html')
-        context = RequestContext(request,{
+        context = RequestContext(request, {
             'plan': plan,
             })
 
-
         return HttpResponse(template.render(context))
+
 
 class ProfileEditView(View):
 

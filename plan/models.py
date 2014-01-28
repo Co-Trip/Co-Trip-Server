@@ -30,6 +30,7 @@ class Plan(models.Model):
     participants = models.ManyToManyField('traveller.Traveller', related_name='participate_plan_set')
     creator = models.ForeignKey('traveller.Traveller', related_name='create_plan_set')
     is_public = models.BooleanField()
+    participants_can_edit = models.BooleanField()
 
     def __unicode__(self):
         return u'%s' % (self.title)
@@ -59,7 +60,7 @@ class PlanForm(ModelForm):
     class Meta:
         model = Plan
         fields = ['title', 'home_city', 'destination_city', 'leaving_date', 'leaving_transportation', 'return_date',
-                  'return_transportation', 'participants_number', 'is_public', 'participants']
+                  'return_transportation', 'participants_number', 'is_public', 'participants', 'participants_can_edit']
 
         widgets = {
         'leaving_date': SelectDateWidget(required=True),

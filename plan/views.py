@@ -1,3 +1,4 @@
+from django.forms import forms, HiddenInput
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.datetime_safe import datetime
@@ -29,6 +30,8 @@ class PlanCreateView(View):
             plan.creator = request.user.get_profile()
             plan.save()
             form.save_m2m()
+
+            #assign view permission
             if plan.is_public is True:
                 group = Group.objects.get(name='all_users')
                 assign_perm('view_plan', group, plan)
@@ -36,7 +39,15 @@ class PlanCreateView(View):
                 assign_perm('view_plan', plan.creator.user, plan)
                 for p in plan.participants.all():
                     assign_perm('view_plan', p.user, plan)
-            plan.save()
+
+            #assign edit permission
+            assign_perm('edit_plan', plan.creator.user, plan)
+
+            if plan.participants_can_edit is True:
+                for p in plan.participants.all():
+                    assign_perm('edit_plan', p.user, plan)
+
+            #plan.save()
             return HttpResponseRedirect('success/')
         return render(request, self.template_name, {'form': form})
 
@@ -45,9 +56,14 @@ class PlanEditView(View):
     form_class = PlanForm
     template_name = 'plan/edit.html'
 
+
     def get(self, request, plan_id):
         plan = Plan.objects.get(id=plan_id)
         form = self.form_class(instance=plan, current_user=request.user.profile)
+
+        if request.user != plan.creator.user:
+            form.fields['participants_can_edit'].widget = HiddenInput()
+
         return render(request, self.template_name, {'form': form})
 
 
@@ -103,6 +119,5 @@ def detail(request, plan_id):
     context = RequestContext(request,{
         'plan': plan,
         })
-
 
     return HttpResponse(template.render(context))
