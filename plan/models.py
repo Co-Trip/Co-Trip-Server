@@ -1,10 +1,8 @@
 from django.db import models
 from django import forms
-# Create your models here.
 from django.forms import ModelForm
-from django.contrib.admin import widgets
 from django.forms.extras import SelectDateWidget
-from django.forms.widgets import CheckboxSelectMultiple, Select
+from django.forms.widgets import Select
 from traveller.models import Traveller
 from cities_light.models import City
 
@@ -27,13 +25,13 @@ class Plan(models.Model):
     leaving_transportation = models.CharField(max_length=15, choices=TRANSPORTATION_CHOICES)
     return_transportation = models.CharField(max_length=15, choices=TRANSPORTATION_CHOICES)
     participants_number = models.IntegerField()
-    participants = models.ManyToManyField('traveller.Traveller', related_name='participate_plan_set')
+    participants = models.ManyToManyField('traveller.Traveller', related_name='participate_plan_set', blank=True)
     creator = models.ForeignKey('traveller.Traveller', related_name='create_plan_set')
     is_public = models.BooleanField()
     participants_can_edit = models.BooleanField()
 
     def __unicode__(self):
-        return u'%s' % (self.title)
+        return u'%s' % self.title
 
     class Meta:
         permissions = (
@@ -42,13 +40,7 @@ class Plan(models.Model):
         )
 
 
-
-
-
-
 class PlanForm(ModelForm):
-
-
     def __init__(self, current_user, *args, **kwargs):
         #current_user
         super(PlanForm, self).__init__(*args, **kwargs)
@@ -57,26 +49,16 @@ class PlanForm(ModelForm):
     participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
     home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
     destination_city = forms.ModelMultipleChoiceField(queryset=City.objects.filter(country='48').all())
+
     class Meta:
         model = Plan
         fields = ['title', 'home_city', 'destination_city', 'leaving_date', 'leaving_transportation', 'return_date',
                   'return_transportation', 'participants_number', 'is_public', 'participants', 'participants_can_edit']
 
         widgets = {
-        'leaving_date': SelectDateWidget(required=True),
-        'return_date': SelectDateWidget(required=True),
-        'leaving_transportation': Select(),
-        'return_transportation': Select(),
+            'leaving_date': SelectDateWidget(required=True),
+            'return_date': SelectDateWidget(required=True),
+            'leaving_transportation': Select(),
+            'return_transportation': Select(),
 
         }
-
-
-#
-# class PlanForm(forms.Form):
-#     #create_time = forms.DateTimeField('create time')
-#     title = forms.CharField(max_length=30)
-#     #leaving_date = forms.DateTimeField('start date')
-#     #return_date = forms.DateTimeField('back date')
-#     leaving_transportation = forms.CharField(max_length=15)
-#     return_transportation = forms.CharField(max_length=15)
-#     participants_number = forms.IntegerField()

@@ -7,13 +7,10 @@ from Co_Trip.views import AboutView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    url(r'^$', 'Co_Trip.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^plan/', include('plan.urls')),
-    url(r'^about/', AboutView.as_view(),name= "about"),
+                       url(r'^$', 'Co_Trip.views.home', name='home'),
+                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^accounts/', include('registration.backends.default.urls')),
+                       url(r'^plan/', include('plan.urls')),
+                       url(r'^about/', AboutView.as_view(), name="about"),
 
 )

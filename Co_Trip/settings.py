@@ -113,7 +113,7 @@ LOGIN_URL = '/accounts/login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-AUTH_PROFILE_MODULE = 'traveller.Traveller'
+#AUTH_PROFILE_MODULE = 'traveller.Traveller'
 
 GUARDIAN_RAISE_403 = True
 

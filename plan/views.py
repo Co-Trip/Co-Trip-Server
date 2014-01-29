@@ -1,10 +1,9 @@
-from django.forms import forms, HiddenInput
+from django.forms import HiddenInput
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.datetime_safe import datetime
 from django.views.generic import View
 from plan.models import Plan, PlanForm
-# Create your views here.
 from django.template import loader, RequestContext
 from traveller.models import Traveller
 from django.contrib.auth.models import Group
@@ -60,7 +59,12 @@ class PlanEditView(View):
     def get(self, request, plan_id):
         plan = Plan.objects.get(id=plan_id)
         form = self.form_class(instance=plan, current_user=request.user.profile)
-
+        #
+        #Found a bug here.
+        #user1 create a plan, user 2 is participant
+        #when user2 edit the plan, he will not see user1 as a participant
+        #maybe should display the creator
+        #and allow participants to be empty
         if request.user != plan.creator.user:
             form.fields['participants_can_edit'].widget = HiddenInput()
 
@@ -91,22 +95,6 @@ def explore(request):
         'plan_list': plan_list,
         })
     return HttpResponse(template.render(context))
-
-
-# def contact(request):
-#     if request.method == 'POST': # If the form has been submitted...
-#         form = ContactForm(request.POST) # A form bound to the POST data
-#         if form.is_valid(): # All validation rules pass
-#             # Process the data in form.cleaned_data
-#             # ...
-#             return HttpResponseRedirect('/thanks/') # Redirect after POST
-#     else:
-#         form = ContactForm() # An unbound form
-#
-#     return render(request, 'contact.html', {
-#         'form': form,
-#     })
-
 
 
 @permission_required_or_403('plan.view_plan', (Plan, 'id', 'plan_id'))
