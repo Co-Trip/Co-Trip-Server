@@ -1,3 +1,5 @@
+from django.contrib.auth import admin
+from traveller.models import Traveller, TravellerAdmin
 from traveller.views import *
 from django.contrib.auth.decorators import login_required
 

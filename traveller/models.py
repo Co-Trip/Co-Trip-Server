@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.db import models
 from django.contrib.auth.models import User, AbstractBaseUser
 from django.forms.extras import SelectDateWidget
@@ -16,8 +17,13 @@ class Traveller(models.Model):
     friends = models.ManyToManyField('traveller.Traveller')
 
     def __unicode__(self):
-        return u'%s' % (self.user.username)
+        return u'%s' % self.user.username
 
+class TravellerAdmin(admin.ModelAdmin):
+    def has_add_permission(self, request):
+        return True
+
+admin.site.register(Traveller, TravellerAdmin)
 
 class ProfileEditForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -30,16 +36,14 @@ class ProfileEditForm(ModelForm):
             pass
 
     city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
-    username = forms.CharField(max_length=30, required=True, label=('username'))
-    email = forms.EmailField(label=("Email"))
-
-
+    username = forms.CharField(max_length=30, required=True, label='username')
+    email = forms.EmailField(label="Email")
 
     class Meta:
         model = Traveller
         fields = ['username', 'email', 'city', 'birthday', 'friends']
         widgets = {
-        'birthday': SelectDateWidget(required=False),
+            'birthday': SelectDateWidget(required=False),
 
         }
 
@@ -47,11 +51,8 @@ class ProfileEditForm(ModelForm):
         u = self.instance.user
         u.email = self.cleaned_data['email']
         u.save()
-        profile = super(ProfileEditForm, self).save(*args, **kwargs)
-        return profile
-
-
-
+        new_profile = super(ProfileEditForm, self).save(*args, **kwargs)
+        return new_profile
 
 
 User.profile = property(lambda u: Traveller.objects.get_or_create(user=u)[0])

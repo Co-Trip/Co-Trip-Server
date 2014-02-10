@@ -17,22 +17,10 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'traveller', ['Traveller'])
 
-        # Adding M2M table for field friends on 'Traveller'
-        m2m_table_name = db.shorten_name(u'traveller_traveller_friends')
-        db.create_table(m2m_table_name, (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('from_traveller', models.ForeignKey(orm[u'traveller.traveller'], null=False)),
-            ('to_traveller', models.ForeignKey(orm[u'traveller.traveller'], null=False))
-        ))
-        db.create_unique(m2m_table_name, ['from_traveller_id', 'to_traveller_id'])
-
 
     def backwards(self, orm):
         # Deleting model 'Traveller'
         db.delete_table(u'traveller_traveller')
-
-        # Removing M2M table for field friends on 'Traveller'
-        db.delete_table(db.shorten_name(u'traveller_traveller_friends'))
 
 
     models = {
@@ -118,7 +106,6 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Traveller'},
             'birthday': ('django.db.models.fields.DateField', [], {'null': 'True'}),
             'city': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['cities_light.City']", 'null': 'True', 'blank': 'True'}),
-            'friends': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['traveller.Traveller']", 'symmetrical': 'False'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True'})
         }

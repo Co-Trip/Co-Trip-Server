@@ -45,6 +45,9 @@ class PlanForm(ModelForm):
         #current_user
         super(PlanForm, self).__init__(*args, **kwargs)
         self.fields['participants'].queryset = self.fields['participants'].queryset.exclude(id=current_user.id)
+        self.fields['home_city'].initial = current_user.city
+        #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        #this is a temporary solution
 
     participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
     home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
@@ -62,3 +65,4 @@ class PlanForm(ModelForm):
             'return_transportation': Select(),
 
         }
+

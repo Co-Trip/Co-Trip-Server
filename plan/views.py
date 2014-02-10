@@ -26,9 +26,17 @@ class PlanCreateView(View):
         if form.is_valid():
             plan = form.save(commit=False)
             plan.create_time = datetime.now()
-            plan.creator = request.user.get_profile()
+            plan.creator = request.user.profile
             plan.save()
             form.save_m2m()
+
+            if request.user.profile.city is None:
+
+                traveller = Traveller.objects.filter(id=request.user.profile.id)[0]
+
+                traveller.city = plan.home_city
+                print request.user.profile
+                traveller.save()
 
             #assign view permission
             if plan.is_public is True:
