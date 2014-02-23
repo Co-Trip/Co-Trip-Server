@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tom Hu (h1994st@gmail.com)
+ * @date    2014-02-14 14:27:59
+ * @version 1.0
+ */
+body {
+  padding-top: 70px;
+}
+.btn {
+  min-width: 74px;
+}
+
+/*
+ * Co-Trip Navbar
+ * --------------------------------------------------
+ */
+.navbar-nav a.CT-user-profile > .avatar {
+  max-width: 28px;
+  height: auto;
+}
+a.CT-user-profile > .name {
+  padding-left: 15px;
+}
+a.CT-user-profile {
+  color: #777777;
+}
+a.CT-user-profile:hover, 
+a.CT-user-profile:focus {
+  text-decoration: none;
+  color: #555555;
+}
+.navbar-nav .CT-user-profile {
+  max-height: 50px;
+  width: 158px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+/*
+ * Co-Trip Footer
+ * --------------------------------------------------
+ */
+footer {
+  height: 80px;
+  min-height: 80px;
+  border-width: 1px;
+  border-top: 1px solid rgb(248, 248, 248);
+  margin-top: 20px;
+  background-color: #eeeeee;
+  border-color: #e7e7e7;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 1029;
+}
+footer > div > p {
+  margin-top: 27px;
+}
