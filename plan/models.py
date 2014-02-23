@@ -5,7 +5,7 @@ from django.forms.extras import SelectDateWidget
 from django.forms.widgets import Select
 from traveller.models import Traveller
 from cities_light.models import City
-
+from ajax_select import make_ajax_field
 
 class Plan(models.Model):
     TRANSPORTATION_CHOICES = (
@@ -45,18 +45,24 @@ class PlanForm(ModelForm):
         #current_user
         super(PlanForm, self).__init__(*args, **kwargs)
         self.fields['participants'].queryset = self.fields['participants'].queryset.exclude(id=current_user.id)
-        self.fields['home_city'].initial = current_user.city
         #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         #this is a temporary solution
 
+
+        self.fields['home_city'].initial = current_user.city
+
     participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
-    home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
+    #home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
+    home_city  = make_ajax_field(Plan, 'home_city', 'cities_light_city', help_text=None)
+
     destination_city = forms.ModelMultipleChoiceField(queryset=City.objects.filter(country='48').all())
 
     class Meta:
         model = Plan
-        fields = ['title', 'home_city', 'destination_city', 'leaving_date', 'leaving_transportation', 'return_date',
+        fields = ['title', 'home_city',
+            'destination_city', 'leaving_date', 'leaving_transportation', 'return_date',
                   'return_transportation', 'participants_number', 'is_public', 'participants', 'participants_can_edit']
+
 
         widgets = {
             'leaving_date': SelectDateWidget(required=True),
