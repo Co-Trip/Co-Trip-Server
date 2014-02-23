@@ -13,7 +13,7 @@ from traveller.models import ProfileEditForm
 
 class ProfileView(View):
     def get(self, request):
-        traveller = request.user.get_profile()
+        traveller = request.user.profile
         created_plans = traveller.create_plan_set.all()
         participated_plans = traveller.participate_plan_set.all()
         friends = traveller.friends.all()

@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ajax_select',
     'django.contrib.humanize',
     #'django.contrib.sites',
     #'south'
@@ -45,11 +46,16 @@ INSTALLED_APPS = (
     'Co_Trip',
     'cities_light',
     'guardian',
-
+    'bootstrap3',
 
     'south',
 
 )
+
+AJAX_LOOKUP_CHANNELS = {
+    'cities_light_country': ('cities_light.lookups', 'CountryLookup'),
+    'cities_light_city': ('cities_light.contrib.ajax_selects_lookups', 'CityLookup'),
+}
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', # this is default
