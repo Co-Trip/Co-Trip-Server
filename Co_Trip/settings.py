@@ -47,7 +47,7 @@ INSTALLED_APPS = (
     'cities_light',
     'guardian',
     'bootstrap3',
-
+    'bootstrap3_datetime',
     'south',
 
 )

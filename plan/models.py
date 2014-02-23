@@ -6,6 +6,8 @@ from django.forms.widgets import Select
 from traveller.models import Traveller
 from cities_light.models import City
 from ajax_select import make_ajax_field
+from bootstrap3_datetime.widgets import DateTimePicker
+
 
 class Plan(models.Model):
     TRANSPORTATION_CHOICES = (
@@ -50,6 +52,7 @@ class PlanForm(ModelForm):
 
 
         self.fields['home_city'].initial = current_user.city
+       # self.fields['leaving_date'].widget =DateTimePicker()
 
     participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
     #home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
@@ -65,7 +68,7 @@ class PlanForm(ModelForm):
 
 
         widgets = {
-            'leaving_date': SelectDateWidget(required=True),
+            'leaving_date': DateTimePicker(),
             'return_date': SelectDateWidget(required=True),
             'leaving_transportation': Select(),
             'return_transportation': Select(),
