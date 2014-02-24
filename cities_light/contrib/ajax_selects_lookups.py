@@ -64,5 +64,6 @@ class CityLookup(StandardLookupChannel):
     model = City
 
     def get_query(self, q, request):
+        print "get city!!!!!!!!!",q
         return City.objects.filter(search_names__icontains=q
             ).select_related('country').distinct()

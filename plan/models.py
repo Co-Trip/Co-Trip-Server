@@ -3,6 +3,7 @@ from django import forms
 from django.forms import ModelForm
 from django.forms.extras import SelectDateWidget
 from django.forms.widgets import Select
+from ajax_select.fields import AutoCompleteSelectField
 from traveller.models import Traveller
 from cities_light.models import City
 from ajax_select import make_ajax_field
@@ -57,7 +58,7 @@ class PlanForm(ModelForm):
     participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
     #home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
     home_city  = make_ajax_field(Plan, 'home_city', 'cities_light_city', help_text=None)
-
+    home_city = AutoCompleteSelectField('cities_light_city')
     destination_city = forms.ModelMultipleChoiceField(queryset=City.objects.filter(country='48').all())
 
     class Meta:

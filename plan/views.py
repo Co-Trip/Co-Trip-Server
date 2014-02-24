@@ -5,6 +5,7 @@ from django.utils.datetime_safe import datetime
 from django.views.generic import View
 from plan.models import Plan, PlanForm
 from django.template import loader, RequestContext
+
 from traveller.models import Traveller
 from django.contrib.auth.models import Group
 from guardian.shortcuts import assign_perm
@@ -117,3 +118,9 @@ def detail(request, plan_id):
         })
 
     return HttpResponse(template.render(context))
+
+
+
+
+
+

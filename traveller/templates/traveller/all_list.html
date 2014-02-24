@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>all users list</h1>
+<p>{{ all_traveller }}</p>
+{% for traveller in all_traveller %}
+    <a href = "../{{ traveller.id }}"><p>{{ traveller }}</p></a>
+
+{% endfor %}
+</body>
+</html>
