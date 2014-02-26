@@ -6,10 +6,12 @@ from django.template import RequestContext
 from django.views.generic import View
 from django.contrib.auth.decorators import login_required
 from guardian.decorators import permission_required_or_403
+from notifications import notify
 from plan.models import Plan
 from django.template import loader
 from traveller.models import ProfileEditForm, Traveller
-
+from friendship.models import Friend, FriendshipRequest
+import json
 
 class ProfileView(View):
     is_current_user = None
@@ -24,14 +26,12 @@ class ProfileView(View):
                 self.is_current_user = True
             else:
                 self.is_current_user = False
-            print type(profile_id)
-            print type(request.user.profile.id)
+
         created_plans = traveller.create_plan_set.all()
         participated_plans = traveller.participate_plan_set.all()
-        friends = traveller.friends.all()
+
         context = {'traveller': traveller, 'created_plans': created_plans, 'participated_plans': participated_plans,
-                   'friends': friends, 'is_current_user':self.is_current_user,}
-        print self.is_current_user
+                    'is_current_user':self.is_current_user,}
         return render_to_response('traveller/profile.html', context, context_instance=RequestContext(request))
 
 
@@ -76,5 +76,20 @@ class ProfileListView(View):
 
         return render(request, self.template_name, {'all_traveller': all_traveller})
 
+
 class AddFriend(View):
-    pass
+
+    def get(self,request,profile_id):
+
+        friend_asker = request.user
+        friend_target = Traveller.objects.filter(pk=profile_id)[0]
+
+
+        notify.send(friend_asker, recipient=friend_target.user, verb=u'sent you a friend request',
+            action_object=friend_asker, description=u'',)
+        Friend.objects.add_friend(friend_asker,friend_target.user)
+        response_data = {'result':'success'}
+        if Friend.objects.are_friends(request.user, friend_target.user) == True:
+            print "friend!"
+        return HttpResponse(json.dumps(response_data), content_type="application/json")
+

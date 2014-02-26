@@ -19,4 +19,7 @@ urlpatterns = patterns('',
                            url(r'^(?P<profile_id>\d+)/$',login_required(ProfileView.as_view()), name="profile detail"),
                            url(r'^(?P<profile_id>\d+)/add_friend$',login_required(AddFriend.as_view()), name="add_friend"),
 
+
+
+
 )

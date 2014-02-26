@@ -38,8 +38,8 @@ class Plan(models.Model):
 
     class Meta:
         permissions = (
-            ('view_plan', 'View Plan'),
-            ('edit_plan', 'Edit Plan'),
+            ('view_plan_permission', 'View Plan'),
+            ('edit_plan_permission', 'Edit Plan'),
         )
 
 

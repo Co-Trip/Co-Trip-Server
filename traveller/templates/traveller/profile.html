@@ -24,8 +24,10 @@
     {% endfor %}
 
 {% if is_current_user%}
-
+    <p><a href="my_friend">my friend list</a></p>
+    <p><a href="unread_friend_request">unread friend request</a></p>
     <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
+
 {% else %}
     <p><br><br><br><br><br><a href="/accounts/profile/{{ traveller.id }}/add_friend">add friend</a></p>
 {% endif %}

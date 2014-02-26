@@ -14,7 +14,7 @@ class Traveller(models.Model):
     user = models.OneToOneField(User)
     birthday = models.DateField(null=True)
     city = models.ForeignKey(City, blank=True, null=True)
-    friends = models.ManyToManyField('traveller.Traveller')
+    #friends = models.ManyToManyField('traveller.Traveller')
 
     def __unicode__(self):
         return u'%s' % self.user.username
@@ -41,7 +41,7 @@ class ProfileEditForm(ModelForm):
 
     class Meta:
         model = Traveller
-        fields = ['username', 'email', 'city', 'birthday', 'friends']
+        fields = ['username', 'email', 'city', 'birthday',] #'friends']
         widgets = {
             'birthday': SelectDateWidget(required=False),
 

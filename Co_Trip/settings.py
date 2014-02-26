@@ -51,6 +51,7 @@ INSTALLED_APPS = (
     'api',
     'tastypie',
     'notifications',
+    'friendship',
     'south',
 
 )
@@ -86,9 +87,16 @@ WSGI_APPLICATION = 'Co_Trip.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
+        # 'OPTIONS': {
+        #     'read_default_file': 'databaseConf.cnf',
+        # },
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'USER': 'danielqiu',
-        'PASSWORD': '123456',
+        # 'USER': 'danielqiu',
+        # 'PASSWORD': '123456',
+        # 'NAME': 'CoTripDB',
+        # 'USER': 'danielqiu',
+        # 'PASSWORD': '',
+
     }
 }
 
@@ -129,7 +137,7 @@ AUTH_PROFILE_MODULE = 'traveller.Traveller'
 GUARDIAN_RAISE_403 = True
 
 CITIES_LIGHT_TRANSLATION_LANGUAGES = ['ZH']
-CITIES_LIGHT_TRANSLATION_SOURCES = ['http://download.geonames.org/export/dump/CN.zip']
+#CITIES_LIGHT_TRANSLATION_SOURCES = ['http://download.geonames.org/export/dump/CN.zip']
 
 ADMINS = (('qsz13', 'qsz1328@gmail.com'))
 

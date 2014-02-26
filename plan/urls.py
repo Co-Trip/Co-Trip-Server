@@ -15,7 +15,7 @@ urlpatterns = patterns('',
                        url(r'^create/$', login_required(PlanCreateView.as_view()), name='create'),
                        url(r'^explore/(?P<plan_id>\d+)/$', detail, name='detail'),
                        url(r'^explore/(?P<plan_id>\d+)/edit$',
-                           permission_required_or_403('plan.edit_plan', (Plan, 'id', 'plan_id'))(
+                           permission_required_or_403('plan.edit_plan_permission', (Plan, 'id', 'plan_id'))(
                                PlanEditView.as_view()), name='detail'),
                        url(r'^explore/(?P<plan_id>\d+)/edit/success$', edit_success, name='success'),
                        url(r'^create/success/$', create_success, name='success'),

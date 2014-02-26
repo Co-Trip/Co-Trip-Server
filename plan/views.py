@@ -106,7 +106,7 @@ def explore(request):
     return HttpResponse(template.render(context))
 
 
-@permission_required_or_403('plan.view_plan', (Plan, 'id', 'plan_id'))
+@permission_required_or_403('plan.view_plan_permission', (Plan, 'id', 'plan_id'))
 def detail(request, plan_id):
     try:
         plan = Plan.objects.get(pk=plan_id)
