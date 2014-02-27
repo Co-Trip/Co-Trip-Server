@@ -136,7 +136,7 @@ AUTH_PROFILE_MODULE = 'traveller.Traveller'
 
 GUARDIAN_RAISE_403 = True
 
-CITIES_LIGHT_TRANSLATION_LANGUAGES = ['ZH']
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ['zh']
 #CITIES_LIGHT_TRANSLATION_SOURCES = ['http://download.geonames.org/export/dump/CN.zip']
 
 ADMINS = (('qsz13', 'qsz1328@gmail.com'))

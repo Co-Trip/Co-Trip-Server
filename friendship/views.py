@@ -1,5 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from notifications import notify
+
 try:
     from django.contrib.auth import get_user_model
     user_model = get_user_model()
@@ -34,6 +36,9 @@ def friendship_add_friend(request, to_username, template_name='friendship/friend
         from_user = request.user
         try:
             Friend.objects.add_friend(from_user, to_user)
+            notify.send(from_user, recipient=to_user, verb=u'sent you a friend request',
+            action_object=from_user, description=u'friend_request',)
+            print 'sent'
         except AlreadyExistsError as e:
             ctx['errors'] = ["%s" % e]
         else:

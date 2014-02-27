@@ -1,9 +1,14 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django import forms
+from django.db.models.query import EmptyQuerySet
 from django.forms import ModelForm
 from django.forms.extras import SelectDateWidget
 from django.forms.widgets import Select
 from ajax_select.fields import AutoCompleteSelectField
+from cached_modelforms import CachedModelChoiceField, CachedModelMultipleChoiceField
+from cities_light.contrib.ajax_selects_lookups import CityLookup
+from friendship.models import Friend
 from traveller.models import Traveller
 from cities_light.models import City
 from ajax_select import make_ajax_field
@@ -44,33 +49,38 @@ class Plan(models.Model):
 
 
 class PlanForm(ModelForm):
+
     def __init__(self, current_user, *args, **kwargs):
-        #current_user
+
         super(PlanForm, self).__init__(*args, **kwargs)
-        self.fields['participants'].queryset = self.fields['participants'].queryset.exclude(id=current_user.id)
-        #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        #this is a temporary solution
+        friend_list= Friend.objects.friends_profile(current_user)
 
 
-        self.fields['home_city'].initial = current_user.city
-       # self.fields['leaving_date'].widget =DateTimePicker()
+        self.fields['participants'] = CachedModelMultipleChoiceField(friend_list)
 
-    participants = forms.ModelMultipleChoiceField(queryset=Traveller.objects.exclude())
-    #home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
-    home_city  = make_ajax_field(Plan, 'home_city', 'cities_light_city', help_text=None)
-    home_city = AutoCompleteSelectField('cities_light_city')
+        self.fields['home_city'].initial = current_user.profile.city
+
+
+    participants = CachedModelMultipleChoiceField()
+    home_city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
     destination_city = forms.ModelMultipleChoiceField(queryset=City.objects.filter(country='48').all())
+    #home_city  = make_ajax_field(Plan, 'home_city', 'cities_light_city', help_text=None)
+    #home_city = AutoCompleteSelectField(
+    #    'cities_light_city',
+    #     label='Select a fruit (AutoCompleteField)',
+    #     required=False,
+    # )
+    #destination_city = AutoCompleteSelectField('cities_light_city')
 
     class Meta:
         model = Plan
         fields = ['title', 'home_city',
-            'destination_city', 'leaving_date', 'leaving_transportation', 'return_date',
+                  'destination_city', 'leaving_date', 'leaving_transportation', 'return_date',
                   'return_transportation', 'participants_number', 'is_public', 'participants', 'participants_can_edit']
 
-
         widgets = {
-            'leaving_date': DateTimePicker(),
-            'return_date': SelectDateWidget(required=True),
+            'leaving_date':  SelectDateWidget(),
+            'return_date':  SelectDateWidget(),
             'leaving_transportation': Select(),
             'return_transportation': Select(),
 

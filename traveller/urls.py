@@ -17,7 +17,7 @@ urlpatterns = patterns('',
                            url(r'^edit/$', login_required(ProfileEditView.as_view()), name="edit"),
                            url(r'^traveller_list/$', login_required(ProfileListView.as_view()), name="all_list"),
                            url(r'^(?P<profile_id>\d+)/$',login_required(ProfileView.as_view()), name="profile detail"),
-                           url(r'^(?P<profile_id>\d+)/add_friend$',login_required(AddFriend.as_view()), name="add_friend"),
+                           # url(r'^(?P<profile_id>\d+)/add_friend$',login_required(AddFriend.as_view()), name="add_friend"),
 
 
 

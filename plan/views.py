@@ -3,6 +3,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.datetime_safe import datetime
 from django.views.generic import View
+from friendship.models import Friend
 from plan.models import Plan, PlanForm
 from django.template import loader, RequestContext
 
@@ -19,11 +20,11 @@ class PlanCreateView(View):
 
     def get(self, request):
 
-        form = self.form_class(current_user=request.user.profile)
+        form = self.form_class(current_user=request.user)
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        form = self.form_class(current_user=request.user.profile, data=request.POST)
+        form = self.form_class(current_user=request.user, data=request.POST)
         if form.is_valid():
             plan = form.save(commit=False)
             plan.create_time = datetime.now()
@@ -42,18 +43,18 @@ class PlanCreateView(View):
             #assign view permission
             if plan.is_public is True:
                 group = Group.objects.get(name='all_users')
-                assign_perm('view_plan', group, plan)
+                assign_perm('view_plan_permission', group, plan)
             else:
-                assign_perm('view_plan', plan.creator.user, plan)
+                assign_perm('view_plan_permission', plan.creator.user, plan)
                 for p in plan.participants.all():
-                    assign_perm('view_plan', p.user, plan)
+                    assign_perm('view_plan_permission', p.user, plan)
 
             #assign edit permission
-            assign_perm('edit_plan', plan.creator.user, plan)
+            assign_perm('edit_plan_permission', plan.creator.user, plan)
 
             if plan.participants_can_edit is True:
                 for p in plan.participants.all():
-                    assign_perm('edit_plan', p.user, plan)
+                    assign_perm('edit_plan_permission', p.user, plan)
 
             #plan.save()
             return HttpResponseRedirect('success/')

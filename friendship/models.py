@@ -133,6 +133,18 @@ class FriendshipRequest(models.Model):
 
 class FriendshipManager(models.Manager):
     """ Friendship manager """
+    def friends_profile(self, user):
+        """ Return a list of all friends profile """
+        key = cache_key('friends', user.pk)
+        friends = cache.get(key)
+
+        if friends is None:
+            qs = Friend.objects.select_related(depth=1).filter(to_user=user).all()
+            print qs
+            friends = [u.from_user.profile for u in qs]
+            cache.set(key, friends)
+
+        return friends
 
     def friends(self, user):
         """ Return a list of all friends """
@@ -141,6 +153,7 @@ class FriendshipManager(models.Manager):
 
         if friends is None:
             qs = Friend.objects.select_related(depth=1).filter(to_user=user).all()
+            print qs
             friends = [u.from_user for u in qs]
             cache.set(key, friends)
 
@@ -298,6 +311,7 @@ class Friend(models.Model):
         unique_together = ('from_user', 'to_user')
 
     def __unicode__(self):
+        #return u'%s' %self.from_user
         return "User #%d is friends with #%d" % (self.to_user_id, self.from_user_id)
 
     def save(self, *args, **kwargs):

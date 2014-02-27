@@ -16,9 +16,8 @@ urlpatterns = patterns('',
                        url(r'^accounts/', include('registration.backends.default.urls')),
                        url(r'^plan/', include('plan.urls')),
                        url(r'^about/', AboutView.as_view(), name="about"),
-                       url(r'^admin/lookups/', include(ajax_select_urls)),
+                       url(r'^lookups/', include(ajax_select_urls)),
                        url(r'^inbox/notifications/', include(notifications.urls)),
                        url(r'^api/', include('api.urls')),
-                       url(r'^friend/',include('friendship.urls')),
-
+                       url(r'^friend/', include('friendship.urls')),
 )

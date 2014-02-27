@@ -1,25 +1,43 @@
 {% load url from future %}
 <div class="alert alert-block alert-{{ notice.level }}">
-  <a class="close pull-right" href="{% url 'notifications:mark_as_read' notice.slug %}">
-    <i class="icon-close"></i>
-  </a>
-  
+
+
   <h4>
     <i class="icon-mail{% if notice.unread %}-alt{% endif %}"></i>
-    {{ notice.actor }} 
+    {{ notice.actor }}
     {{ notice.verb }}
     {% if notice.target %}
       of {{ notice.target }}
     {% endif %}
+  {{ notice.timesince }} ago
+
+  {% if notice.description == 'friend_request' %}
+      (this is a friend request)  <a href="/friend/friend/requests/">check out here</a>
+  {%  endif %}
   </h4>
-  
-  <p>{{ notice.timesince }} ago</p>
-  
-  <p>{{ notice.description|linebreaksbr }}</p>
-  
-  <div class="notice-actions">
-    {% for action in notice.data.actions %}
-      <a class="btn" href="{{ action.href }}">{{ action.title }}</a>
-    {% endfor %}
-  </div>
-</div>
+
+
+{% if notice.unread %}
+    <a class="close pull-right" href="{% url 'notifications:mark_as_read' notice.slug %}">
+    <i class="icon-close">mark as read</i>
+  </a>
+{% endif %}
+
+
+
+
+{#  <div class="notice-actions">#}
+{#    {% for action in notice.data.actions %}#}
+{#      <a class="btn" href="{{ action.href }}">{{ action.title }}asdfasdf</a>#}
+{#        {% if notice.unread %}#}
+{#    <a class="close pull-right" href="{% url 'notifications:mark_as_read' notice.slug %}">#}
+{#    <i class="icon-close">mark as read</i>#}
+{#  </a>#}
+{#{% endif %}#}
+{#          {% if notice.description == 'friend_request' %}#}
+{#      (this is a friend request)#}
+{#  {%  endif %}#}
+{#    {% endfor %}#}
+{#  </div>#}
+{#</div>#}
+
