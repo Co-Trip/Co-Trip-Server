@@ -15,7 +15,14 @@
         <p>time format: 2014-01-20</p>
         <form action="" method="post">{% csrf_token %}
 {#            {% bootstrap_form form %}#}
-            {{ form.as_p }}
+{#            {% for city in form.home_city_option %}#}
+{##}
+{#            <option value="{{ city.id }}">{{ city }}</option>#}
+            {% for fields in form %}
+
+            {{ fields.name }}
+            {% endfor %}
+
         <input type="submit" value="Submit" />
 </form>
 </body>

@@ -21,6 +21,7 @@ class PlanCreateView(View):
     def get(self, request):
 
         form = self.form_class(current_user=request.user)
+        print form.fields['title'].widget.__dict__
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):

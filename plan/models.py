@@ -41,12 +41,39 @@ class Plan(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
+    def create(self):
+        pass
+
     class Meta:
         permissions = (
             ('view_plan_permission', 'View Plan'),
             ('edit_plan_permission', 'Edit Plan'),
         )
 
+
+class DailyPlan(models.Model):
+
+    TRANSPORTATION_CHOICES = (
+        ('plane', 'Plane'),
+        ('train', 'Train'),
+        ('bus', 'Bus'),
+        ('other', 'Other'),
+
+    )
+
+    day_number = models.IntegerField()
+    hotel = models.CharField(max_length=20)
+    morning_site = models.ForeignKey('cities_light.City', related_name='morning_site_set')
+    afternoon_site = models.ForeignKey('cities_light.City', related_name='afternoon_set')
+    evening_site = models.ForeignKey('cities_light.City', related_name='evening_plan_set')
+    transportation = models.CharField(max_length=15, choices=TRANSPORTATION_CHOICES)
+
+
+    class Meta:
+        permissions = (
+            ('view_plan_permission', 'View Plan'),
+            ('edit_plan_permission', 'Edit Plan'),
+        )
 
 class PlanForm(ModelForm):
 

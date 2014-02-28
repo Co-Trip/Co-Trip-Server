@@ -17,4 +17,6 @@ v1_api.register(FriendshipRequestResource())
 
 urlpatterns = patterns('',
                         url(r'^', include(v1_api.urls)),
+                        #url(r'^/v1/plan/add', include(v1_api.urls)),
+
 )
