@@ -8,7 +8,7 @@ from plan.models import Plan, PlanForm
 from django.template import loader, RequestContext
 
 from traveller.models import Traveller
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User, AnonymousUser
 from guardian.shortcuts import assign_perm
 from guardian.decorators import permission_required_or_403
 
@@ -45,6 +45,7 @@ class PlanCreateView(View):
             if plan.is_public is True:
                 group = Group.objects.get(name='all_users')
                 assign_perm('view_plan_permission', group, plan)
+                assign_perm('view_plan_permission', AnonymousUser(), plan)
             else:
                 assign_perm('view_plan_permission', plan.creator.user, plan)
                 for p in plan.participants.all():

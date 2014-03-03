@@ -1,3 +1,5 @@
+{% load comments %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,5 +20,46 @@
     {% endfor %}
     <p><a href="/plan/explore/{{ plan.id }}/edit">edit</a></p>
 
+
+    {% get_comment_list for plan as comment_list %}
+{% for comment in comment_list %}
+    <p>{{ comment }}</p>
+{% endfor %}
+
+
+
+{% if user.is_authenticated %}
+    {% get_comment_form for plan as form %}
+    <form action="{% comment_form_target %}" method="POST">
+    {% csrf_token %}
+
+  <p><label for="id_comment">Comment: </label>{{ form.comment }}</p>
+
+  {{ form.content_type }}
+  {{ form.object_pk }}
+  {{ form.timestamp }}
+  {{ form.security_hash }}
+  <span style="display: none;">{{ form.honeypot }}</span>
+
+    <input type="hidden" name="next" value="{% url 'plan_detail' plan.id %}" />
+    <input type="submit" value="Add comment" id="id_submit" />
+    </form>
+{% else %}
+    <p>Please <a href="{% url 'auth_login' %}">log in</a> to leave a comment.</p>
+{% endif %}
+
+{#    {% get_comment_form for  plan as form%}#}
+{#<table>#}
+{#  <form action="{% comment_form_target %}" method="post">#}
+{#    {% csrf_token %}#}
+{#    {{ form }}#}
+{#    <tr>#}
+{#      <td colspan="2">#}
+{#        <input type="submit" name="submit" value="Post">#}
+{#        <input type="submit" name="preview" value="Preview">#}
+{#      </td>#}
+{#    </tr>#}
+{#  </form>#}
+{#</table>#}
 </body>
 </html>

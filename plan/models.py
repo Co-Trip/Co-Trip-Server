@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.db import models
 from django import forms
 from django.db.models.query import EmptyQuerySet
@@ -41,8 +42,13 @@ class Plan(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
-    def create(self):
-        pass
+    @models.permalink
+    def get_absolute_url(self):
+        return "/plan/%i/detail" % self.id
+
+
+    def get_absolute_url(self):
+        return reverse('plan_detail', kwargs={'plan_id': self.id})
 
     class Meta:
         permissions = (

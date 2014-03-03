@@ -18,10 +18,11 @@
 {#            {% for city in form.home_city_option %}#}
 {##}
 {#            <option value="{{ city.id }}">{{ city }}</option>#}
-            {% for fields in form %}
-
-            {{ fields.name }}
-            {% endfor %}
+{#            {% for fields in form %}#}
+{##}
+{#            {{ fields.name }}#}
+{#            {% endfor %}#}
+            {{ form.as_p }}
 
         <input type="submit" value="Submit" />
 </form>

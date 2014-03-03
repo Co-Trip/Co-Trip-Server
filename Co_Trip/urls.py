@@ -20,4 +20,9 @@ urlpatterns = patterns('',
                        url(r'^inbox/notifications/', include(notifications.urls)),
                        url(r'^api/', include('api.urls')),
                        url(r'^friend/', include('friendship.urls')),
+                       url(r'^comments/', include('django_comments.urls')),
 )
+
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()

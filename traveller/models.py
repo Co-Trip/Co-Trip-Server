@@ -1,23 +1,32 @@
 from django.contrib import admin
+
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User, AbstractBaseUser
 from django.forms.extras import SelectDateWidget
 from cities_light.models import City
-# Create your models here.
 from django.db.models.signals import post_save
 from django.forms import ModelForm
 from django.db import models
 from django import forms
+# Create your models here.
+
 
 
 class Traveller(models.Model):
     user = models.OneToOneField(User)
     birthday = models.DateField(null=True)
     city = models.ForeignKey(City, blank=True, null=True)
-    #friends = models.ManyToManyField('traveller.Traveller')
+    avatar_name = models.CharField(max_length=128,null=True)
 
     def __unicode__(self):
         return u'%s' % self.user.username
+
+    def get_absolute_url(self):
+        return reverse('profile_detail', kwargs={'profile_id': self.id})
+
+
+
 
 class TravellerAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
@@ -41,7 +50,7 @@ class ProfileEditForm(ModelForm):
 
     class Meta:
         model = Traveller
-        fields = ['username', 'email', 'city', 'birthday',] #'friends']
+        fields = ['username', 'email', 'city', 'birthday',]
         widgets = {
             'birthday': SelectDateWidget(required=False),
 

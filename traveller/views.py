@@ -12,6 +12,8 @@ from django.template import loader
 from traveller.models import ProfileEditForm, Traveller
 from friendship.models import Friend, FriendshipRequest
 import json
+import os
+
 
 class ProfileView(View):
     is_current_user = None
@@ -21,7 +23,10 @@ class ProfileView(View):
             traveller = request.user.profile
 
         else:
-            traveller = Traveller.objects.filter(pk=profile_id)[0]
+            try:
+                traveller = Traveller.objects.get(pk=profile_id)
+            except:
+                return HttpResponseRedirect('/login')
             if int(profile_id) == request.user.profile.id:
                 self.is_current_user = True
             else:
@@ -30,8 +35,13 @@ class ProfileView(View):
         created_plans = traveller.create_plan_set.all()
         participated_plans = traveller.participate_plan_set.all()
 
+
+
         context = {'traveller': traveller, 'created_plans': created_plans, 'participated_plans': participated_plans,
                     'is_current_user':self.is_current_user,}
+
+
+
         return render_to_response('traveller/profile.html', context, context_instance=RequestContext(request))
 
 
@@ -92,4 +102,5 @@ class AddFriend(View):
         if Friend.objects.are_friends(request.user, friend_target.user) == True:
             print "friend!"
         return HttpResponse(json.dumps(response_data), content_type="application/json")
+
 

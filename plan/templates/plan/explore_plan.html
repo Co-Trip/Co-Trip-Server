@@ -6,7 +6,7 @@
 <body>
     <p>here are the <font size="30px">public</font> plans:<p>
         {% for plan in plan_list %}
-        <li><a href="/plan/explore/{{ plan.id }}/">{{ plan.title }}</a></li>
+        <li><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></li>
     {% endfor %}
 </body>
 </html>

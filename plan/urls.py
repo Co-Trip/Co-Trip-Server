@@ -19,7 +19,7 @@ urlpatterns = patterns('',
                                PlanEditView.as_view()), name='detail'),
                        url(r'^explore/(?P<plan_id>\d+)/edit/success$', edit_success, name='success'),
                        url(r'^create/success/$', create_success, name='success'),
-                       url(r'^(?P<plan_id>\d+)/detail/$', detail, name='detail'),
+                       url(r'^(?P<plan_id>\d+)/detail/$', detail, name='plan_detail'),
 
 
 )
