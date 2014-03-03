@@ -1,7 +1,5 @@
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, render_to_response
-
-# Create your views here.
 from django.template import RequestContext
 from django.views.generic import View
 from django.contrib.auth.decorators import login_required
@@ -13,7 +11,15 @@ from traveller.models import ProfileEditForm, Traveller
 from friendship.models import Friend, FriendshipRequest
 import json
 import os
+from upload_avatar import get_uploadavatar_context
+from .models import User
+from upload_avatar.app_settings import (
+    UPLOAD_AVATAR_UPLOAD_ROOT,
+    UPLOAD_AVATAR_AVATAR_ROOT,
+    UPLOAD_AVATAR_RESIZE_SIZE,
+)
 
+# Create your views here.
 
 class ProfileView(View):
     is_current_user = None
@@ -35,10 +41,14 @@ class ProfileView(View):
         created_plans = traveller.create_plan_set.all()
         participated_plans = traveller.participate_plan_set.all()
 
+        imgs = map(lambda size: "<p><img src='%s'/></p>" % traveller.get_avatar_url(size), UPLOAD_AVATAR_RESIZE_SIZE)
 
+        print imgs
 
+        avatar = traveller.get_avatar_url(50)
+        print avatar
         context = {'traveller': traveller, 'created_plans': created_plans, 'participated_plans': participated_plans,
-                    'is_current_user':self.is_current_user,}
+                    'is_current_user':self.is_current_user, "avatar":avatar}
 
 
 
@@ -89,7 +99,7 @@ class ProfileListView(View):
 
 class AddFriend(View):
 
-    def get(self,request,profile_id):
+    def get(self, request, profile_id):
 
         friend_asker = request.user
         friend_target = Traveller.objects.filter(pk=profile_id)[0]
@@ -99,8 +109,42 @@ class AddFriend(View):
             action_object=friend_asker, description=u'',)
         Friend.objects.add_friend(friend_asker,friend_target.user)
         response_data = {'result':'success'}
-        if Friend.objects.are_friends(request.user, friend_target.user) == True:
-            print "friend!"
+        # if Friend.objects.are_friends(request.user, friend_target.user) == True:
+        #     print "friend!"
         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
+
+#########################
+# In production, you don't need this,
+# static files should serve by web server, e.g. Nginx
+
+def find_mimetype(filename):
+    """In production, you don't need this,
+    Static files should serve by web server, e.g. Nginx.
+    """
+    if filename.endswith(('.jpg', '.jpep')):
+        return 'image/jpeg'
+    if filename.endswith('.png'):
+        return 'image/png'
+    if filename.endswith('.gif'):
+        return 'image/gif'
+    return 'application/octet-stream'
+
+
+def get_upload_images(request, filename):
+    mimetype = find_mimetype(filename)
+    with open(os.path.join(UPLOAD_AVATAR_UPLOAD_ROOT, filename), 'r') as f:
+        return HttpResponse(f.read(), mimetype=mimetype)
+
+def get_avatar(request, filename):
+    mimetype = find_mimetype(filename)
+    with open(os.path.join(UPLOAD_AVATAR_AVATAR_ROOT, filename), 'r') as f:
+        return HttpResponse(f.read(), mimetype=mimetype)
+
+
+#########################
+
+
+def upload(request):
+    return render_to_response("traveller/upload.html", get_uploadavatar_context(), context_instance = RequestContext(request))

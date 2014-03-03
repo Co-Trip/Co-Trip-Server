@@ -10,14 +10,15 @@ from django.forms import ModelForm
 from django.db import models
 from django import forms
 # Create your models here.
+from upload_avatar.models import UploadAvatarMixIn
+from upload_avatar.signals import avatar_crop_done
 
 
-
-class Traveller(models.Model):
-    user = models.OneToOneField(User)
+class Traveller(models.Model, UploadAvatarMixIn):
+    user = models.OneToOneField(User, related_name='profile')
     birthday = models.DateField(null=True)
     city = models.ForeignKey(City, blank=True, null=True)
-    avatar_name = models.CharField(max_length=128,null=True)
+    avatar_name = models.CharField(max_length=128, null=True)
 
     def __unicode__(self):
         return u'%s' % self.user.username
@@ -25,7 +26,16 @@ class Traveller(models.Model):
     def get_absolute_url(self):
         return reverse('profile_detail', kwargs={'profile_id': self.id})
 
+    def get_avatar_name(self, size):
+        return UploadAvatarMixIn.build_avatar_name(self, self.avatar_name, size)
 
+def save_avatar_in_db(sender, uid, avatar_name, **kwargs):
+    if Traveller.objects.filter(user_id=uid).exists():
+        Traveller.objects.filter(user_id=uid).update(avatar_name=avatar_name)
+    else:
+        Traveller.objects.create(user_id=uid, avatar_name=avatar_name)
+
+avatar_crop_done.connect(save_avatar_in_db)
 
 
 class TravellerAdmin(admin.ModelAdmin):
@@ -75,3 +85,7 @@ def profile(sender, **kwargs):
 
 
 post_save.connect(profile, sender=User)
+
+
+
+

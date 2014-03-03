@@ -21,6 +21,7 @@ urlpatterns = patterns('',
                        url(r'^api/', include('api.urls')),
                        url(r'^friend/', include('friendship.urls')),
                        url(r'^comments/', include('django_comments.urls')),
+                       url(r'', include('upload_avatar.urls')),
 )
 
 

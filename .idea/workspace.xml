@@ -2,20 +2,151 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3a1da7-36e7-49aa-a98e-93e716642f63" name="Default" comment="registration/login finished">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/traveller/templates/traveller/upload.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/01940178a30d5b7dade364ad698e832e-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/01940178a30d5b7dade364ad698e832e-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/01940178a30d5b7dade364ad698e832e-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/03c1a309fe2dac3872984d31f4ad6bce-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/03c1a309fe2dac3872984d31f4ad6bce-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/03c1a309fe2dac3872984d31f4ad6bce-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/07020a9e497bf71da9233a3f91a14bd1-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/07020a9e497bf71da9233a3f91a14bd1-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/07020a9e497bf71da9233a3f91a14bd1-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/07258156f27ad7ab05d271724d0d9f07-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/07258156f27ad7ab05d271724d0d9f07-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/07258156f27ad7ab05d271724d0d9f07-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/09ae8ca20f9d86fb160a001cffbfab49-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/09ae8ca20f9d86fb160a001cffbfab49-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/09ae8ca20f9d86fb160a001cffbfab49-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/0d2e78331c5edc63a85e002c0b0439dc-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/0d2e78331c5edc63a85e002c0b0439dc-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/0d2e78331c5edc63a85e002c0b0439dc-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/1432186b3769214e82c8618ba608d150-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/1432186b3769214e82c8618ba608d150-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/1432186b3769214e82c8618ba608d150-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/298eca3c5938c0d57038adb7f058e356-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/298eca3c5938c0d57038adb7f058e356-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/298eca3c5938c0d57038adb7f058e356-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/2c916d01bb88f01bd819a1dcef94325c-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/2c916d01bb88f01bd819a1dcef94325c-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/2c916d01bb88f01bd819a1dcef94325c-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/2dd910e060249421d490243e2bfb7925-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/2dd910e060249421d490243e2bfb7925-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/2dd910e060249421d490243e2bfb7925-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/342e6a2cf3dd24c0e831245b6408005b-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/342e6a2cf3dd24c0e831245b6408005b-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/342e6a2cf3dd24c0e831245b6408005b-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/365dc6ce87d1f97ee9e81dad67ffa303-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/365dc6ce87d1f97ee9e81dad67ffa303-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/365dc6ce87d1f97ee9e81dad67ffa303-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/40482a51e691e5bb2f59a0668a4b0d89-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/40482a51e691e5bb2f59a0668a4b0d89-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/40482a51e691e5bb2f59a0668a4b0d89-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/406b27ffe2d150f4155196c8d6f9c1a8-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/406b27ffe2d150f4155196c8d6f9c1a8-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/406b27ffe2d150f4155196c8d6f9c1a8-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/43dec1e881c623f0e764572e80e625a1-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/43dec1e881c623f0e764572e80e625a1-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/43dec1e881c623f0e764572e80e625a1-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/4e0443237140cee38a56c91a4c113207-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/4e0443237140cee38a56c91a4c113207-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/4e0443237140cee38a56c91a4c113207-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/53ba0311e75106337fe0d52726ced500-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/53ba0311e75106337fe0d52726ced500-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/53ba0311e75106337fe0d52726ced500-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/5dd331eb40d260a92029ba20d6e99fe4-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/5dd331eb40d260a92029ba20d6e99fe4-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/5dd331eb40d260a92029ba20d6e99fe4-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6b2b052a8c2149631dc3effe89d6c8a7-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6b2b052a8c2149631dc3effe89d6c8a7-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6b2b052a8c2149631dc3effe89d6c8a7-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6b677372cbd6ec343173bea19a25b2c6-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6b677372cbd6ec343173bea19a25b2c6-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6b677372cbd6ec343173bea19a25b2c6-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6cea7057f25bf2825b0b32d667b92452-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6cea7057f25bf2825b0b32d667b92452-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/6cea7057f25bf2825b0b32d667b92452-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/749a04c9c4279abfb22918a8a228bbc7-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/749a04c9c4279abfb22918a8a228bbc7-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/749a04c9c4279abfb22918a8a228bbc7-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/7caccee9878a8cbae9efcf7c947117da-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/7caccee9878a8cbae9efcf7c947117da-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/7caccee9878a8cbae9efcf7c947117da-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/7d04ec1621e8125ce6ff952e8dbe777d-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/7d04ec1621e8125ce6ff952e8dbe777d-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/7d04ec1621e8125ce6ff952e8dbe777d-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/815b1efed14b327b47aafaf5fc715fec-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/815b1efed14b327b47aafaf5fc715fec-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/815b1efed14b327b47aafaf5fc715fec-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/873acdf0edd5913b1a9e91a3d6391862-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/873acdf0edd5913b1a9e91a3d6391862-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/873acdf0edd5913b1a9e91a3d6391862-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/915c0700ff2f973e4992ac26cac84c75-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/915c0700ff2f973e4992ac26cac84c75-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/915c0700ff2f973e4992ac26cac84c75-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/97a84494fe874c967f6c62370cf91d5b-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/97a84494fe874c967f6c62370cf91d5b-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/97a84494fe874c967f6c62370cf91d5b-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/a0c0720a3eaba85129e26ae560c181a0-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/a0c0720a3eaba85129e26ae560c181a0-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/a0c0720a3eaba85129e26ae560c181a0-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/a983194070f05b8babf476d70c963ad3-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/a983194070f05b8babf476d70c963ad3-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/a983194070f05b8babf476d70c963ad3-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/b5ba8441a558313ef663e17ab1de7113-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/b5ba8441a558313ef663e17ab1de7113-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/b5ba8441a558313ef663e17ab1de7113-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/bec5459c2df20496262f39bdb0863183-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/bec5459c2df20496262f39bdb0863183-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/bec5459c2df20496262f39bdb0863183-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/beeec06b3a61c4749f89f460a5d6117e-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/beeec06b3a61c4749f89f460a5d6117e-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/beeec06b3a61c4749f89f460a5d6117e-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c0e7ecec547e1b397036264368afdbc0-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c0e7ecec547e1b397036264368afdbc0-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c0e7ecec547e1b397036264368afdbc0-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c1f2134068ba4882327f7a909713d148-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c1f2134068ba4882327f7a909713d148-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c1f2134068ba4882327f7a909713d148-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c8e8a4db3460be704f406f8505815c68-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c8e8a4db3460be704f406f8505815c68-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/c8e8a4db3460be704f406f8505815c68-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cb4074077a4f8bade3b80dd58e00d072-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cb4074077a4f8bade3b80dd58e00d072-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cb4074077a4f8bade3b80dd58e00d072-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cbd4b7df4ea1e8256d99fd6c31f986e8-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cbd4b7df4ea1e8256d99fd6c31f986e8-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cbd4b7df4ea1e8256d99fd6c31f986e8-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cdcfda6109fccdf81f56a0342255f10f-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cdcfda6109fccdf81f56a0342255f10f-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cdcfda6109fccdf81f56a0342255f10f-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cf9b09f0cd29152bac71d932bae164a4-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cf9b09f0cd29152bac71d932bae164a4-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/cf9b09f0cd29152bac71d932bae164a4-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/d4a39cc596868b856996d3e432bf34a0-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/d4a39cc596868b856996d3e432bf34a0-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/d4a39cc596868b856996d3e432bf34a0-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/dd5691e84bfe5de9a12cae27e500ffba-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/dd5691e84bfe5de9a12cae27e500ffba-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/dd5691e84bfe5de9a12cae27e500ffba-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/e02b3776bb7e1e362345ca36cfeb4ba5-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/e02b3776bb7e1e362345ca36cfeb4ba5-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/e02b3776bb7e1e362345ca36cfeb4ba5-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/e71620de0d56e36ed839284421417ed3-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/e71620de0d56e36ed839284421417ed3-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/e71620de0d56e36ed839284421417ed3-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ebbd75d266c81551800ee9a9e0f0eba5-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ebbd75d266c81551800ee9a9e0f0eba5-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ebbd75d266c81551800ee9a9e0f0eba5-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ed42f0d2b5923641df03cc451f9de8c0-100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ed42f0d2b5923641df03cc451f9de8c0-140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ed42f0d2b5923641df03cc451f9de8c0-50.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/templates/traveller/all_list.html" afterPath="$PROJECT_DIR$/traveller/templates/traveller/all_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/templates/plan/create.html" afterPath="$PROJECT_DIR$/plan/templates/plan/create.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/templates/plan/detail.html" afterPath="$PROJECT_DIR$/plan/templates/plan/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/templates/plan/explore_plan.html" afterPath="$PROJECT_DIR$/plan/templates/plan/explore_plan.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/models.py" afterPath="$PROJECT_DIR$/plan/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/models.py" afterPath="$PROJECT_DIR$/traveller/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/templates/traveller/profile.html" afterPath="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/settings.py" afterPath="$PROJECT_DIR$/Co_Trip/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/templates/traveller/upload.html" afterPath="$PROJECT_DIR$/traveller/templates/traveller/upload.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/urls.py" afterPath="$PROJECT_DIR$/Co_Trip/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/urls.py" afterPath="$PROJECT_DIR$/plan/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/urls.py" afterPath="$PROJECT_DIR$/traveller/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/views.py" afterPath="$PROJECT_DIR$/plan/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/views.py" afterPath="$PROJECT_DIR$/traveller/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,30 +172,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/urls.py">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="73" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+            <state line="9" column="43" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0" vertical-offset="516" max-vertical-offset="2985">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -72,7 +192,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traveller/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
+            <state line="35" column="17" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1455">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -80,28 +200,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traveller/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="60" selection-start="1438" selection-end="1438" vertical-scroll-proportion="-0.9197397" vertical-offset="1009" max-vertical-offset="1665">
+            <state line="50" column="75" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="2340">
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/upload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="77" selection-start="362" selection-end="362" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traveller/urls.py">
+      <file leaf-file-name="profile.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="37" column="7" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.71428573" vertical-offset="0" max-vertical-offset="777">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_list.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/all_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="61" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
@@ -166,24 +324,24 @@
         <option value="$PROJECT_DIR$/plan/models.py" />
         <option value="$PROJECT_DIR$/plan/views.py" />
         <option value="$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html" />
-        <option value="$PROJECT_DIR$/traveller/templates/traveller/upload.html" />
-        <option value="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
         <option value="$PROJECT_DIR$/upload_avatar/app_settings.py" />
         <option value="$PROJECT_DIR$/upload_avatar/views.py" />
-        <option value="$PROJECT_DIR$/upload_avatar/models.py" />
         <option value="$PROJECT_DIR$/Co_Trip/urls.py" />
+        <option value="$PROJECT_DIR$/traveller/templates/traveller/upload.html" />
         <option value="$PROJECT_DIR$/Co_Trip/settings.py" />
-        <option value="$PROJECT_DIR$/traveller/models.py" />
         <option value="$PROJECT_DIR$/traveller/urls.py" />
+        <option value="$PROJECT_DIR$/upload_avatar/models.py" />
+        <option value="$PROJECT_DIR$/traveller/models.py" />
         <option value="$PROJECT_DIR$/traveller/views.py" />
+        <option value="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="298" />
-    <option name="y" value="22" />
-    <option name="width" value="1084" />
-    <option name="height" value="781" />
+    <option name="x" value="2064" />
+    <option name="y" value="104" />
+    <option name="width" value="1545" />
+    <option name="height" value="1108" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -230,48 +388,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="traveller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -301,6 +417,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/traveller/migrations" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/Co_Trip/templates/Co_Trip" />
       <recent name="$PROJECT_DIR$/Co_Trip/templates" />
@@ -568,20 +685,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="298" y="22" width="1084" height="781" extended-state="6" />
+    <frame x="2064" y="104" width="1545" height="1108" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23735955" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23676611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24907748" sideWeight="0.5883015" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17475729" sideWeight="0.5883015" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15507075" sideWeight="0.4105737" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26264045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17998075" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -636,21 +753,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="1" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577" />
@@ -674,16 +776,6 @@
     <entry file="file://$PROJECT_DIR$/plan/templates/plan/success.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/all_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_comments/urls.py">
@@ -786,11 +878,6 @@
         <state line="46" column="42" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1680" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plan/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="4281" selection-end="4281" vertical-scroll-proportion="0.0" vertical-offset="1268" max-vertical-offset="1845" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_comments/views/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="582" selection-end="582" vertical-scroll-proportion="-0.4558059" vertical-offset="578" max-vertical-offset="1155" />
@@ -806,16 +893,6 @@
         <state line="130" column="24" selection-start="5114" selection-end="5122" vertical-scroll-proportion="-14.576923" vertical-offset="1571" max-vertical-offset="2145" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="546" selection-end="546" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="165" selection-end="165" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="615" />
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/dispatch/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="23" selection-start="587" selection-end="587" vertical-scroll-proportion="0.6499134" vertical-offset="0" max-vertical-offset="4620" />
@@ -825,7 +902,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="451">
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,37 +916,148 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="73" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+        <state line="29" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/forms/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="291" column="0" selection-start="11822" selection-end="11822" vertical-scroll-proportion="0.33333334" vertical-offset="3873" max-vertical-offset="18330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/app_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="38" selection-start="3585" selection-end="3585" vertical-scroll-proportion="1.3208503" vertical-offset="0" max-vertical-offset="1845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="391" column="66" selection-start="15270" selection-end="15270" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5925">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0" vertical-offset="516" max-vertical-offset="2985">
+        <state line="177" column="37" selection-start="4632" selection-end="4632" vertical-scroll-proportion="0.0" vertical-offset="2303" max-vertical-offset="3045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/core/urlresolvers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="454" column="4" selection-start="18415" selection-end="18415" vertical-scroll-proportion="0.33248731" vertical-offset="6323" max-vertical-offset="8505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="19" selection-start="3559" selection-end="3559" vertical-scroll-proportion="-7.3461537" vertical-offset="1744" max-vertical-offset="2460">
+          <folding>
+            <element signature="e#25#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="43" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="742">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="61" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
+        <state line="35" column="17" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1455">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/urls.py">
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="801">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/all_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="77" selection-start="362" selection-end="362" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="60" selection-start="1438" selection-end="1438" vertical-scroll-proportion="-0.9197397" vertical-offset="1009" max-vertical-offset="1665">
+        <state line="50" column="75" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="2340">
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="7" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.71428573" vertical-offset="0" max-vertical-offset="777">
           <folding />
         </state>
       </provider>
