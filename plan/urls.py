@@ -20,6 +20,6 @@ urlpatterns = patterns('',
                        url(r'^explore/(?P<plan_id>\d+)/edit/success$', edit_success, name='success'),
                        url(r'^create/success/$', create_success, name='success'),
                        url(r'^(?P<plan_id>\d+)/detail/$', detail, name='plan_detail'),
-
+                       #url(r'^create/daily_plan_create/$', DailyPlanCreateView.as_view(), name='daily_plan_creation')
 
 )

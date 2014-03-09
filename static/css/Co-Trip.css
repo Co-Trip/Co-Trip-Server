@@ -11,11 +11,43 @@ body {
 .btn {
   min-width: 74px;
 }
+.avatar {
+  border-radius: 4px;
+}
 
 /*
  * Co-Trip Navbar
  * --------------------------------------------------
  */
+.CT-navbar-notification-indicator {
+  float: right;
+  width: 50px;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.CT-navbar-notification-indicator .mail-status {
+  border-radius: 100px;
+}
+.notification-all-read {
+  
+}
+.CT-navbar-notification-indicator:hover .notification-unread {
+  color: #3196E6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 18px rgba(49, 150, 230, 1);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 18px rgba(49, 150, 230, 1);
+}
+.notification-unread {
+  color: #66afe9;
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-transition: color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 14px rgba(102, 175, 233, 0.9);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 14px rgba(102, 175, 233, 0.9);
+}
 .navbar-nav a.CT-user-profile > .avatar {
   max-width: 28px;
   height: auto;
@@ -48,12 +80,12 @@ footer {
   border-width: 1px;
   border-top: 1px solid rgb(248, 248, 248);
   margin-top: 20px;
-  background-color: #eeeeee;
+  /*background-color: #eeeeee;*/
   border-color: #e7e7e7;
   position: relative;
   left: 0;
   right: 0;
-  z-index: 1029;
+  z-index: -1;
 }
 footer > div > p {
   margin-top: 27px;

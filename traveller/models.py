@@ -13,15 +13,24 @@ from django import forms
 from upload_avatar.models import UploadAvatarMixIn
 from upload_avatar.signals import avatar_crop_done
 
+GENDER_CHOICES= (
+        ('male', 'Male'),
+        ('female', 'Female'),
+        ('other', 'Other'),
+
+    )
 
 class Traveller(models.Model, UploadAvatarMixIn):
     user = models.OneToOneField(User, related_name='profile')
+    gender = models.CharField(max_length=15, null=True, choices=GENDER_CHOICES)
+
     birthday = models.DateField(null=True)
     city = models.ForeignKey(City, blank=True, null=True)
     avatar_name = models.CharField(max_length=128, null=True)
 
     def __unicode__(self):
         return u'%s' % self.user.username
+
 
     def get_absolute_url(self):
         return reverse('profile_detail', kwargs={'profile_id': self.id})
@@ -60,7 +69,7 @@ class ProfileEditForm(ModelForm):
 
     class Meta:
         model = Traveller
-        fields = ['username', 'email', 'city', 'birthday',]
+        fields = ['username', 'email', 'city', 'birthday', 'gender']
         widgets = {
             'birthday': SelectDateWidget(required=False),
 

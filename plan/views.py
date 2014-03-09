@@ -1,36 +1,65 @@
 from django.forms import HiddenInput
+from django.forms.models import modelformset_factory
+
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.datetime_safe import datetime
 from django.views.generic import View
-from friendship.models import Friend
-from plan.models import Plan, PlanForm
+from plan.models import Plan, PlanForm, DailyPlanForm, DailyPlan
 from django.template import loader, RequestContext
 
 from traveller.models import Traveller
 from django.contrib.auth.models import Group, User, AnonymousUser
 from guardian.shortcuts import assign_perm
 from guardian.decorators import permission_required_or_403
-
+from plan.models import PlanForm
 
 class PlanCreateView(View):
 
-    form_class = PlanForm
     template_name = 'plan/create.html'
-
+    DailyPlanFormSet = modelformset_factory(DailyPlan, form=DailyPlanForm)
     def get(self, request):
 
-        form = self.form_class(current_user=request.user)
-        print form.fields['title'].widget.__dict__
-        return render(request, self.template_name, {'form': form})
+        daily_plan_form_set = self.DailyPlanFormSet(queryset=DailyPlan.objects.none())
+        print daily_plan_form_set.forms
+        primary_form = PlanForm(current_user=request.user)
+
+        return render(request, self.template_name, {'form': primary_form, 'daily_plan_form': daily_plan_form_set})
 
     def post(self, request):
-        form = self.form_class(current_user=request.user, data=request.POST)
-        if form.is_valid():
+
+        form = PlanForm(current_user=request.user, data=request.POST)
+        formset = self.DailyPlanFormSet(request.POST)
+        if form.is_valid() and form.is_valid():
+
             plan = form.save(commit=False)
             plan.create_time = datetime.now()
             plan.creator = request.user.profile
+            participants_list = form.cleaned_data['participants']
+            start_Date = form.cleaned_data['leaving_date']
+            end_Date = form.cleaned_data['return_date']
+            delta_days = end_Date-start_Date
+
+            plan.days = delta_days.days + 1
+            plan.participants_number = len(participants_list)
             plan.save()
+            for index, dailyForm in enumerate(formset):
+
+
+                dailyPlan = dailyForm.save(commit=False)
+
+                dailyPlan.day_number = index
+                dailyPlan.primary_plan = plan
+                dailyPlan.primary_plan_id = plan.pk
+
+                dailyPlan.save()
+                dailyForm.save_m2m()
+
+
+
+
+
+
             form.save_m2m()
 
             if request.user.profile.city is None:
@@ -61,6 +90,18 @@ class PlanCreateView(View):
             #plan.save()
             return HttpResponseRedirect('success/')
         return render(request, self.template_name, {'form': form})
+
+
+class DailyPlanCreateView(View):
+    form_class = DailyPlanForm
+    template_name = 'plan/daily_plan_create.html'
+
+    def get(self, request, ):
+
+
+        pass
+
+
 
 
 class PlanEditView(View):

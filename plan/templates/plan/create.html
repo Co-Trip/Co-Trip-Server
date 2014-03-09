@@ -1,30 +1,219 @@
-{#{% load bootstrap3 %}#}
-{#{% bootstrap_css %}#}
-{#{% bootstrap_javascript %}#}
-{#{% bootstrap_messages %}#}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Create your plan</title>
-    {{ form.media }}
-</head>
-<body>
-    <h1>Create</h1>
-        <p>this is a creation page to be done.</p>
-        <p>time format: 2014-01-20</p>
-        <form action="" method="post">{% csrf_token %}
-{#            {% bootstrap_form form %}#}
-{#            {% for city in form.home_city_option %}#}
-{##}
-{#            <option value="{{ city.id }}">{{ city }}</option>#}
-{#            {% for fields in form %}#}
-{##}
-{#            {{ fields.name }}#}
-{#            {% endfor %}#}
-            {{ form.as_p }}
+{% load dajaxice_templatetags %}
 
-        <input type="submit" value="Submit" />
-</form>
-</body>
-</html>
+
+
+    {% block title %}Create your plan | Co-Trip {% endblock %}
+
+
+ {% block css_link %}
+
+
+    <!-- Datetimepicker core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}external/datetimepicker/css/bootstrap-datetimepicker.css">
+
+    <!-- Form Validator core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}external/bootstrapvalidator/css/bootstrapValidator.css"/>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}create.css" />
+
+{% endblock %}
+
+
+  </head>
+
+     {% block main_content %}
+            <div class="row">
+        <form class="form-horizontal col-xs-12 col-sm-9 bootstrap-validator-form" action="" role="form" id="plan-form" method="POST" novalidate="novalidate">
+            {% csrf_token %}
+          <legend>Create Your Plan</legend>
+          <div class="form-group" id="plan-title">
+            <label for="id-title" class="col-sm-2 control-label">Title</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="id-title" name="title" placeholder="Your plan title" required>
+            </div>
+          </div><!-- /plan title -->
+
+          <div class="form-group" id="plan-home-city">
+            <label for="id-home-city" class="col-sm-2 control-label">Home city</label>
+            <div class="col-sm-10">
+                {{ form.home_city}}
+
+            </div>
+          </div><!-- /plan home city -->
+
+          <div class="form-group" id="plan-destination-city">
+            <label for="id-destination-city" class="col-sm-2 control-label">Destination city</label>
+            <div class="col-sm-10">
+                    {{ form.destination_city }}
+              <p class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</p>
+            </div>
+          </div><!-- /plan destination city -->
+
+          <div class="form-group" id="plan-leaving-date">
+            <label for="id-leaving-date" class="col-sm-2 control-label">Leaving date</label>
+            <div class="col-sm-10">
+              <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="id-leaving-date" data-link-format="yyyy-mm-dd">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+              <input type="hidden" id="id-leaving-date" name="leaving_date" value="" form="plan-form">
+            </div>
+          </div><!-- /plan leaving date -->
+
+          <div class="form-group" id="plan-leaving-transportation">
+            <label for="id-leaving-transportation" class="col-sm-2 control-label">Leaving transportation</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="leaving_transportation" id="id-leaving-transportation" form="plan-form" required>
+                <option value="" selected="select">-- Select your leaving transportation --</option>
+                <option value="plane">Plane</option>
+                <option value="train">Train</option>
+                <option value="bus">Bus</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div><!-- /plan leaving transportation -->
+
+          <div class="form-group" id="plan-return-date">
+            <label for="id-return-date" class="col-sm-2 control-label">Return data</label>
+            <div class="col-sm-10">
+              <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="id-return-date" data-link-format="yyyy-mm-dd">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+              <input type="hidden" id="id-return-date" name="return_date" value="" form="plan-form">
+            </div>
+          </div><!-- /plan return date -->
+
+          <div class="form-group" id="plan-return-transportation">
+            <label for="id-return-transportation" class="col-sm-2 control-label">Return transportation</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="return_transportation" id="id-return-transportation" form="plan-form" required>
+                <option value="" selected="select">-- Select your return transportation --</option>
+                <option value="plane">Plane</option>
+                <option value="train">Train</option>
+                <option value="bus">Bus</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div><!-- /plan return transportation -->
+
+
+
+          <div class="form-group" id="plan-participants">
+            <label for="id-participants" class="col-sm-2 control-label">Participants</label>
+            <div class="col-sm-10">
+                {{ form.participants }}
+
+
+
+              <p class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</p>
+            </div>
+          </div><!-- /plan participants -->
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox" id="plan-participants-can-edit">
+                <label for="id-participants-can-edit">
+                  <input type="checkbox" id="id-participants-can-edit" name="participants_can_edit"> Participants can edit
+                </label>
+              </div>
+            </div>
+          </div><!-- /plan participants can edit -->
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox" id="plan-is-public">
+                <label for="id-is-public">
+                  <input type="checkbox" id="id-is-public" name="is_public"> Is public
+                </label>
+              </div>
+            </div>
+          </div><!-- /plan is public -->
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default" id="plan-submit-button">Create</button>
+              <input type="reset" class="btn btn-danger">
+            </div>
+          </div><!-- /form button -->
+
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="add-button">
+              <span class="glyphicon glyphicon-plus"></span>
+            </div>
+
+            <div class="panel-group daily-plans" id="accordion">
+              <div class="panel panel-default daily-plan" data-dpid="0">
+                <div class="panel-heading day-date" data-date-year="2014" data-date-month="3" data-date-day="1">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-target="#collapse-1" data-parent="#accordion" href="#collapse-1">
+                      Day1 2014-3-1
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse-1" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="daily-detail">
+
+
+
+
+
+
+{#                      <textarea name="daily[0][datail]" class="form-control" style="height: 150px;" placeholder="Daily detail"></textarea>#}
+{{ daily_plan_form.as_p }}
+
+
+
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/span-->
+      </div>
+      {% endblock %}
+
+
+    {% block js %}
+        <!-- Datetimepicker core Javascript -->
+    <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <!-- Form Validator core CSS -->
+    <script type="text/javascript" src="{{ STATIC_URL }}external/bootstrapvalidator/js/bootstrapValidator.js"></script>
+
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="{{ STATIC_URL }}create.js"></script>
+    {% dajaxice_js_import %}
+    {% endblock %}
+
+
+
+

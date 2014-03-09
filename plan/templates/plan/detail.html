@@ -1,11 +1,10 @@
-{% load comments %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ plan.title }} - Co-Trip</title>
-</head>
-<body>
+{% load comments %}
+{% block title %}{{ plan.title }}{% endblock %}
+
+{% block main_content %}
+
 <h1>{{ plan.title }}</h1>
     <p>create_time: {{ plan.create_time }}</p>
     <p>leaving_date: {{ plan.leaving_date }}</p>
@@ -20,7 +19,9 @@
     {% endfor %}
     <p><a href="/plan/explore/{{ plan.id }}/edit">edit</a></p>
 
-
+{%   for daily_plan in plan.daily_plan_set.all %}
+    <p>hotel: {{ daily_plan.hotel }}</p>
+{% endfor %}
     {% get_comment_list for plan as comment_list %}
 {% for comment in comment_list %}
     <p>{{ comment }}</p>
@@ -48,18 +49,4 @@
     <p>Please <a href="{% url 'auth_login' %}">log in</a> to leave a comment.</p>
 {% endif %}
 
-{#    {% get_comment_form for  plan as form%}#}
-{#<table>#}
-{#  <form action="{% comment_form_target %}" method="post">#}
-{#    {% csrf_token %}#}
-{#    {{ form }}#}
-{#    <tr>#}
-{#      <td colspan="2">#}
-{#        <input type="submit" name="submit" value="Post">#}
-{#        <input type="submit" name="preview" value="Preview">#}
-{#      </td>#}
-{#    </tr>#}
-{#  </form>#}
-{#</table>#}
-</body>
-</html>
+{% endblock %}

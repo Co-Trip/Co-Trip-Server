@@ -1,12 +1,15 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template import loader, RequestContext
 from django.views.generic import TemplateView
 
 
 def home(request):
-    template = loader.get_template('Co_Trip/index.html')
-    context = RequestContext(request)
-    return HttpResponse(template.render(context))
+
+    if request.user.id >= 0:
+        return HttpResponse(render(request, 'Co_Trip/index.html'))
+    else:
+        return HttpResponse(render(request, 'Co_Trip/public_index.html'))
 
 
 class AboutView(TemplateView):

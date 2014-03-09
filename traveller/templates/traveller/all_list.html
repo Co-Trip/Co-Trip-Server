@@ -8,6 +8,7 @@
 <p>{{ all_traveller }}</p>
 {% for traveller in all_traveller %}
     <a href = "{{ traveller.get_absolute_url }}"><p>{{ traveller }}</p></a>
+    {{ traveller.get_absolute_url }}
 
 {% endfor %}
 </body>

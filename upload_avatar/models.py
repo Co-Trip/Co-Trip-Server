@@ -46,7 +46,8 @@ class UploadAvatarMixIn:
         if not os.path.exists(full_path):
             return None
         return full_path
-    
+
+
     def get_avatar_url(self, size=UPLOAD_AVATAR_DEFAULT_SIZE):
         return UPLOAD_AVATAR_URL_PREFIX_CROPPED + self.get_avatar_name(size)
     
@@ -57,7 +58,7 @@ class UploadedImage(models.Model):
     uid = models.IntegerField(unique=True)
     image = models.CharField(max_length=255)
     upload_date = models.DateTimeField(auto_now_add=True)
-    
+
     def get_image_path(self):
         path = os.path.join(UPLOAD_AVATAR_UPLOAD_ROOT, self.image)
         if not os.path.exists(path):

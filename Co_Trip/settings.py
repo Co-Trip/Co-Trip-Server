@@ -59,6 +59,9 @@ INSTALLED_APPS = (
     'notifications',
     'friendship',
     'south',
+    'dajaxice',
+    'dajax',
+    'autocomplete_light',
 
 )
 
@@ -71,7 +74,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', # this is default
     'guardian.backends.ObjectPermissionBackend',
 )
-ANONYMOUS_USER_ID = -1
+ANONYMOUS_USER_ID = None
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -80,7 +83,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
+
+
 
 ROOT_URLCONF = 'Co_Trip.urls'
 
@@ -109,7 +115,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-CN'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -173,8 +179,8 @@ COMMENTS_APP = 'plan_comment'
 
 
 
-UPLOAD_AVATAR_UPLOAD_ROOT = os.path.join(PROJECT_PATH, 'upload')
-UPLOAD_AVATAR_AVATAR_ROOT = os.path.join(PROJECT_PATH, 'avatar')
+UPLOAD_AVATAR_UPLOAD_ROOT = os.path.join(PROJECT_PATH, 'media/upload')
+UPLOAD_AVATAR_AVATAR_ROOT = os.path.join(PROJECT_PATH, 'media/avatar')
 UPLOAD_AVATAR_URL_PREFIX_ORIGINAL = 'uploadedimage/'
 UPLOAD_AVATAR_URL_PREFIX_CROPPED = 'avatar/'
 
@@ -196,3 +202,30 @@ UPLOAD_AVATAR_WEB_LAYOUT = {
         },
     ]
 }
+
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media/upload')
+MEDIA_URL='/media/'
+
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
+
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages'
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'dajaxice.finders.DajaxiceFinder',
+)

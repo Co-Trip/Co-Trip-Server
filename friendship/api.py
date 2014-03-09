@@ -1,17 +1,19 @@
-__author__ = 'danielqiu'
-
-from friendship.models import Friend, FriendshipRequest
+from friendship.models import Follow
 from tastypie.resources import ModelResource
 from tastypie.serializers import Serializer
 
-class FriendResource(ModelResource):
+__author__ = 'danielqiu'
+
+
+
+class FollowerResource(ModelResource):
     class Meta:
-        queryset = Friend.objects.all()
-        resource_name = 'friend'
+        queryset = Follow.objects.all()
+        resource_name = 'follower'
         serializer = Serializer()
 
-class FriendshipRequestResource(ModelResource):
+class FollowingResource(ModelResource):
     class Meta:
-        queryset = FriendshipRequest.objects.all()
-        resource_name = 'friend_request'
+        queryset = Follow.objects.all()
+        resource_name = 'Following'
         serializer = Serializer()

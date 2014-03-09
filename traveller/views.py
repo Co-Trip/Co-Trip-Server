@@ -8,7 +8,7 @@ from notifications import notify
 from plan.models import Plan
 from django.template import loader
 from traveller.models import ProfileEditForm, Traveller
-from friendship.models import Friend, FriendshipRequest
+
 import json
 import os
 from upload_avatar import get_uploadavatar_context
@@ -41,33 +41,14 @@ class ProfileView(View):
         created_plans = traveller.create_plan_set.all()
         participated_plans = traveller.participate_plan_set.all()
 
-        imgs = map(lambda size: "<p><img src='%s'/></p>" % traveller.get_avatar_url(size), UPLOAD_AVATAR_RESIZE_SIZE)
 
-        print imgs
-
-        avatar = traveller.get_avatar_url(50)
-        print avatar
         context = {'traveller': traveller, 'created_plans': created_plans, 'participated_plans': participated_plans,
-                    'is_current_user':self.is_current_user, "avatar":avatar}
+                    'is_current_user':self.is_current_user}
 
 
 
         return render_to_response('traveller/profile.html', context, context_instance=RequestContext(request))
 
-
-class PlanDetailView(View):
-
-    def get(self, request, plan_id):
-        try:
-            plan = Plan.objects.get(pk=plan_id)
-        except plan.DoesNotExist:
-            raise Http404
-        template = loader.get_template('plan/detail.html')
-        context = RequestContext(request, {
-            'plan': plan,
-        })
-
-        return HttpResponse(template.render(context))
 
 
 class ProfileEditView(View):
@@ -97,21 +78,21 @@ class ProfileListView(View):
         return render(request, self.template_name, {'all_traveller': all_traveller})
 
 
-class AddFriend(View):
-
-    def get(self, request, profile_id):
-
-        friend_asker = request.user
-        friend_target = Traveller.objects.filter(pk=profile_id)[0]
-
-
-        notify.send(friend_asker, recipient=friend_target.user, verb=u'sent you a friend request',
-            action_object=friend_asker, description=u'',)
-        Friend.objects.add_friend(friend_asker,friend_target.user)
-        response_data = {'result':'success'}
-        # if Friend.objects.are_friends(request.user, friend_target.user) == True:
-        #     print "friend!"
-        return HttpResponse(json.dumps(response_data), content_type="application/json")
+# class AddFriend(View):
+#
+#     def get(self, request, profile_id):
+#
+#         friend_asker = request.user
+#         friend_target = Traveller.objects.filter(pk=profile_id)[0]
+#
+#
+#         notify.send(friend_asker, recipient=friend_target.user, verb=u'sent you a friend request',
+#             action_object=friend_asker, description=u'',)
+#         Friend.objects.add_friend(friend_asker,friend_target.user)
+#         response_data = {'result':'success'}
+#         # if Friend.objects.are_friends(request.user, friend_target.user) == True:
+#         #     print "friend!"
+#         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
 
@@ -148,3 +129,10 @@ def get_avatar(request, filename):
 
 def upload(request):
     return render_to_response("traveller/upload.html", get_uploadavatar_context(), context_instance = RequestContext(request))
+
+
+
+def search(request):
+    username = request.GET.get('q', '')
+    user_list = User.objects.filter(username__icontains=username)
+    return render(request, 'traveller/search_result.html', {'userlist': user_list})

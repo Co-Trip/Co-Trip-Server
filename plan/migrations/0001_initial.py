@@ -43,6 +43,61 @@ class Migration(SchemaMigration):
         ))
         db.create_unique(m2m_table_name, ['plan_id', 'traveller_id'])
 
+        # Adding model 'Site'
+        db.create_table(u'plan_site', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('daily_plan', self.gf('django.db.models.fields.related.ForeignKey')(related_name='daily_site_set', null=True, to=orm['plan.DailyPlan'])),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('address', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('spend', self.gf('django.db.models.fields.IntegerField')()),
+            ('description', self.gf('django.db.models.fields.CharField')(max_length=1024)),
+        ))
+        db.send_create_signal(u'plan', ['Site'])
+
+        # Adding M2M table for field up_voters on 'Site'
+        m2m_table_name = db.shorten_name(u'plan_site_up_voters')
+        db.create_table(m2m_table_name, (
+            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
+            ('site', models.ForeignKey(orm[u'plan.site'], null=False)),
+            ('traveller', models.ForeignKey(orm[u'traveller.traveller'], null=False))
+        ))
+        db.create_unique(m2m_table_name, ['site_id', 'traveller_id'])
+
+        # Adding M2M table for field down_voters on 'Site'
+        m2m_table_name = db.shorten_name(u'plan_site_down_voters')
+        db.create_table(m2m_table_name, (
+            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
+            ('site', models.ForeignKey(orm[u'plan.site'], null=False)),
+            ('traveller', models.ForeignKey(orm[u'traveller.traveller'], null=False))
+        ))
+        db.create_unique(m2m_table_name, ['site_id', 'traveller_id'])
+
+        # Adding model 'Meal'
+        db.create_table(u'plan_meal', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('meal_type', self.gf('django.db.models.fields.CharField')(max_length=15)),
+            ('daily_plan', self.gf('django.db.models.fields.related.ForeignKey')(related_name='meal_set', to=orm['plan.DailyPlan'])),
+        ))
+        db.send_create_signal(u'plan', ['Meal'])
+
+        # Adding model 'SiteImage'
+        db.create_table(u'plan_siteimage', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('image', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
+            ('site', self.gf('django.db.models.fields.related.ForeignKey')(related_name='site_image_set', to=orm['plan.Site'])),
+        ))
+        db.send_create_signal(u'plan', ['SiteImage'])
+
+        # Adding model 'DailyPlan'
+        db.create_table(u'plan_dailyplan', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('day_number', self.gf('django.db.models.fields.IntegerField')()),
+            ('hotel', self.gf('django.db.models.fields.CharField')(max_length=20)),
+            ('transportation', self.gf('django.db.models.fields.CharField')(max_length=15)),
+            ('primary_plan', self.gf('django.db.models.fields.related.ForeignKey')(related_name='daily_plan_set', to=orm['plan.Plan'])),
+        ))
+        db.send_create_signal(u'plan', ['DailyPlan'])
+
 
     def backwards(self, orm):
         # Deleting model 'Plan'
@@ -53,6 +108,24 @@ class Migration(SchemaMigration):
 
         # Removing M2M table for field participants on 'Plan'
         db.delete_table(db.shorten_name(u'plan_plan_participants'))
+
+        # Deleting model 'Site'
+        db.delete_table(u'plan_site')
+
+        # Removing M2M table for field up_voters on 'Site'
+        db.delete_table(db.shorten_name(u'plan_site_up_voters'))
+
+        # Removing M2M table for field down_voters on 'Site'
+        db.delete_table(db.shorten_name(u'plan_site_down_voters'))
+
+        # Deleting model 'Meal'
+        db.delete_table(u'plan_meal')
+
+        # Deleting model 'SiteImage'
+        db.delete_table(u'plan_siteimage')
+
+        # Deleting model 'DailyPlan'
+        db.delete_table(u'plan_dailyplan')
 
 
     models = {
@@ -134,6 +207,20 @@ class Migration(SchemaMigration):
             'model': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
+        u'plan.dailyplan': {
+            'Meta': {'object_name': 'DailyPlan'},
+            'day_number': ('django.db.models.fields.IntegerField', [], {}),
+            'hotel': ('django.db.models.fields.CharField', [], {'max_length': '20'}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'primary_plan': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'daily_plan_set'", 'to': u"orm['plan.Plan']"}),
+            'transportation': ('django.db.models.fields.CharField', [], {'max_length': '15'})
+        },
+        u'plan.meal': {
+            'Meta': {'object_name': 'Meal'},
+            'daily_plan': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'meal_set'", 'to': u"orm['plan.DailyPlan']"}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'meal_type': ('django.db.models.fields.CharField', [], {'max_length': '15'})
+        },
         u'plan.plan': {
             'Meta': {'object_name': 'Plan'},
             'create_time': ('django.db.models.fields.DateTimeField', [], {}),
@@ -144,19 +231,38 @@ class Migration(SchemaMigration):
             'is_public': ('django.db.models.fields.BooleanField', [], {}),
             'leaving_date': ('django.db.models.fields.DateTimeField', [], {}),
             'leaving_transportation': ('django.db.models.fields.CharField', [], {'max_length': '15'}),
-            'participants': ('django.db.models.fields.related.ManyToManyField', [], {'related_name': "'participate_plan_set'", 'symmetrical': 'False', 'to': u"orm['traveller.Traveller']"}),
+            'participants': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'related_name': "'participate_plan_set'", 'blank': 'True', 'to': u"orm['traveller.Traveller']"}),
             'participants_can_edit': ('django.db.models.fields.BooleanField', [], {}),
             'participants_number': ('django.db.models.fields.IntegerField', [], {}),
             'return_date': ('django.db.models.fields.DateTimeField', [], {}),
             'return_transportation': ('django.db.models.fields.CharField', [], {'max_length': '15'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '30'})
         },
+        u'plan.site': {
+            'Meta': {'object_name': 'Site'},
+            'address': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
+            'daily_plan': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'daily_site_set'", 'null': 'True', 'to': u"orm['plan.DailyPlan']"}),
+            'description': ('django.db.models.fields.CharField', [], {'max_length': '1024'}),
+            'down_voters': ('django.db.models.fields.related.ManyToManyField', [], {'related_name': "'down_voting_plan_set'", 'symmetrical': 'False', 'to': u"orm['traveller.Traveller']"}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
+            'spend': ('django.db.models.fields.IntegerField', [], {}),
+            'up_voters': ('django.db.models.fields.related.ManyToManyField', [], {'related_name': "'up_voting_plan_set'", 'symmetrical': 'False', 'to': u"orm['traveller.Traveller']"})
+        },
+        u'plan.siteimage': {
+            'Meta': {'object_name': 'SiteImage'},
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100'}),
+            'site': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'site_image_set'", 'to': u"orm['plan.Site']"})
+        },
         u'traveller.traveller': {
             'Meta': {'object_name': 'Traveller'},
+            'avatar_name': ('django.db.models.fields.CharField', [], {'max_length': '128', 'null': 'True'}),
             'birthday': ('django.db.models.fields.DateField', [], {'null': 'True'}),
             'city': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['cities_light.City']", 'null': 'True', 'blank': 'True'}),
+            'gender': ('django.db.models.fields.CharField', [], {'max_length': '15', 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True'})
+            'user': ('django.db.models.fields.related.OneToOneField', [], {'related_name': "'profile'", 'unique': 'True', 'to': u"orm['auth.User']"})
         }
     }
 
