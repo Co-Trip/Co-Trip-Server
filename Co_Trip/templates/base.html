@@ -65,12 +65,13 @@
             <li class="dropdown">
               <a class="CT-user-profile dropdown-toggle" href="#" data-toggle="dropdown">
                 <img src="{% get_avatar user 50%}" alt="{{ user.username }}" class="avatar">
+
                 <span class="name">{{ user.username }}</span>
               </a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/accounts/profile/">
-                    <span class="glyphicon glyphicon-user"></span> 我的主页
+                    <span class="glyphicon glyphicon-user"></span> 我的主页 {{ user.profile_image_url }}
                   </a>
                 </li>
                 <li class="divider"></li>

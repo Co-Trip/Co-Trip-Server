@@ -157,6 +157,167 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/ed42f0d2b5923641df03cc451f9de8c0-50.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/friendship/templates/friendship/all_friends.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/friendship/templates/friendship/friend_management.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/association.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/consumer/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/consumer/consumer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/consumer/discover.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/consumer/html_parse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/cryptutil.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/dh.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extension.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extensions/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extensions/ax.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extensions/draft/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extensions/draft/pape2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extensions/draft/pape5.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/extensions/sreg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/fetchers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/kvform.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/message.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/oidutil.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/server/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/server/server.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/server/trustroot.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/sreg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/store/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/store/filestore.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/store/interface.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/store/memstore.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/store/nonce.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/store/sqlstore.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/cryptutil.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/accept.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/example-xrds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/openid-1.2-consumer-sqlitestore.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test1-discover.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test1-parsehtml.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid2_xrds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid2_xrds_no_local_id.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid_1_and_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid_1_and_2_xrds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid_1_and_2_xrds_bad_delegate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid_and_yadis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/openid_no_delegate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/unicode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/unicode2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/unicode3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_0entries.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_2_bad_local_id.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_2entries_delegate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_2entries_idp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_another_delegate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_idp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_idp_delegate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_discover/yadis_no_delegate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/delegated-20060809-r1.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/delegated-20060809-r2.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/delegated-20060809.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/no-xrd.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/not-xrds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/prefixsometimes.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/ref.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/sometimesprefix.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/spoof1.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/spoof2.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/spoof3.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/status222.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/subsegments.xrds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/test_etxrd/valid-populated-xrds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/data/trustroot.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/datadriven.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/dh.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/dhpriv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/discoverdata.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/kvform.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/linkparse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/linkparse.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/n2b64" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/oidutil.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/storetest.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/support.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_accept.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_association.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_association_response.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_auth_request.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_ax.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_consumer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_discover.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_etxrd.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_examples.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_extension.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_fetchers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_htmldiscover.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_message.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_negotiation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_nonce.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_openidyadis.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_pape.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_pape_draft2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_pape_draft5.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_parsehtml.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_rpverify.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_server.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_services.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_sreg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_symbol.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_urinorm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_verifydisco.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_xri.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_xrires.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/test_yadis_discover.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/trustroot.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/test/urinorm.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/urinorm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/accept.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/constants.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/discover.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/etxrd.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/filters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/manager.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/parsehtml.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/services.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/xri.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/openid/yadis/xrires.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/cherrypy_app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/cherrypy_app/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/cherrypy_app/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/cherrypy_app/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/django_app/me/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/django_app/me/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/django_app/me/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/flask_app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/flask_app/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/flask_app/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/flask_app/routes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/flask_app/template_filters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/flask_app/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/pyramid_app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/pyramid_app/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/pyramid_app/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/pyramid_app/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/pyramid_app/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/tornado_app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/tornado_app/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/tornado_app/handlers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/tornado_app/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/tornado_app/routes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/tornado_app/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/webpy_app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/webpy_app/app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/webpy_app/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/webpy_app/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/apps/webpy_app/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/strategies/cherrypy_strategy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/strategies/flask_strategy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/strategies/pyramid_strategy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/strategies/tornado_strategy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/social/strategies/webpy_strategy.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/03d4742b353f4b6d3e9a80152bf952e5.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/25b3d2a0772090ef7e108b458bcb0dab.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/4caaadc9e128999ac2582d10245dcb96.png" afterPath="" />
@@ -164,21 +325,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/d92d5d0896d39b586f331d9baaabd351.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/e1e0366fd01d391deff497bce5b91608.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/about.html" afterPath="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/about.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/templates/base.html" afterPath="$PROJECT_DIR$/Co_Trip/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/templates/plan/create.html" afterPath="$PROJECT_DIR$/plan/templates/plan/create.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/templates/traveller/edit.html" afterPath="$PROJECT_DIR$/traveller/templates/traveller/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/templates/friendship/templatetags/followers.html" afterPath="$PROJECT_DIR$/friendship/templates/friendship/templatetags/followers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/templates/friendship/templatetags/following.html" afterPath="$PROJECT_DIR$/friendship/templates/friendship/templatetags/following.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/templatetags/friendshiptags.py" afterPath="$PROJECT_DIR$/friendship/templatetags/friendshiptags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/index.html" afterPath="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notifications/templates/notifications/list.html" afterPath="$PROJECT_DIR$/notifications/templates/notifications/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/models.py" afterPath="$PROJECT_DIR$/plan/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notifications/templates/notifications/notice.html" afterPath="$PROJECT_DIR$/notifications/templates/notifications/notice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/templates/traveller/profile.html" afterPath="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/models.py" afterPath="$PROJECT_DIR$/friendship/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/settings.py" afterPath="$PROJECT_DIR$/Co_Trip/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/urls.py" afterPath="$PROJECT_DIR$/Co_Trip/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/views.py" afterPath="$PROJECT_DIR$/friendship/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Co_Trip.iws" />
@@ -202,20 +351,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/templates/base.html">
+      <file leaf-file-name="mail.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/pipeline/mail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="20" selection-start="4085" selection-end="4085" vertical-scroll-proportion="-26.666666" vertical-offset="965" max-vertical-offset="2040">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan/templates/plan/create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="57" selection-start="5524" selection-end="5524" vertical-scroll-proportion="-5.625" vertical-offset="1875" max-vertical-offset="3285">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,52 +365,27 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="239" column="27" selection-start="6271" selection-end="6271" vertical-scroll-proportion="0.0" vertical-offset="3088" max-vertical-offset="3675">
+            <state line="242" column="0" selection-start="6308" selection-end="6308" vertical-scroll-proportion="0.0" vertical-offset="3198" max-vertical-offset="3720">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weibo.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social/backends/weibo.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Co_Trip/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-              <folding />
+            <state line="9" column="48" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Co_Trip/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="58" selection-start="816" selection-end="816" vertical-scroll-proportion="-17.208334" vertical-offset="157" max-vertical-offset="825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan/ajax.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="64" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/social/apps/django_app/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.53859967" vertical-offset="0" max-vertical-offset="557">
+            <state line="88" column="41" selection-start="3635" selection-end="3635" vertical-scroll-proportion="-35.0" vertical-offset="480" max-vertical-offset="2055">
               <folding />
             </state>
           </provider>
@@ -277,19 +394,57 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plan/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="0" selection-start="5613" selection-end="5613" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="2550">
+            <state line="122" column="41" selection-start="4216" selection-end="4216" vertical-scroll-proportion="-6.576923" vertical-offset="1419" max-vertical-offset="2310">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/friendship/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="43" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.7091562" vertical-offset="490" max-vertical-offset="2085">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/store.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="42" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="social_auth.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/pipeline/social_auth.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/pipeline/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="1455">
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/edit.html">
+      <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="51" selection-start="141" selection-end="141" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
-              <folding />
+            <state line="20" column="28" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -312,7 +467,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/upload_avatar/views.py" />
         <option value="$PROJECT_DIR$/traveller/templates/traveller/upload.html" />
         <option value="$PROJECT_DIR$/plan/templates/plan/daily_plan_create.html" />
         <option value="$PROJECT_DIR$/plan/urls.py" />
@@ -328,7 +482,6 @@
         <option value="$PROJECT_DIR$/friendship/admin.py" />
         <option value="$PROJECT_DIR$/friendship/signals.py" />
         <option value="$PROJECT_DIR$/friendship/urls.py" />
-        <option value="$PROJECT_DIR$/friendship/models.py" />
         <option value="$PROJECT_DIR$/plan/templates/plan/detail.html" />
         <option value="$PROJECT_DIR$/plan/views.py" />
         <option value="$PROJECT_DIR$/api/urls.py" />
@@ -357,18 +510,20 @@
         <option value="$PROJECT_DIR$/django_messages/templates/django_messages/compose.html" />
         <option value="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/index.html" />
         <option value="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/about.html" />
-        <option value="$PROJECT_DIR$/plan/models.py" />
-        <option value="$PROJECT_DIR$/Co_Trip/templates/base.html" />
         <option value="$PROJECT_DIR$/plan/templates/plan/create.html" />
         <option value="$PROJECT_DIR$/traveller/templates/traveller/edit.html" />
         <option value="$PROJECT_DIR$/Co_Trip/urls.py" />
         <option value="$PROJECT_DIR$/Co_Trip/settings.py" />
+        <option value="$PROJECT_DIR$/social/store.py" />
+        <option value="$PROJECT_DIR$/Co_Trip/templates/base.html" />
+        <option value="$PROJECT_DIR$/plan/models.py" />
+        <option value="$PROJECT_DIR$/friendship/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2030" />
-    <option name="y" value="469" />
+    <option name="x" value="2350" />
+    <option name="y" value="196" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
@@ -426,39 +581,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="social" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="social" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backends" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemId" value="plan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,12 +883,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2030" y="469" width="1440" height="874" extended-state="0" />
+    <frame x="2350" y="196" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28819877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18263888" sideWeight="0.5883015" order="0" side_tool="false" content_ui="combo" />
@@ -776,7 +900,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28930366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -828,78 +951,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/autocomplete_light/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1168" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete_light/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1575">
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete_light/templates/autocomplete_light/registry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="383" selection-end="383" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete_light/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cities_light/contrib/ajax_selects_lookups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="49" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete_light/autocomplete/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="0" selection-start="5748" selection-end="5748" vertical-scroll-proportion="-36.23077" vertical-offset="1293" max-vertical-offset="2910" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete_light/widgets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="21" selection-start="7496" selection-end="7496" vertical-scroll-proportion="0.0" vertical-offset="2431" max-vertical-offset="4710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/autocomplete_light_registry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="962" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1059" selection-end="1059" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1590">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/all_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/traveller/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
@@ -1110,7 +1161,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2640">
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1125,22 +1176,6 @@
     <entry file="file:///Library/Python/2.7/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1062" column="8" selection-start="45431" selection-end="45431" vertical-scroll-proportion="-0.26032317" vertical-offset="15850" max-vertical-offset="18330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plan/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="0" selection-start="5613" selection-end="5613" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="2550">
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Co_Trip/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="20" selection-start="4085" selection-end="4085" vertical-scroll-proportion="-26.666666" vertical-offset="965" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
@@ -1166,30 +1201,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/backends/weibo.py">
+    <entry file="file:///Library/Python/2.7/site-packages/django/contrib/auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="690">
+        <state line="11" column="18" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
+    <entry file="file://$PROJECT_DIR$/guardian/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="27" selection-start="6271" selection-end="6271" vertical-scroll-proportion="0.0" vertical-offset="3088" max-vertical-offset="3675">
+        <state line="72" column="4" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1995">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/apps/django_app/context_processors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="64" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+        <state line="32" column="65" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/apps/django_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/social/apps/django_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.53859967" vertical-offset="0" max-vertical-offset="557">
+        <state line="20" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/apps/django_app/default/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="3486" selection-end="3486" vertical-scroll-proportion="0.0" vertical-offset="813" max-vertical-offset="1665">
+          <folding>
+            <element signature="e#40#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/backends/weibo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="50" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/pipeline/mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/pipeline/social_auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/pipeline/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Co_Trip/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="48" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="0" selection-start="6308" selection-end="6308" vertical-scroll-proportion="0.0" vertical-offset="3198" max-vertical-offset="3720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Co_Trip/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="41" selection-start="3635" selection-end="3635" vertical-scroll-proportion="-35.0" vertical-offset="480" max-vertical-offset="2055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="41" selection-start="4216" selection-end="4216" vertical-scroll-proportion="-6.576923" vertical-offset="1419" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="43" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.7091562" vertical-offset="490" max-vertical-offset="2085">
           <folding />
         </state>
       </provider>
