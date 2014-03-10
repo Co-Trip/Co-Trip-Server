@@ -140,6 +140,7 @@ class PlanForm(ModelForm):
         widget=SelectMultiple(attrs={'class': 'form-control'}))
 
 
+
     class Meta:
         model = Plan
         fields = ['title', 'home_city',
@@ -149,8 +150,8 @@ class PlanForm(ModelForm):
         widgets = {
             'leaving_date':  SelectDateWidget(),
             'return_date':  SelectDateWidget(),
-            'leaving_transportation': Select(),
-            'return_transportation': Select(),
+            'leaving_transportation': Select(attrs={'class': 'form-control'}),
+            'return_transportation': Select(attrs={'class': 'form-control'}),
 
         }
 

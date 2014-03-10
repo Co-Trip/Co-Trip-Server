@@ -28,8 +28,9 @@ urlpatterns = patterns('',
                        url(r'^comments/', include('django_comments.urls')),
                        url(r'', include('upload_avatar.urls')),
                        url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
-                       #url(r'^ajax_search/', include('ajax_search.urls')),
                        url(r'^autocomplete/', include('autocomplete_light.urls')),
+                       url(r'^messages/', include('django_messages.urls')),
+                       url('', include('social.apps.django_app.urls', namespace='social'))
 )
 
 # autocomplete_light.register(Traveller, TravellerAutocomplete)

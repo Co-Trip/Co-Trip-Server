@@ -4,7 +4,7 @@
 
 
 
-    {% block title %}Create your plan | Co-Trip {% endblock %}
+    {% block title %}创建旅行计划{% endblock %}
 
 
  {% block css_link %}
@@ -28,16 +28,16 @@
             <div class="row">
         <form class="form-horizontal col-xs-12 col-sm-9 bootstrap-validator-form" action="" role="form" id="plan-form" method="POST" novalidate="novalidate">
             {% csrf_token %}
-          <legend>Create Your Plan</legend>
+          <legend>创建旅行计划</legend>
           <div class="form-group" id="plan-title">
-            <label for="id-title" class="col-sm-2 control-label">Title</label>
+            <label for="id-title" class="col-sm-2 control-label">标题</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="id-title" name="title" placeholder="Your plan title" required>
+              <input type="text" class="form-control" id="id-title" name="title" placeholder="旅行计划的标题" required>
             </div>
           </div><!-- /plan title -->
 
           <div class="form-group" id="plan-home-city">
-            <label for="id-home-city" class="col-sm-2 control-label">Home city</label>
+            <label for="id-home-city" class="col-sm-2 control-label">出发城市</label>
             <div class="col-sm-10">
                 {{ form.home_city}}
 
@@ -45,15 +45,15 @@
           </div><!-- /plan home city -->
 
           <div class="form-group" id="plan-destination-city">
-            <label for="id-destination-city" class="col-sm-2 control-label">Destination city</label>
+            <label for="id-destination-city" class="col-sm-2 control-label">旅行城市</label>
             <div class="col-sm-10">
                     {{ form.destination_city }}
-              <p class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</p>
+              <p class="help-block"> 此处改为联动动态加载</p>
             </div>
           </div><!-- /plan destination city -->
 
           <div class="form-group" id="plan-leaving-date">
-            <label for="id-leaving-date" class="col-sm-2 control-label">Leaving date</label>
+            <label for="id-leaving-date" class="col-sm-2 control-label">出发日期</label>
             <div class="col-sm-10">
               <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="id-leaving-date" data-link-format="yyyy-mm-dd">
                 <input class="form-control" size="16" type="text" value="" readonly>
@@ -65,20 +65,18 @@
           </div><!-- /plan leaving date -->
 
           <div class="form-group" id="plan-leaving-transportation">
-            <label for="id-leaving-transportation" class="col-sm-2 control-label">Leaving transportation</label>
+            <label for="id-leaving-transportation" class="col-sm-2 control-label">出行工具</label>
             <div class="col-sm-10">
-              <select class="form-control" name="leaving_transportation" id="id-leaving-transportation" form="plan-form" required>
-                <option value="" selected="select">-- Select your leaving transportation --</option>
-                <option value="plane">Plane</option>
-                <option value="train">Train</option>
-                <option value="bus">Bus</option>
-                <option value="other">Other</option>
-              </select>
+
+
+                {{ form.leaving_transportation }}
+
+
             </div>
           </div><!-- /plan leaving transportation -->
 
           <div class="form-group" id="plan-return-date">
-            <label for="id-return-date" class="col-sm-2 control-label">Return data</label>
+            <label for="id-return-date" class="col-sm-2 control-label">返回日期</label>
             <div class="col-sm-10">
               <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="id-return-date" data-link-format="yyyy-mm-dd">
                 <input class="form-control" size="16" type="text" value="" readonly>
@@ -90,28 +88,24 @@
           </div><!-- /plan return date -->
 
           <div class="form-group" id="plan-return-transportation">
-            <label for="id-return-transportation" class="col-sm-2 control-label">Return transportation</label>
+            <label for="id-return-transportation" class="col-sm-2 control-label">返程交通工具</label>
             <div class="col-sm-10">
-              <select class="form-control" name="return_transportation" id="id-return-transportation" form="plan-form" required>
-                <option value="" selected="select">-- Select your return transportation --</option>
-                <option value="plane">Plane</option>
-                <option value="train">Train</option>
-                <option value="bus">Bus</option>
-                <option value="other">Other</option>
-              </select>
+
+                {{ form.return_transportation }}
+
             </div>
           </div><!-- /plan return transportation -->
 
 
 
           <div class="form-group" id="plan-participants">
-            <label for="id-participants" class="col-sm-2 control-label">Participants</label>
+            <label for="id-participants" class="col-sm-2 control-label">同行人</label>
             <div class="col-sm-10">
                 {{ form.participants }}
 
 
 
-              <p class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</p>
+              <p class="help-block"> 此处改为动态加载 </p>
             </div>
           </div><!-- /plan participants -->
 
@@ -119,7 +113,7 @@
             <div class="col-sm-offset-2 col-sm-10">
               <div class="checkbox" id="plan-participants-can-edit">
                 <label for="id-participants-can-edit">
-                  <input type="checkbox" id="id-participants-can-edit" name="participants_can_edit"> Participants can edit
+                  <input type="checkbox" id="id-participants-can-edit" name="participants_can_edit"> 同行人可修改此份旅行计划
                 </label>
               </div>
             </div>
@@ -129,7 +123,7 @@
             <div class="col-sm-offset-2 col-sm-10">
               <div class="checkbox" id="plan-is-public">
                 <label for="id-is-public">
-                  <input type="checkbox" id="id-is-public" name="is_public"> Is public
+                  <input type="checkbox" id="id-is-public" name="is_public"> 分享此份旅行计划
                 </label>
               </div>
             </div>
@@ -137,7 +131,7 @@
 
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default" id="plan-submit-button">Create</button>
+              <button type="submit" class="btn btn-default" id="plan-submit-button">创建</button>
               <input type="reset" class="btn btn-danger">
             </div>
           </div><!-- /form button -->

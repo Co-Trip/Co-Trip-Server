@@ -1,5 +1,9 @@
+# -*- coding: utf-8 -*
+
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from notifications import notify
+
 try:
     from django.contrib.auth import get_user_model
     user_model = get_user_model()
@@ -45,6 +49,7 @@ def follower_add(request, followee_username, template_name='friendship/follow/ad
         follower = request.user
         try:
             Follow.objects.add_follower(follower, followee)
+            notify.send(follower, recipient=followee, verb=u'关注了你',)
         except AlreadyExistsError as e:
             ctx['errors'] = ["%s" % e]
         else:

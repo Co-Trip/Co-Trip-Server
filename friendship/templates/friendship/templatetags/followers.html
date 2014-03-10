@@ -1,6 +1,7 @@
 <ul>
     {% for f in followers %}
 
-    <li>{{ f.username }}</li>
+    <a href='{{ f.profile.get_absolute_url }}'>{{ f.username }}</a>
+
     {% endfor %}
 </ul> 

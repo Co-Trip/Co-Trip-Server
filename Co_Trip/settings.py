@@ -62,6 +62,9 @@ INSTALLED_APPS = (
     'dajaxice',
     'dajax',
     'autocomplete_light',
+    'django_messages',
+    'mailer',
+    'social.apps.django_app.default',
 
 )
 
@@ -73,6 +76,7 @@ AJAX_LOOKUP_CHANNELS = {
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', # this is default
     'guardian.backends.ObjectPermissionBackend',
+    'social.backends.weibo.WeiboOAuth2',
 )
 ANONYMOUS_USER_ID = None
 
@@ -221,7 +225,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages'
+    'django.contrib.messages.context_processors.messages',
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
 )
 
 STATICFILES_FINDERS = (
@@ -229,3 +235,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'dajaxice.finders.DajaxiceFinder',
 )
+
+SOCIAL_AUTH_WEIBO_KEY = '3898996455'
+SOCIAL_AUTH_WEIBO_SECRET = 'b5c980bf93d3751affd1241b9fe76ef8'

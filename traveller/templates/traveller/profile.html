@@ -18,10 +18,10 @@
     <p>gender {{ traveller.gender  }}</p>
 
     <p>followers:</p>
-    {% followers request.user %}
+    {% followers traveller.user %}
 
     <p>following:</p>
-    {% following request.user %}
+    {% following traveller.user %}
 
 
     <br><br><br><br><p>created plans:</p>
@@ -35,8 +35,8 @@
     {% endfor %}
 
 {% if is_current_user%}
-    <p><a href="my_friend">my friend list</a></p>
-    <p><a href="/inbox/notifications/">unread friend request</a></p>
+
+    <p><a href="/inbox/notifications/">unread notification</a></p>
     <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
 
 {% else %}

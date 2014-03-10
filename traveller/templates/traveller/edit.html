@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
+{% block title %}账号设置{% endblock %}
 
-    <title></title>
-</head>
-<body>
-     <form action="." method="post">{% csrf_token %}
-        {{ form.as_p }}
+{% block main_content %}
+
+    <form action="." method="post">{% csrf_token %}
+
+    {{ form.as_p }}
         <input type="submit" value="Submit" />
-</body>
-</html>
+{% endblock %}
+
