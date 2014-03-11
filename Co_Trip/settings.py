@@ -78,7 +78,7 @@ AUTHENTICATION_BACKENDS = (
     'guardian.backends.ObjectPermissionBackend',
     'social.backends.weibo.WeiboOAuth2',
 )
-ANONYMOUS_USER_ID = None
+ANONYMOUS_USER_ID = -1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -240,3 +240,4 @@ STATICFILES_FINDERS = (
 SOCIAL_AUTH_WEIBO_KEY = '3898996455'
 SOCIAL_AUTH_WEIBO_SECRET = 'b5c980bf93d3751affd1241b9fe76ef8'
 
+API_LIMIT_PER_PAGE = 10

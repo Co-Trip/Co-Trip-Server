@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>plan edit</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}编辑行程{% endblock %}
+
+{% block main_content %}
     <h1>Edit</h1>
         <p>this is a edit page to be done.</p>
         <p>time format: 2014-01-20</p>
         <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit" />
-</body>
-</html>
+{% endblock %}

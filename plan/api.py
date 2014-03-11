@@ -17,6 +17,6 @@ class PlanResource(ModelResource):
         queryset = Plan.objects.all()
         resource_name = 'plan'
         serializer = Serializer()
-        authorization= Authorization()
-        #fields = ['title', 'creator', 'participants']
+
+
 

@@ -56,10 +56,6 @@ class PlanCreateView(View):
                 dailyForm.save_m2m()
 
 
-
-
-
-
             form.save_m2m()
 
             if request.user.profile.city is None:
@@ -111,8 +107,8 @@ class PlanEditView(View):
 
     def get(self, request, plan_id):
         plan = Plan.objects.get(id=plan_id)
-        form = self.form_class(instance=plan, current_user=request.user.profile)
-        #
+        form = self.form_class(instance=plan, current_user=request.user)
+
         #Found a bug here.
         #user1 create a plan, user 2 is participant
         #when user2 edit the plan, he will not see user1 as a participant
@@ -127,7 +123,7 @@ class PlanEditView(View):
 
     def post(self, request, plan_id):
         plan = Plan.objects.get(id=plan_id)
-        form = self.form_class(current_user=request.user.profile, data=request.POST, instance=plan)
+        form = self.form_class(current_user=request.user, data=request.POST, instance=plan)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('edit/success')
