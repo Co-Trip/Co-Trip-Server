@@ -10,10 +10,11 @@
       of {{ notice.target }}
     {% endif %}
   {{ notice.timesince }} ago
+    {{ notice.data }}
+{#  {% if notice.description == 'friend_request' %}#}
+{#      (this is a friend request)  <a href="/friend/friend/requests/">check out here</a>#}
+{#  {%  endif %}#}
 
-  {% if notice.description == 'friend_request' %}
-      (this is a friend request)  <a href="/friend/friend/requests/">check out here</a>
-  {%  endif %}
   </h4>
 
 
@@ -23,3 +24,4 @@
   </a>
 {% endif %}
 
+</div>

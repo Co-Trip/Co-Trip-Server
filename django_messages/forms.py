@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*
 import datetime
 from django import forms
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
+from notifications import notify
 
 if "notification" in settings.INSTALLED_APPS:
     from notification import models as notification
@@ -46,6 +48,7 @@ class ComposeForm(forms.Form):
                 parent_msg.save()
             msg.save()
             message_list.append(msg)
+            notify.send(sender, url="/messages/view/10/",recipient=r, verb=u'给你发送了一条新私信',)
             if notification:
                 if parent_msg is not None:
                     notification.send([sender], "messages_replied", {'message': msg,})
@@ -54,3 +57,4 @@ class ComposeForm(forms.Form):
                     notification.send([sender], "messages_sent", {'message': msg,})
                     notification.send([r], "messages_received", {'message': msg,})
         return message_list
+

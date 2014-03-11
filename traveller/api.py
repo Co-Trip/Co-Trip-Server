@@ -12,6 +12,9 @@ class TravellerResource(ModelResource):
         serializer = Serializer()
 
 
+
+
+
 class UserResource(ModelResource):
     class Meta:
         queryset = User.objects.all()

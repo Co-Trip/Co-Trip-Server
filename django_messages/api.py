@@ -20,12 +20,22 @@ class SentMessageAuthorization(Authorization):
 
 class SentMessageResource(ModelResource):
 
-
+    messageSubject = fields.CharField(attribute='subject')
+    messageBody = fields.CharField(attribute='body')
 
     class Meta:
         queryset = Message.objects.all()
         resource_name = 'sent_message'
         authorization = SentMessageAuthorization()
+        fields=['messageSubject', 'messageBody']
+
+    def dehydrate(self, bundle):
+        bundle.data['recipientName'] = bundle.obj.recipient.username
+        bundle.data['recipientURL'] = bundle.obj.recipient.profile.get_absolute_url()
+        bundle.data['userAvatarImg'] = bundle.obj.recipient.profile.get_avatar_url(50)
+        bundle.data['messageURL'] = bundle.obj.get_absolute_url()
+        bundle.data['messageID'] = bundle.obj.id
+        return bundle
 
 
 
@@ -37,14 +47,19 @@ class ReceivedMessageAuthorization(Authorization):
 
 class ReceivedMessageResource(ModelResource):
 
-    sender = fields.ForeignKey(TravellerResource, "sender")
-    recipient = fields.ForeignKey(TravellerResource, "recipient")
+    messageSubject = fields.CharField(attribute='subject')
+    messageBody = fields.CharField(attribute='body')
 
     class Meta:
         queryset = Message.objects.all()
         resource_name = 'received_message'
         authorization = ReceivedMessageAuthorization()
+        fields=['messageSubject', 'messageBody']
 
-
-    #     creator = fields.ForeignKey(TravellerResource, 'creator')
-    # participants = fields.ManyToManyField(TravellerResource, 'participants')
+    def dehydrate(self, bundle):
+        bundle.data['senderName'] = bundle.obj.sender.username
+        bundle.data['senderURL'] = bundle.obj.sender.profile.get_absolute_url()
+        bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
+        bundle.data['messageURL'] = bundle.obj.get_absolute_url()
+        bundle.data['messageID'] = bundle.obj.id
+        return bundle

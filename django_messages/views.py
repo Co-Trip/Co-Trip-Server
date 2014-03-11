@@ -12,6 +12,7 @@ from django_messages.models import Message
 from django_messages.forms import ComposeForm
 from django_messages.utils import format_quote, get_user_model, get_username_field
 
+
 User = get_user_model()
 
 if "notification" in settings.INSTALLED_APPS:
@@ -72,6 +73,7 @@ def compose(request, recipient=None, form_class=ComposeForm,
     """
     if request.method == "POST":
         sender = request.user
+        #recipient =
         form = form_class(request.POST, recipient_filter=recipient_filter)
         if form.is_valid():
             form.save(sender=request.user)

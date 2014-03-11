@@ -2,6 +2,7 @@ import datetime
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
+from django.core.exceptions import ImproperlyConfigured
 from django.db import models
 from django.utils.timezone import utc
 from .utils import id2slug
