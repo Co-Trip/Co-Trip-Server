@@ -65,7 +65,7 @@ class ProfileEditView(View):
         form = self.form_class(request.POST, instance=traveller)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('.')
+            return HttpResponseRedirect('/accounts/profile/')
         return render(request, self.template_name, {'form': form})
 
 

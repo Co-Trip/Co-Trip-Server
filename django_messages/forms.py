@@ -48,7 +48,7 @@ class ComposeForm(forms.Form):
                 parent_msg.save()
             msg.save()
             message_list.append(msg)
-            notify.send(sender, url="/messages/view/10/",recipient=r, verb=u'给你发送了一条新私信',)
+            notify.send(sender, url=msg.get_absolute_url(),recipient=r, verb=u'给你发送了一条新私信',)
             if notification:
                 if parent_msg is not None:
                     notification.send([sender], "messages_replied", {'message': msg,})
@@ -57,4 +57,3 @@ class ComposeForm(forms.Form):
                     notification.send([sender], "messages_sent", {'message': msg,})
                     notification.send([r], "messages_received", {'message': msg,})
         return message_list
-
