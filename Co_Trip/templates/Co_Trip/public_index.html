@@ -1,84 +1,127 @@
 <!DOCTYPE html>
-
 <html lang="zh-cn">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="author" content="Co-Trip">
-		<meta name="description" content="Travel">
-		<meta name="keywords" content="Travel, Co-Trip, Coopertaion, Online">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Co-Trip">
+    <meta name="description" content="Travel">
+    <meta name="keywords" content="Travel, Co-Trip, Coopertaion, Online">
 
-		<title>Co-Trip</title>
+    <title>Co-Trip</title>
 
-		<!--[if ls IE 10]>
-			<h1>Are you kidding? You are still using IE?</h1>
-		<![endif]-->
+    <!--[if ls IE 10]>
+      <h1>Are you kidding? You are still using IE?</h1>
+    <![endif]-->
 
-		<!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
 		{% load staticfiles %}
-		<link rel="stylesheet" type="text/css" href="{% static "external/Bootstrap/css/bootstrap.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "external/Bootstrap3.1.1/css/bootstrap.css" %}">
 
 		<!-- Custom styles -->
-		<link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="{% static "css/Co-Trip.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/p_index.css" %}">
 	</head>
 
 	<body>
-		<!-- =====NAVBAR===== -->
-		<div class="navbar-wrapper">
-			<div class="container">
+    <!-- =====BACKGROUND===== -->
+    <div class="background" id="background-image1">
+      <span class="sr-only">Background Image1</span>
+    </div>
 
-				<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-					<div class="container">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="">Co-Trip</a>
-						</div>
+    <div class="background" id="background-image2">
+      <span class="sr-only">Background Image2</span>
+    </div>
 
-						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav navbar-left">
-								<li class="active"><a href="">Home</a></li>
-                <li><a href="plan/explore">Explorer</a></li>
-								<li><a href="">Help</a></li>
-							</ul>
+    <!-- =====MAIN===== -->
+    <div class="container-fluid" id="main">
+      <div class="row">
+        <div class="col-sm-offset-1 col-sm-3 left-side-panel">
+          <div class="logo-container">
+            <img src="imgs/Co-Trip text.png" alt="text" class="logo">
+          </div>
+          <div class="buttons">
+            <a href="" class="btn btn-warning btn-lg btn-block">探索</a>
+            <a href="" class="btn btn-success btn-lg btn-block">关于</a>
+          </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-6 right-side-panel">
+          <div class="block">
+            <div class="login-block">
+              <h2 class="page-header text-right">登 录</h2>
+              <form id="login-form" method="POST" role="form" class="form-login" action="/accounts/login/?next={{ next|default:"/" }}">
+                <h4>使用常用邮箱登录</h4>
+                {% csrf_token %}
+                <input name="username" type="text" class="form-control" placeholder="用户名" required autofocus>
+                <input name="password" type="password" class="form-control" placeholder="密码" required>
+                <button class="btn btn-info" type="submit" form="login-form">开启我的Co-Trip</button>
+                <button class="btn btn-link pull-right" type="button" id="login-button">去注册</button>
+              </form>
+            </div>
+            <div class="signup-block" style="display: none;">
+              <h2 class="page-header text-right">注 册</h2>
+              <form id="signup-form" method="POST" role="form" class="form-signup" action="/accounts/register/">
+                <h4>使用常用邮箱注册</h4>
+                {% csrf_token %}
+                <input name="email" type="email" class="form-control" placeholder="常用邮箱" required autofocus>
+                <input name="username" type="text" class="form-control" placeholder="用户名" required>
+                <input name="password1" type="password" class="form-control" placeholder="密码" required>
+                <input name="password2" type="password" class="form-control" placeholder="重复密码" required>
+                <button class="btn btn-info" type="submit" form="signup-form">开启我的Co-Trip</button>
+                <button class="btn btn-link pull-right" type="button" id="signup-button">已有账号</button>
+              </form>
+            </div>
+          </div>
+          <div class="social-login">
+            <h4>或使用社交账号登录</h4>
+            <ul class="social-list">
+              <li class="social">
+                <img src="imgs/weibo_64x64.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <div class="social-button">
+                  <a href="/login/weibo" class="btn btn-sm btn-danger">使用新浪微博</a>
+                </div>
+              </li>
+              <li class="social">
+                <img src="imgs/renren_64x64.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <div class="social-button">
+                  <a href="#" class="btn btn-sm btn-primary">使用人人账号</a>
+                </div>
+              </li>
+              <li class="social">
+                <img src="imgs/QQ_64x64.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <div class="social-button">
+                  <a href="#" class="btn btn-sm btn-warning">使用腾讯QQ</a>
+                </div>
+              </li>
+              <li class="social">
+                <img src="imgs/douban_48x48.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <div class="social-button">
+                  <a href="#" class="btn btn-sm btn-success">使用豆瓣账号</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-							<form class="navbar-form navbar-left" role="search">
-						    	<div class="form-group">
-						    		<input type="text" class="form-control" placeholder="Search">
-						    	</div>
-						    	<button type="submit" class="btn btn-default">Search</button>
-						    </form>
+    <!-- =====FOOTER===== -->
+    <footer id="footer">
+      <div class="container">
+        <p class="text-center">All content copyright <a href="/">Co-Trip</a> © 2014 • All rights reserved.</p>
+      </div>
+    </footer>
+		
 
-						    <ul class="nav navbar-nav navbar-right">
-						    	<button type="button" class="btn btn-primary navbar-btn">Sign Up</button>
-						    	<button type="button" class="btn btn-default navbar-btn">Login</button>
-						    </ul>
-						</div>
-
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- =====MAIN TEXT===== -->
-		<div class="jumbotron">
-			<h1>welcome to Co-Trip</h1>
-		    <p>this is the home page for Co-Trip</p>
-
-	        <p>you can <a href = "accounts/login">log in</a> or <a href = "accounts/register">sign up</a></p>
-
-		</div>
-
-		<!-- Bootstrap core Javascript -->
 		{% load staticfiles %}
-		<script type="text/javascript" src="{% static "external/jQuery/jquery-1.10.2.js" %}"></script>
+		<!-- jQuery core Javascript -->
+    <script type="text/javascript" src="{% static "external/jQuery/jquery-1.10.2.js" %}"></script>
+
+    <!-- Bootstrap core Javascript -->
 		<script type="text/javascript" src="{% static "external/Bootstrap/js/bootstrap.js" %}"></script>
+
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="{% static "js/index2.2.js" %}"></script>
 	</body>
 
 </html>

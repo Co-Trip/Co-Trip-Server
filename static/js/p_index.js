@@ -8,14 +8,15 @@ $(document).ready(function($) {
 		jQuery.changeBackgroundImage(num);
 	}, 8000);
 
-	jQuery.showPanel($('#login'));
-	$('#button-signup').click(function(event) {
-		jQuery.showPanel($('#signup'));
-		jQuery.hidePanel($('#login'));
+	$('#login-button').click(function(event) {
+		$('.signup-block').fadeOut('fast', function() {
+			$('.login-block').fadeIn('fast');
+		});
 	});
-	$('#button-login').click(function(event) {
-		jQuery.showPanel($('#login'));
-		jQuery.hidePanel($('#signup'));
+	$('#signup-button').click(function(event) {
+		$('.login-block').fadeOut('fast', function() {
+			$('.signup-block').fadeIn('fast');
+		});
 	});
 });
 
@@ -31,21 +32,4 @@ jQuery.changeBackgroundImage = function(num) {
 		$('#background-image1').fadeOut(2000);
 		$('#background-image2').fadeIn(3000);
 	};
-};
-
-jQuery.showPanel = function($panel) {
-	$panel.delay(50).show('slow').animate({
-		left: -20,
-		opacity: 1
-	}, '8000').animate({
-		left: 0
-	}, 'fast');
-};
-jQuery.hidePanel = function($panel) {
-	$panel.animate({
-		left: -20,
-	}, 'fast').animate({
-		left: 120,
-		opacity: 0
-	}, '6000').hide('fast');
 };

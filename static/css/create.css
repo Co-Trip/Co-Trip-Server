@@ -5,3 +5,12 @@
  * @date    2014-02-16 15:24:10
  * @version 1.0
  */
+.add-button {
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  margin: 0;
+}
+.add-button > span {
+	cursor: pointer;
+}

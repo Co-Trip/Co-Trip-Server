@@ -11,6 +11,29 @@ body {
 .btn {
   min-width: 74px;
 }
+/* .btn-outline */
+.btn-outline {
+  background-color: transparent;
+}
+.btn-outline.btn-primary {
+  color: #428bca;
+}
+.btn-outline.btn-success {
+  color: #5cb85c;
+}
+.btn-outline.btn-info {
+  color: #5bc0de;
+}
+.btn-outline.btn-warning {
+  color: #f0ad4e;
+}
+.btn-outline.btn-danger {
+  color: #d9534f;
+}
+.btn-outline:hover {
+  color: #ffffff;
+}
+
 .avatar {
   border-radius: 4px;
 }
@@ -85,7 +108,7 @@ footer {
   position: relative;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 25;
 }
 footer > div > p {
   margin-top: 27px;

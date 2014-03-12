@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tom Hu (h1994st@gmail.com)
+ * @date    2014-03-08 13:21:37
+ * @version 1.0
+ */
+
+/*
+ * Co-Trip Settings Sidebar
+ * --------------------------------------------------
+ */
+
+
+/*
+ * Co-Trip Settings
+ * --------------------------------------------------
+ */
+
+.profile-preview .avatar {
+	max-width: 100%;
+}
+
+.user-info {
+	list-style: none;
+	padding: 0;
+}
+.user-info * {
+	letter-spacing: 1px;
+}
+.user-info span {
+	margin-right: 4px;
+}

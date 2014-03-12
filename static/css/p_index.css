@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tom Hu (h1994st@gmail.com)
+ * @date    2014-03-02 20:51:30
+ * @version 1.0
+ */
+body.no-nav {
+  padding-top: 0;
+}
+body.no-nav .navbar {
+  display: none;
+}
+
+body {
+  display: block;
+  position: relative;
+  padding-top: 50px;
+}
+html, body {
+  height: 100%;
+}
+footer {
+  background-color: rgba(255, 255, 255, 0.47);
+  margin-top: 0px;
+}
+
+/*
+ * Co-Trip Index Background
+ * --------------------------------------------------
+ */
+.background {
+  z-index: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-color: rgb(39, 143, 202);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  position:absolute;
+  left:0;
+  top:0;
+  display: none;
+}
+
+/*
+ * Co-Trip Main
+ * --------------------------------------------------
+ */
+#main {
+  z-index: 3;
+  height: 100%;
+  min-height: 100%;
+  padding-bottom: 80px;
+  margin: 0 auto -80px;
+  position: relative;
+}
+#main > .row {
+  height: 100%;
+}
+
+/*
+ * Co-Trip Logo
+ * --------------------------------------------------
+ */
+.left-side-panel {
+  min-height: 100%;
+  height: 100%;
+  padding-top: 130px;
+}
+.logo {
+  top: 200px;
+  width: 100%;
+}
+.left-side-panel .buttons {
+  margin: 20px 30px;
+}
+.left-side-panel .buttons .btn {
+  margin: 0 auto;
+  width: 90%;
+}
+.left-side-panel .buttons .btn:last-child {
+  width: 50%;
+  margin: 30px auto;
+}
+
+/*
+ * Co-Trip Right Side Panel
+ * --------------------------------------------------
+ */
+.right-side-panel {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  padding: 20px;
+  padding-left: 150px;
+}
+.right-side-panel h4,
+.right-side-panel h2 {
+  color: #3d3d3d;
+}
+
+.block {
+  height: 373px;
+}
+.block .page-header {
+  margin-top: 0;
+  letter-spacing: 4px;
+}
+.block form {
+  margin-right: 250px;
+}
+.block form .form-control {
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.block form .btn {
+  font-size: 16px;
+  padding: 8px 20px 8px 20px;
+}
+
+.signup-block form .form-control {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.social-login {
+  margin-top: 40px;
+}
+.social-list {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 40px;
+}
+.social-list .social {
+  height: 36px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.social-list .social .social-logo {
+  width: 36px;
+  margin-right: 15px;
+}
+.social-list .social .social-button {
+  height: 100%;
+}
+.social-list .social .social-button a {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  min-width: 138px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
