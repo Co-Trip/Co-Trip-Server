@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load avatartags %}
 {% load friendshiptags %}
+{% load url from future %}
 
 {% block title %}
     我的主页
@@ -36,7 +37,7 @@
 
 {% if is_current_user%}
 
-    <p><a href="/inbox/notifications/">unread notification</a></p>
+    <p><a href="{% url 'notifications:all'  %}">unread notification</a></p>
     <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
 
 {% else %}
@@ -47,4 +48,4 @@
 
 
 
-{% endblock %}tml>
+{% endblock %}
