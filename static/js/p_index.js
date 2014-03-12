@@ -1,5 +1,5 @@
 $(document).ready(function($) {
-	var num = Math.floor(Math.random() * 12 + 1);
+	var num = Math.floor(Math.random() * 3 + 2);
 	$('#background-image1').css('background-image', 'url(../Background/' + num + '.jpg)');
 	$('#background-image1').fadeIn(2000);
 	$('#background-mask').attr('src', '../Background/' + num + '.jpg');

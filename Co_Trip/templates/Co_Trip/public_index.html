@@ -38,7 +38,8 @@
       <div class="row">
         <div class="col-sm-offset-1 col-sm-3 left-side-panel">
           <div class="logo-container">
-            <img src="imgs/Co-Trip text.png" alt="text" class="logo">
+          	{% load staticfiles %}
+            <img src="{% static "imgs/Co-Trip text.png" %}" alt="text" class="logo">
           </div>
           <div class="buttons">
             <a href="" class="btn btn-warning btn-lg btn-block">探索</a>
@@ -75,26 +76,27 @@
           <div class="social-login">
             <h4>或使用社交账号登录</h4>
             <ul class="social-list">
+            	{% load staticfiles %}
               <li class="social">
-                <img src="imgs/weibo_64x64.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <img src="{% static "imgs/weibo_64x64.png" %}" alt="" class="social-logo pull-left" style="width: 36px;">
                 <div class="social-button">
                   <a href="/login/weibo" class="btn btn-sm btn-danger">使用新浪微博</a>
                 </div>
               </li>
               <li class="social">
-                <img src="imgs/renren_64x64.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <img src="{% static "imgs/renren_64x64.png" %}" alt="" class="social-logo pull-left" style="width: 36px;">
                 <div class="social-button">
                   <a href="#" class="btn btn-sm btn-primary">使用人人账号</a>
                 </div>
               </li>
               <li class="social">
-                <img src="imgs/QQ_64x64.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <img src="{% static "imgs/QQ_64x64.png" %}" alt="" class="social-logo pull-left" style="width: 36px;">
                 <div class="social-button">
                   <a href="#" class="btn btn-sm btn-warning">使用腾讯QQ</a>
                 </div>
               </li>
               <li class="social">
-                <img src="imgs/douban_48x48.png" alt="" class="social-logo pull-left" style="width: 36px;">
+                <img src="{% static "imgs/douban_48x48.png" %}" alt="" class="social-logo pull-left" style="width: 36px;">
                 <div class="social-button">
                   <a href="#" class="btn btn-sm btn-success">使用豆瓣账号</a>
                 </div>
