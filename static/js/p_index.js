@@ -4,7 +4,7 @@ $(document).ready(function($) {
 	$('#background-image1').fadeIn(2000);
 	$('#background-mask').attr('src', '/static/imgs/background-image/' + num + '.jpg');
 	setInterval(function() {
-		num = Math.floor(Math.random() * 12 + 1);
+		num = Math.floor(Math.random() * 3 + 2);
 		jQuery.changeBackgroundImage(num);
 	}, 8000);
 
