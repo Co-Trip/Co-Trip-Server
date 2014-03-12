@@ -5,17 +5,10 @@
  * @date    2014-03-02 20:51:30
  * @version 1.0
  */
-body.no-nav {
-  padding-top: 0;
-}
-body.no-nav .navbar {
-  display: none;
-}
-
 body {
   display: block;
   position: relative;
-  padding-top: 50px;
+  padding-top: 0;
 }
 html, body {
   height: 100%;
