@@ -1,4 +1,4 @@
-from django_messages.api import ReceivedMessageResource, SentMessageResource
+from django_messages.api import ReceivedMessageResource, SentMessageResource, TrashMessageResource
 from friendship.api import FollowerResource, FollowingResource
 from tastypie.api import Api
 from plan.api import PlanResource
@@ -18,7 +18,7 @@ v1_api.register(FollowerResource())
 v1_api.register(FollowingResource())
 v1_api.register(ReceivedMessageResource())
 v1_api.register(SentMessageResource())
-
+v1_api.register(TrashMessageResource())
 
 urlpatterns = patterns('',
                         url(r'^', include(v1_api.urls)),

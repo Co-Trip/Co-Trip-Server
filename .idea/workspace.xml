@@ -164,6 +164,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/d92d5d0896d39b586f331d9baaabd351.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/e1e0366fd01d391deff497bce5b91608.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_messages/api.py" afterPath="$PROJECT_DIR$/django_messages/api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/urls.py" afterPath="$PROJECT_DIR$/api/urls.py" />
     </list>
     <ignored path="Co_Trip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -186,11 +187,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="api.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="api.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_messages/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="27" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.70430106" vertical-offset="597" max-vertical-offset="1155">
+            <state line="86" column="25" selection-start="2998" selection-end="2998" vertical-scroll-proportion="0.0" vertical-offset="987" max-vertical-offset="1635">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="20" selection-start="792" selection-end="792" vertical-scroll-proportion="0.37634408" vertical-offset="0" max-vertical-offset="558">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trash.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/trash.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="7" selection-start="156" selection-end="156" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="525">
+              <folding>
+                <marker date="1392832286000" expanded="true" signature="195:710" placeholder="..." />
+                <marker date="1392832286000" expanded="true" signature="207:353" placeholder="..." />
+                <marker date="1392832286000" expanded="true" signature="365:701" placeholder="..." />
+                <marker date="1392832286000" expanded="true" signature="409:675" placeholder="..." />
+                <marker date="1392832286000" expanded="true" signature="460:505" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -216,7 +241,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_messages/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="11" selection-start="2232" selection-end="2235" vertical-scroll-proportion="-9.423077" vertical-offset="610" max-vertical-offset="1545">
+            <state line="41" column="9" selection-start="1216" selection-end="1216" vertical-scroll-proportion="-16.153847" vertical-offset="135" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
@@ -227,17 +252,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="41" column="32" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="management.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_messages/management.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -265,20 +279,8 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_messages/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="20" selection-start="8304" selection-end="8304" vertical-scroll-proportion="-14.615385" vertical-offset="2545" max-vertical-offset="3105">
+            <state line="54" column="58" selection-start="2010" selection-end="2010" vertical-scroll-proportion="-14.615385" vertical-offset="250" max-vertical-offset="3105">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compose.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/compose.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-              <folding>
-                <marker date="1394420776000" expanded="true" signature="152:273" placeholder="..." />
-                <marker date="1394420776000" expanded="true" signature="178:207" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -345,13 +347,13 @@
         <option value="$PROJECT_DIR$/Co_Trip/urls.py" />
         <option value="$PROJECT_DIR$/Co_Trip/templates/base.html" />
         <option value="$PROJECT_DIR$/notifications/templates/notifications/notice.html" />
-        <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/notifications/api.py" />
         <option value="$PROJECT_DIR$/upload_avatar/static/imgareaselect/css/imgareaselect-default.css" />
         <option value="$PROJECT_DIR$/upload_avatar/templates/upload_avatar.js" />
         <option value="$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html" />
         <option value="$PROJECT_DIR$/upload_avatar/models.py" />
         <option value="$PROJECT_DIR$/django_messages/api.py" />
+        <option value="$PROJECT_DIR$/api/urls.py" />
       </list>
     </option>
   </component>
@@ -452,10 +454,6 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -472,6 +470,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -855,15 +857,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django_messages/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="68" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/traveller/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="59" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440" />
@@ -1039,15 +1032,6 @@
         <state line="115" column="3" selection-start="3957" selection-end="3957" vertical-scroll-proportion="0.0" vertical-offset="1723" max-vertical-offset="2895" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding>
-            <element signature="e#0#76#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notifications/templates/notifications/notice.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="20" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="450">
@@ -1108,16 +1092,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
           <folding>
-            <marker date="1394420776000" expanded="true" signature="152:273" placeholder="..." />
-            <marker date="1394420776000" expanded="true" signature="178:207" placeholder="..." />
+            <marker date="1394420776000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394420776000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="32" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,16 +1123,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/views.py">
+    <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/inbox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="20" selection-start="8304" selection-end="8304" vertical-scroll-proportion="-14.615385" vertical-offset="2545" max-vertical-offset="3105">
+        <state line="16" column="33" selection-start="492" selection-end="492" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/inbox.html">
+    <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/trash.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="492" selection-end="492" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="6" column="7" selection-start="156" selection-end="156" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="525">
+          <folding>
+            <marker date="1392832286000" expanded="true" signature="195:710" placeholder="..." />
+            <marker date="1392832286000" expanded="true" signature="207:353" placeholder="..." />
+            <marker date="1392832286000" expanded="true" signature="365:701" placeholder="..." />
+            <marker date="1392832286000" expanded="true" signature="409:675" placeholder="..." />
+            <marker date="1392832286000" expanded="true" signature="460:505" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="58" selection-start="2010" selection-end="2010" vertical-scroll-proportion="-14.615385" vertical-offset="250" max-vertical-offset="3105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="9" selection-start="1216" selection-end="1216" vertical-scroll-proportion="-16.153847" vertical-offset="135" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="32" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
@@ -1167,16 +1171,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/models.py">
+    <entry file="file://$PROJECT_DIR$/django_messages/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="11" selection-start="2232" selection-end="2235" vertical-scroll-proportion="-9.423077" vertical-offset="610" max-vertical-offset="1545">
+        <state line="86" column="25" selection-start="2998" selection-end="2998" vertical-scroll-proportion="0.0" vertical-offset="987" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/api.py">
+    <entry file="file://$PROJECT_DIR$/api/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="27" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.70430106" vertical-offset="597" max-vertical-offset="1155">
+        <state line="20" column="20" selection-start="792" selection-end="792" vertical-scroll-proportion="0.37634408" vertical-offset="0" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
