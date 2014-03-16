@@ -1,14 +1,50 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load url from future %} 
+
+
 {% block bodyclass %}about{% endblock %}
-{% block main_content %}
-{% endblock %}
+
 {% block sidebar %}
 <ul class="subnavilist">
-    <li><a href="{% url 'messages_inbox' %} ">&raquo;&nbsp;{% trans "Inbox" %}</a></li>
-    <li><a href="{% url 'messages_outbox' %} ">&raquo;&nbsp;{% trans "Sent Messages" %}</a></li>
-    <li><a href="{% url 'messages_compose' %} ">&raquo;&nbsp;{% trans "New Message" %}</a></li>
-    <li><a href="{% url 'messages_trash' %} ">&raquo;&nbsp;{% trans "Trash" %}</a></li>
+  <li><a href="{% url 'messages_inbox' %} ">&raquo;&nbsp;{% trans "Inbox" %}</a></li>
+  <li><a href="{% url 'messages_outbox' %} ">&raquo;&nbsp;{% trans "Sent Messages" %}</a></li>
+  <li><a href="{% url 'messages_compose' %} ">&raquo;&nbsp;{% trans "New Message" %}</a></li>
+  <li><a href="{% url 'messages_trash' %} ">&raquo;&nbsp;{% trans "Trash" %}</a></li>
 </ul>
+{% endblock %}
+
+
+{% block title %}站内消息 | Co-Trip{% endblock %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/messages.css">
+{% endblock %}
+
+{% block main_content %}
+<div class="notification-nav-tabs">
+  <ul class="nav nav-tabs" id="main-tabs">
+    <li class="active"><a href="#messages">Messages</a></li>
+    <li><a href="/notifications/">Notifications</a></li>
+    <li class="pull-right"><button type="button" class="btn btn-default" data-toggle="clear_notification">Mark all as read</button></li>
+  </ul>
+</div><!-- #main-tabs -->
+
+<div class="row" id="nav-tab-contents">
+  <div class="col-sm-3">
+    {% block side_tab_bar %}
+      
+    {% endblock %}
+  </div>
+        
+  <div class="col-sm-9">
+    {% block tab_contents %}
+      
+    {% endblock %}
+  </div><!-- /right-contents -->
+</div><!-- #nav-tab-contents -->
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/messages.js"></script>
 {% endblock %}
