@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3a1da7-36e7-49aa-a98e-93e716642f63" name="Default" comment="registration/login finished">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/danielqiu.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/01940178a30d5b7dade364ad698e832e-100.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/01940178a30d5b7dade364ad698e832e-140.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/avatar/01940178a30d5b7dade364ad698e832e-50.png" afterPath="" />
@@ -163,8 +164,15 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/d4c81d74512f323849453bf6b01f661b.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/d92d5d0896d39b586f331d9baaabd351.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/e1e0366fd01d391deff497bce5b91608.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/avatar/None-100.png" afterPath="$PROJECT_DIR$/media/avatar/None-100.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Co_Trip/templates/base.html" afterPath="$PROJECT_DIR$/Co_Trip/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_messages/api.py" afterPath="$PROJECT_DIR$/django_messages/api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notifications/api.py" afterPath="$PROJECT_DIR$/notifications/api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload_avatar/static/imgareaselect/css/imgareaselect-default.css" afterPath="$PROJECT_DIR$/upload_avatar/static/imgareaselect/css/imgareaselect-default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload_avatar/models.py" afterPath="$PROJECT_DIR$/upload_avatar/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notifications/templates/notifications/notice.html" afterPath="$PROJECT_DIR$/notifications/templates/notifications/notice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html" afterPath="$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/urls.py" afterPath="$PROJECT_DIR$/api/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Co_Trip.iws" />
@@ -188,19 +196,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="profile.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
+      <file leaf-file-name="api.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notifications/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="855">
+            <state line="10" column="45" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inbox.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/inbox.html">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="49" selection-start="584" selection-end="613" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="540">
+            <state line="67" column="19" selection-start="2053" selection-end="2053" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="1305">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_messages/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="8" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compose.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/compose.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.23136246" vertical-offset="0" max-vertical-offset="778">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_avatar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="194" column="28" selection-start="7333" selection-end="7333" vertical-scroll-proportion="0.0" vertical-offset="2490" max-vertical-offset="3345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="0" selection-start="2756" selection-end="2756" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2460">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imgareaselect-default.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_avatar/static/imgareaselect/css/imgareaselect-default.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="0" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notice.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notifications/templates/notifications/notice.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="20" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -210,71 +281,6 @@
         <entry file="file://$PROJECT_DIR$/notifications/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="48" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="16" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.77160496" vertical-offset="1110" max-vertical-offset="2100">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fields.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax_select/fields.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="403" column="38" selection-start="14328" selection-end="14328" vertical-scroll-proportion="0.0" vertical-offset="5642" max-vertical-offset="6165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="explore_plan.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan/templates/plan/explore_plan.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="315">
-              <folding>
-                <marker date="1394266417000" expanded="true" signature="191:236" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="44" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -298,11 +304,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/friendship/signals.py" />
-        <option value="$PROJECT_DIR$/friendship/urls.py" />
-        <option value="$PROJECT_DIR$/plan/templates/plan/detail.html" />
-        <option value="$PROJECT_DIR$/friendship/api.py" />
-        <option value="$PROJECT_DIR$/ajax_search/urls.py" />
         <option value="$PROJECT_DIR$/ajax_search/views.py" />
         <option value="$PROJECT_DIR$/traveller/autocomplete_light_registry.html.py" />
         <option value="$PROJECT_DIR$/autocomplete_light/templates/autocomplete_light/registry.html" />
@@ -328,7 +329,6 @@
         <option value="$PROJECT_DIR$/friendship/views.py" />
         <option value="$PROJECT_DIR$/traveller/ajax.py" />
         <option value="$PROJECT_DIR$/django_messages/templates/django_messages/view.html" />
-        <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/plan/api.py" />
         <option value="$PROJECT_DIR$/django_messages/models.py" />
         <option value="$PROJECT_DIR$/notifications/ajax.py" />
@@ -336,10 +336,8 @@
         <option value="$PROJECT_DIR$/Co_Trip/settings.py" />
         <option value="$PROJECT_DIR$/notifications/models.py" />
         <option value="$PROJECT_DIR$/traveller/api.py" />
-        <option value="$PROJECT_DIR$/django_messages/api.py" />
         <option value="$PROJECT_DIR$/traveller/views.py" />
         <option value="$PROJECT_DIR$/django_messages/forms.py" />
-        <option value="$PROJECT_DIR$/notifications/templates/notifications/notice.html" />
         <option value="$PROJECT_DIR$/friendship/templates/friendship/templatetags/following.html" />
         <option value="$PROJECT_DIR$/friendship/templates/friendship/templatetags/followers.html" />
         <option value="$PROJECT_DIR$/friendship/templatetags/friendshiptags.py" />
@@ -349,13 +347,20 @@
         <option value="$PROJECT_DIR$/django_messages/templates/django_messages/inbox.html" />
         <option value="$PROJECT_DIR$/Co_Trip/urls.py" />
         <option value="$PROJECT_DIR$/Co_Trip/templates/base.html" />
+        <option value="$PROJECT_DIR$/django_messages/api.py" />
+        <option value="$PROJECT_DIR$/notifications/templates/notifications/notice.html" />
+        <option value="$PROJECT_DIR$/api/urls.py" />
+        <option value="$PROJECT_DIR$/notifications/api.py" />
+        <option value="$PROJECT_DIR$/upload_avatar/static/imgareaselect/css/imgareaselect-default.css" />
+        <option value="$PROJECT_DIR$/upload_avatar/templates/upload_avatar.js" />
+        <option value="$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html" />
+        <option value="$PROJECT_DIR$/upload_avatar/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="874" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -411,7 +416,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemId" value="upload_avatar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,11 +430,105 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemId" value="upload_avatar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload_avatar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload_avatar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notifications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,7 +543,7 @@
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/django-upload-avatar-master/example" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -731,24 +830,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="7" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28695652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18263888" sideWeight="0.5883015" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15507075" sideWeight="0.4105737" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26832297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25322393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28695652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -760,8 +859,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28819877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28695652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15507075" sideWeight="0.4105737" order="2" side_tool="true" content_ui="tabs" />
@@ -773,9 +872,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18263888" sideWeight="0.5883015" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2447205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26832297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -799,58 +898,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="435" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plan/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plan/ajax.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="578" selection-end="578" vertical-scroll-proportion="0.14732143" vertical-offset="0" max-vertical-offset="5340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Co-Trip-Server.sublime-workspace">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="281.8889" vertical-offset="7611" max-vertical-offset="12915" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/management.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plan/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
@@ -865,25 +912,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_select/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1116">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="25" selection-start="6356" selection-end="6356" vertical-scroll-proportion="0.0" vertical-offset="2604" max-vertical-offset="3750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notifications/templates/notifications/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="214" selection-end="214" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
+        <state line="244" column="25" selection-start="6356" selection-end="6356" vertical-scroll-proportion="0.0" vertical-offset="2604" max-vertical-offset="3750" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/urls.py">
@@ -933,20 +964,6 @@
         <state line="29" column="8" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="21" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="748" selection-end="748" vertical-scroll-proportion="72.73077" vertical-offset="2191" max-vertical-offset="3285">
-          <folding>
-            <element signature="e#0#53#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notifications/signals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.026785715" vertical-offset="0" max-vertical-offset="1120" />
@@ -962,36 +979,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_messages/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="10" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notifications/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="7" selection-start="5455" selection-end="5455" vertical-scroll-proportion="-9.846154" vertical-offset="1994" max-vertical-offset="2895" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsonfield/fields.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="42" selection-start="4004" selection-end="4004" vertical-scroll-proportion="0.0" vertical-offset="1161" max-vertical-offset="2550" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notifications/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="60" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_messages/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="32" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notifications/templates/notifications/notice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="6" selection-start="715" selection-end="715" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="480" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/friendship/templates/friendship/templatetags/following.html">
@@ -1001,23 +996,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/friendship/templates/friendship/templatetags/followers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="753">
-          <folding />
-        </state>
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="753" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/friendship/templatetags/friendshiptags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
+        <state line="15" column="48" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/friendship/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="45" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="2085">
-          <folding />
-        </state>
+        <state line="65" column="45" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="2085" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/search_result.html">
@@ -1029,28 +1018,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="16" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/all_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="642">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notifications/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
@@ -1064,41 +1042,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/inbox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="49" selection-start="584" selection-end="613" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="540">
+        <state line="18" column="49" selection-start="584" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax_select/fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="403" column="38" selection-start="14328" selection-end="14328" vertical-scroll-proportion="0.0" vertical-offset="5642" max-vertical-offset="6165">
-          <folding />
-        </state>
+        <state line="403" column="38" selection-start="14328" selection-end="14328" vertical-scroll-proportion="0.0" vertical-offset="5642" max-vertical-offset="6165" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plan/templates/plan/explore_plan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="315">
-          <folding>
-            <marker date="1394266417000" expanded="true" signature="191:236" placeholder="..." />
-          </folding>
-        </state>
+        <state line="12" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/guardian/tests/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plan/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="523">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="523" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plan/views.py">
@@ -1124,7 +1090,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="16" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.77160496" vertical-offset="1110" max-vertical-offset="2100">
+        <state line="99" column="16" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax_select/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/templatetags/avatartags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="523" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifications/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="60" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.87030715" vertical-offset="0" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="6" selection-start="6848" selection-end="6848" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="10" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifications/templates/notifications/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="214" selection-end="214" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifications/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="3" selection-start="3957" selection-end="3957" vertical-scroll-proportion="0.0" vertical-offset="1723" max-vertical-offset="2895" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="4" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding>
+            <element signature="e#0#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifications/templates/notifications/notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifications/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifications/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="45" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/static/imgareaselect/css/imgareaselect-default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/templates/upload_avatar/upload_avatar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="28" selection-start="7333" selection-end="7333" vertical-scroll-proportion="0.0" vertical-offset="2490" max-vertical-offset="3345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="0" selection-start="2756" selection-end="2756" vertical-scroll-proportion="0.0" vertical-offset="1424" max-vertical-offset="2010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_avatar/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="19" selection-start="2053" selection-end="2053" vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_messages/templates/django_messages/compose.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.23136246" vertical-offset="0" max-vertical-offset="778">
           <folding />
         </state>
       </provider>

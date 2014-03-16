@@ -30,7 +30,9 @@ class SentMessageResource(ModelResource):
         fields=['messageSubject', 'messageBody']
 
     def dehydrate(self, bundle):
+        bundle.data['senderName'] = bundle.obj.sender.username
         bundle.data['recipientName'] = bundle.obj.recipient.username
+        bundle.data['senderURL'] = bundle.obj.sender.profile.get_absolute_url()
         bundle.data['recipientURL'] = bundle.obj.recipient.profile.get_absolute_url()
         bundle.data['userAvatarImg'] = bundle.obj.recipient.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
@@ -58,7 +60,9 @@ class ReceivedMessageResource(ModelResource):
 
     def dehydrate(self, bundle):
         bundle.data['senderName'] = bundle.obj.sender.username
+        bundle.data['recipientName'] = bundle.obj.recipient.username
         bundle.data['senderURL'] = bundle.obj.sender.profile.get_absolute_url()
+        bundle.data['recipientURL'] = bundle.obj.recipient.profile.get_absolute_url()
         bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
         bundle.data['messageID'] = bundle.obj.id

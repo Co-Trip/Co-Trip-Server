@@ -39,6 +39,8 @@ class UploadAvatarMixIn:
     
     
     def build_avatar_name(self, name, size):
+        if name == None:
+            return '%s.%s' % (name, UPLOAD_AVATAR_SAVE_FORMAT)
         return '%s-%d.%s' % (name, size, UPLOAD_AVATAR_SAVE_FORMAT)
     
     def get_avatar_path(self, size=UPLOAD_AVATAR_DEFAULT_SIZE):
