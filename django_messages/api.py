@@ -66,4 +66,9 @@ class ReceivedMessageResource(ModelResource):
         bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
         bundle.data['messageID'] = bundle.obj.id
+
+        if bundle.obj.new():
+            bundle.data['isUnread'] = True
+        else:
+            bundle.data['isUnread'] = False
         return bundle
