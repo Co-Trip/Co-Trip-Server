@@ -14,7 +14,8 @@ class SentMessageAuthorization(Authorization):
 
     def read_list(self, object_list, bundle):
         return object_list.filter(sender=bundle.request.user)
-
+    def read_detail(self, object_list, bundle):
+        return object_list.filter(sender=bundle.request.user)
 
 
 
@@ -45,7 +46,8 @@ class ReceivedMessageAuthorization(Authorization):
 
     def read_list(self, object_list, bundle):
         return object_list.filter(recipient=bundle.request.user)
-
+    def read_detail(self, object_list, bundle):
+        return object_list.filter(recipient=bundle.request.user)
 
 class ReceivedMessageResource(ModelResource):
 
@@ -76,6 +78,15 @@ class ReceivedMessageResource(ModelResource):
 class TrashMessageAuthorization(Authorization):
 
     def read_list(self, object_list, bundle):
+        return object_list.filter(
+            recipient=bundle.request.user,
+            recipient_deleted_at__isnull=False,
+        ) | object_list.filter(
+            sender=bundle.request.user,
+            sender_deleted_at__isnull=False,
+        )
+
+    def read_detail(self, object_list, bundle):
         return object_list.filter(
             recipient=bundle.request.user,
             recipient_deleted_at__isnull=False,
