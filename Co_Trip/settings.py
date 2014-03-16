@@ -144,6 +144,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'dajaxice.finders.DajaxiceFinder',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 2
@@ -231,11 +232,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'social.apps.django_app.context_processors.login_redirect',
 )
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'dajaxice.finders.DajaxiceFinder',
-)
 
 SOCIAL_AUTH_WEIBO_KEY = '3898996455'
 SOCIAL_AUTH_WEIBO_SECRET = 'b5c980bf93d3751affd1241b9fe76ef8'

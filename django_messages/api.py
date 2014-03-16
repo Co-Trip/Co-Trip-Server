@@ -15,8 +15,10 @@ class SentMessageAuthorization(Authorization):
     def read_list(self, object_list, bundle):
         return object_list.filter(sender=bundle.request.user)
     def read_detail(self, object_list, bundle):
-        return object_list.filter(sender=bundle.request.user)
-
+        if bundle.obj.sender == bundle.request.user:
+            return True
+        else:
+            return False
 
 
 class SentMessageResource(ModelResource):
@@ -47,7 +49,7 @@ class ReceivedMessageAuthorization(Authorization):
     def read_list(self, object_list, bundle):
         return object_list.filter(recipient=bundle.request.user)
     def read_detail(self, object_list, bundle):
-        return object_list.filter(recipient=bundle.request.user)
+        return bundle.obj.recipient == bundle.request.user
 
 class ReceivedMessageResource(ModelResource):
 
@@ -75,6 +77,7 @@ class ReceivedMessageResource(ModelResource):
             bundle.data['isUnread'] = False
         return bundle
 
+
 class TrashMessageAuthorization(Authorization):
 
     def read_list(self, object_list, bundle):
@@ -87,13 +90,8 @@ class TrashMessageAuthorization(Authorization):
         )
 
     def read_detail(self, object_list, bundle):
-        return object_list.filter(
-            recipient=bundle.request.user,
-            recipient_deleted_at__isnull=False,
-        ) | object_list.filter(
-            sender=bundle.request.user,
-            sender_deleted_at__isnull=False,
-        )
+
+        return bundle.obj.sender == bundle.request.user or bundle.obj.recipient == bundle.request.user
 
 class TrashMessageResource(ModelResource):
 

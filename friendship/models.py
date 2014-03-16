@@ -56,7 +56,7 @@ class FollowingManager(models.Manager):
 
         if followers is None:
             qs = Follow.objects.filter(followee=user).all()
-            followers = [u.follower for u in qs]
+            followers = [u.follower.profile for u in qs]
             cache.set(key, followers)
 
         return followers
@@ -68,7 +68,7 @@ class FollowingManager(models.Manager):
 
         if following is None:
             qs = Follow.objects.filter(follower=user).all()
-            following = [u.followee for u in qs]
+            following = [u.followee.profile for u in qs]
             cache.set(key, following)
 
         return following

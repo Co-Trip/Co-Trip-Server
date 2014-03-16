@@ -11,7 +11,7 @@ class AllNotificationAuthorization(Authorization):
         return object_list.filter(recipient=bundle.request.user)
 
     def read_detail(self, object_list, bundle):
-        return object_list.filter(recipient=bundle.request.user)
+        return bundle.obj.recipient == bundle.request.user
 
 
 class AllNotificationResource(ModelResource):
@@ -21,10 +21,14 @@ class AllNotificationResource(ModelResource):
         resource_name = 'all_notification'
         serializer = Serializer()
         authorization = AllNotificationAuthorization()
-        excludes = ['public', 'level']
+        excludes = ['public', 'level', 'action_object_object_id', 'actor_object_id', 'resource_uri', 'target_object_id',
+                    'description']
 
     def dehydrate(self, bundle):
         bundle.data['data'] = bundle.obj.data
+        bundle.data['actor'] = bundle.obj.actor
+        bundle.data['actorURL'] = bundle.obj.actor .profile.get_absolute_url()
+
         return bundle
 
 
@@ -33,7 +37,7 @@ class UnreadNotificationAuthorization(Authorization):
         return object_list.filter(recipient=bundle.request.user, unread=True)
 
     def read_detail(self, object_list, bundle):
-        return object_list.filter(recipient=bundle.request.user, unread=True)
+        return bundle.obj.recipient == bundle.request.user
 
 
 class UnreadNotificationResource(ModelResource):
