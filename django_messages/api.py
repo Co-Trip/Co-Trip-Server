@@ -108,9 +108,18 @@ class TrashMessageResource(ModelResource):
         bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
         bundle.data['messageID'] = bundle.obj.id
-        if bundle.obj.recipient == bundle.request.user:
+        if bundle.obj.sender == bundle.request.user:
+            bundle.data['userAvatarImg'] = bundle.obj.recipient.profile.get_avatar_url(50)
+            bundle.data['isFromMe'] = True
+        else:
+            bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
+            bundle.data['isFromMe'] = False
             if bundle.obj.new():
                 bundle.data['isUnread'] = True
             else:
                 bundle.data['isUnread'] = False
         return bundle
+
+    def alter_list_data_to_serialize(self, request, data):
+        data['meta']['currentUser'] = request.user
+        return data
