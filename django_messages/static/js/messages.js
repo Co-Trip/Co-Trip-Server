@@ -51,7 +51,7 @@ var Message = function (data) {
 
         // Media body
         var mediaBody = $('<div class="media-body CT-message-item-content"></div>');
-        var mediaHeading = '<h4 class="media-heading"><a href="' + _messageURL + '">' + _messageSubject + (_isUnread ? '(未读)') : '' + '</a> <small><i>' + (_isFromMe ? 'To: ' + _recipientName : 'From: ' + _senderName) + '</i></small></h4>';
+        var mediaHeading = '<h4 class="media-heading"><a href="' + _messageURL + '">' + _messageSubject + (_isUnread ? '(未读)' : '') + '</a> <small><i>' + (_isFromMe ? 'To: ' + _recipientName : 'From: ' + _senderName) + '</i></small></h4>';
         var messageBody = '<div><small>' + _messageBody + '</small></div>';
 
         mediaBody.append(mediaHeading);
