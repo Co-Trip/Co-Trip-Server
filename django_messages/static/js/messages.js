@@ -87,6 +87,7 @@ $(document).ready(function() {
             var obj = json["objects"];
             var unreadNumber = 0;
             $('#inbox-list').empty();
+            $('#inbox-badge').empty();
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i], false);
                 if (item.isUnread()) {
@@ -98,6 +99,8 @@ $(document).ready(function() {
             }
             if (unreadNumber != 0) {
                 $('#inbox-badge').text(unreadNumber);
+            } else {
+                $('#inbox-badge').empty();
             }
     });
 });
@@ -121,6 +124,8 @@ $('a[href="#inbox"]').on('show.bs.tab', function (e) {
             }
             if (unreadNumber != 0) {
                 $('#inbox-badge').text(unreadNumber);
+            } else {
+                $('#inbox-badge').empty();
             }
     });
 });
