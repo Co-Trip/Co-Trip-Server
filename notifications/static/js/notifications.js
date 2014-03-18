@@ -9,60 +9,32 @@ if (typeof jQuery === 'undefined') { throw new Error('requires jQuery') }
 /**
  * 'data' is Json Format
  */
-var Message = function (data) {
-    // Sender info
-    var _senderName = data["senderName"];
-    var _senderURL = data["senderURL"];
+var Notifis = function (data) {
+    var _isUnread = data['unread'];
+    var _verb = data['verb'];
+    var _itemTime = data['timestamp'];
+    var _itemID = data['id'];
+    var _itemURL = data['data']['url'];
+    var _actor = data['actor'];
+    var _actorURL = data['actorURL'];
 
-    // Recipient info
-    var _recipientName = data['recipientName'];
-    var _recipientURL = data['recipientURL'];
-
-    // Message info
-    var _messageURL = data["messageURL"];
-    var _messageSubject = data["messageSubject"];
-    var _messageBody = data["messageBody"];
-    var _messageID = data["messageID"];
-    var _userAvatarImg = data["userAvatarImg"];
-
-    var _isUnread = data['isUnread']; // boolean
-    var _isFromMe = data['isFromMe']; // boolean
-
-    if (_isFromMe === undefined && _isUnread !== undefined) {
-        _isFromMe = false;
-    } else if (_isFromMe === undefined && _isUnread === undefined) {
-        _isFromMe = true;
-    }
-
-    /**
-     * Convert to jQuery object
-     * @method  tojQueryObject
-     * @for     Message
-     * @return  {jQuery Object} return a jQuery object for inserting to the page 
-     */
     this.tojQueryObject = function () {
-        var messageItem = $('<li class="media CT-message-item"></li>');
-
-        // Avatar
-        var avatar = '<a class="pull-left" href="' + (_isFromMe ? _recipientURL : _senderURL) + '"><img src="/' + _userAvatarImg + '" alt="' + (_isFromMe ? _recipientName : _senderName) + '" class="media-object avatar"></a>';
+        var notificationItem = $('<li class="media CT-notification-item"></li>');
 
         // Close button
         var deleteButton = '<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>';
 
         // Media body
-        var mediaBody = $('<div class="media-body CT-message-item-content"></div>');
-        var mediaHeading = '<h4 class="media-heading"><a href="' + _messageURL + '">' + _messageSubject + (_isUnread ? '(未读)' : '') + '</a> <small><i>' + (_isFromMe ? 'To: ' + _recipientName : 'From: ' + _senderName) + '</i></small></h4>';
-        var messageBody = '<div><small>' + _messageBody + '</small></div>';
+        var mediaBody = $('<div class="media-body CT-notification-item-content"></div>');
+        var mediaHeading = '<h4 class="media-heading"><a href="' + _actorURL + '">' + _actor + '</a>' + _verb + '</h4>';
 
         mediaBody.append(mediaHeading);
-        mediaBody.append(messageBody);
 
-        messageItem.append(avatar);
-        messageItem.append(deleteButton);
-        messageItem.append(mediaBody);
-        messageItem.hide();
-        
-        return messageItem;
+        notificationItem.append(deleteButton);
+        notificationItem.append(mediaBody);
+        notificationItem.hide();
+
+        return notificationItem;
     };
 
     this.isUnread = function () {

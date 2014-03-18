@@ -4,22 +4,20 @@
 
   <h4>
     <i class="icon-mail{% if notice.unread %}-alt{% endif %}"></i>
-    <a href="{{ notice.data.url }}">{{ notice.actor }}
-    {{ notice.verb }}
-    {% if notice.target %}
-      of {{ notice.target }}
-    {% endif %} </a>
-  {{ notice.timesince }} ago
-
-
-
+    <a href="{{ notice.data.url }}">
+      {{ notice.actor }}
+      {{ notice.verb }}
+      {% if notice.target %}
+        of {{ notice.target }}
+      {% endif %}
+    </a>
+    {{ notice.timesince }} ago
   </h4>
 
-
-{% if notice.unread %}
-    <a class="close pull-right" href="{% url 'notifications:mark_as_read' notice.slug %}">
+  {% if notice.unread %}
+  <a class="close pull-right" href="{% url 'notifications:mark_as_read' notice.slug %}">
     <i class="icon-close">mark as read</i>
   </a>
-{% endif %}
+  {% endif %}
 
 </div>

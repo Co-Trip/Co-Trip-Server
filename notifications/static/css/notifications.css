@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tom Hu (h1994st@gmail.com)
+ * @date    2014-02-25 19:34:20
+ * @version 1.0
+ */
+#nav-tab-contents {
+  margin-top: 20px;
+}
+
+/*
+ * Co-Trip Notification Center
+ * --------------------------------------------------
+ */
+.CT-list {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 5px 10px 5px;
+}
+.CT-notification-item {
+  
+}
+.CT-list .avatar {
+  max-width: 64px;
+}
+.CT-notification-item-content {
+  max-height: 100%;
+}
