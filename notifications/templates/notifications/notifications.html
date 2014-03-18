@@ -21,7 +21,7 @@
 {% block tab_contents %}
 <div class="tab-content">
   <div class="tab-pane active fade in" id="unread">
-    <ul class="media-list CT-list">
+    <ul class="media-list CT-list" id="unread-list">
       <li class="media CT-notification-item">
         <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
         <div class="media-body CT-notification-item-content">
@@ -57,7 +57,9 @@
     </ul>
   </div><!-- /#unread -->
   <div class="tab-pane fade" id="all">
-    
+    <ul class="media-list CT-list" id="all-list">
+      
+    </ul>
   </div><!-- /#all -->
 </div>
 {% endblock %}

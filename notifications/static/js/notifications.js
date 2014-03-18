@@ -12,11 +12,13 @@ if (typeof jQuery === 'undefined') { throw new Error('requires jQuery') }
 var Notifis = function (data) {
     var _isUnread = data['unread'];
     var _verb = data['verb'];
-    var _itemTime = data['timestamp'];
+    var _itemTimeSince = data['timesince'];
     var _itemID = data['id'];
+    var _slug = data['slug'];
     var _itemURL = data['data']['url'];
     var _actor = data['actor'];
     var _actorURL = data['actorURL'];
+    var _hasDeleteButton = true;
 
     this.tojQueryObject = function () {
         var notificationItem = $('<li class="media CT-notification-item"></li>');
@@ -26,11 +28,18 @@ var Notifis = function (data) {
 
         // Media body
         var mediaBody = $('<div class="media-body CT-notification-item-content"></div>');
-        var mediaHeading = '<h4 class="media-heading"><a href="' + _actorURL + '">' + _actor + '</a>' + _verb + '</h4>';
+        var mediaHeading = '<h4 class="media-heading"><a href="' + _actorURL + '">' + _actor + '</a>' + _verb + ' <small><i>' + _itemTimeSince + '</i></small></h4>';
 
         mediaBody.append(mediaHeading);
 
-        notificationItem.append(deleteButton);
+        if (_hasDeleteButton) {
+            notificationItem.append(deleteButton);
+
+            // Mark as read
+            notificationItem.bind('close.bs.alert', function () {
+                $.get('/notifications/mark-as-read/' + _slug + '/');
+            })
+        };
         notificationItem.append(mediaBody);
         notificationItem.hide();
 
@@ -39,6 +48,10 @@ var Notifis = function (data) {
 
     this.isUnread = function () {
         return _isUnread;
+    };
+
+    this.removeDeleteButton = function () {
+        _hasDeleteButton = false;
     };
 };
 
@@ -52,74 +65,66 @@ $(document).ready(function() {
         $('#notification-circle').removeClass('notification-unread');
     });
 
-    // load inbox list
-    $.getJSON('/api/v1/received_message/', 
+    // load unread list
+    $.getJSON('/api/v1/unread_notification/', 
         {format: 'json'}, 
         function(json, textStatus) {
             var obj = json["objects"];
             var unreadNumber = 0;
-            $('#inbox-list').empty();
+            $('#unread-list').empty();
+            $('#unread-badge').empty();
             for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i], false);
+                var item = new Notifis(obj[i]);
                 if (item.isUnread()) {
                     unreadNumber ++;
                 }
                 var $item = item.tojQueryObject();
-                $('#inbox-list').append($item);
+                $('#unread-list').append($item);
                 $item.fadeIn();
             }
             if (unreadNumber != 0) {
-                $('#inbox-badge').text(unreadNumber);
+                $('#unread-badge').text(unreadNumber);
+            } else {
+                $('#unread-badge').empty();
             }
     });
 });
 
-$('a[href="#inbox"]').on('show.bs.tab', function (e) {
-    $.getJSON('/api/v1/received_message/', 
+$('a[href="#unread"]').on('show.bs.tab', function (e) {
+    $.getJSON('/api/v1/unread_notification/', 
         {format: 'json'}, 
         function(json, textStatus) {
             var obj = json["objects"];
             var unreadNumber = 0;
-            $('#inbox-list').empty();
-            $('#inbox-badge').empty();
+            $('#unread-list').empty();
+            $('#unread-badge').empty();
             for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i], false);
+                var item = new Notifis(obj[i]);
                 if (item.isUnread()) {
                     unreadNumber ++;
                 }
                 var $item = item.tojQueryObject();
-                $('#inbox-list').append($item);
+                $('#unread-list').append($item);
                 $item.fadeIn();
             }
             if (unreadNumber != 0) {
-                $('#inbox-badge').text(unreadNumber);
+                $('#unread-badge').text(unreadNumber);
+            } else {
+                $('#unread-badge').empty();
             }
     });
 });
-$('a[href="#sent"]').on('show.bs.tab', function (e) {
-    $.getJSON('/api/v1/sent_message/', 
+$('a[href="#all"]').on('show.bs.tab', function (e) {
+    $.getJSON('/api/v1/all_notification/', 
         {format: 'json'}, 
         function(json, textStatus) {
             var obj = json["objects"];
-            $('#sent-list').empty();
+            $('#all-list').empty();
             for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i]);
+                var item = new Notifis(obj[i]);
+                item.removeDeleteButton();
                 var $item = item.tojQueryObject();
-                $('#sent-list').append($item);
-                $item.fadeIn();
-            }
-    });
-});
-$('a[href="#trash"]').on('show.bs.tab', function (e) {
-    $.getJSON('/api/v1/deleted_message/', 
-        {format: 'json'}, 
-        function(json, textStatus) {
-            var obj = json["objects"];
-            $('#trash-list').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i]);
-                var $item = item.tojQueryObject();
-                $('#trash-list').append($item);
+                $('#all-list').append($item);
                 $item.fadeIn();
             }
     });

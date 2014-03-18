@@ -27,6 +27,7 @@ var Message = function (data) {
 
     var _isUnread = data['isUnread']; // boolean
     var _isFromMe = data['isFromMe']; // boolean
+    var _hasDeleteButton = true; // boolean
 
     if (_isFromMe === undefined && _isUnread !== undefined) {
         _isFromMe = false;
@@ -41,7 +42,7 @@ var Message = function (data) {
      * @return  {jQuery Object} return a jQuery object for inserting to the page 
      */
     this.tojQueryObject = function () {
-        var messageItem = $('<li class="media CT-message-item"></li>');
+        var messageItem = $('<li class="media CT-message-item fade in"></li>');
 
         // Avatar
         var avatar = '<a class="pull-left" href="' + (_isFromMe ? _recipientURL : _senderURL) + '"><img src="/' + _userAvatarImg + '" alt="' + (_isFromMe ? _recipientName : _senderName) + '" class="media-object avatar"></a>';
@@ -58,15 +59,29 @@ var Message = function (data) {
         mediaBody.append(messageBody);
 
         messageItem.append(avatar);
-        messageItem.append(deleteButton);
-        messageItem.append(mediaBody);
-        messageItem.hide();
+
+        if (_hasDeleteButton) {
+            messageItem.append(deleteButton);
+
+            // Delete
+            messageItem.bind('close.bs.alert', function () {
+                $.get('/messages/delete/' + _messageID + '/');
+            })
+        }
         
+        messageItem.append(mediaBody);
+        messageItem.data('id', _messageID);
+        messageItem.hide();
+
         return messageItem;
     };
 
     this.isUnread = function () {
         return _isUnread;
+    };
+
+    this.removeDeleteButton = function () {
+        _hasDeleteButton = false;
     };
 };
 
@@ -89,7 +104,7 @@ $(document).ready(function() {
             $('#inbox-list').empty();
             $('#inbox-badge').empty();
             for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i], false);
+                var item = new Message(obj[i]);
                 if (item.isUnread()) {
                     unreadNumber ++;
                 }
@@ -114,7 +129,7 @@ $('a[href="#inbox"]').on('show.bs.tab', function (e) {
             $('#inbox-list').empty();
             $('#inbox-badge').empty();
             for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i], false);
+                var item = new Message(obj[i]);
                 if (item.isUnread()) {
                     unreadNumber ++;
                 }
