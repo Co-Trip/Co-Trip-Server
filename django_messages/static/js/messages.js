@@ -132,7 +132,9 @@ $(document).ready(function() {
                 $('#inbox-list').append($item);
                 $item.fadeIn();
             }
-            $('#inbox-badge').text(unreadNumber);
+            if (unreadNumber != 0) {
+                $('#inbox-badge').text(unreadNumber);
+            }
     });
 });
 
@@ -153,7 +155,9 @@ $('a[href="#inbox"]').on('show.bs.tab', function (e) {
                 $('#inbox-list').append($item);
                 $item.fadeIn();
             }
-            $('#inbox-badge').text(unreadNumber);
+            if (unreadNumber != 0) {
+                $('#inbox-badge').text(unreadNumber);
+            }
     });
 });
 $('a[href="#sent"]').on('show.bs.tab', function (e) {
