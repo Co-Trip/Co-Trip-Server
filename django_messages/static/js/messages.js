@@ -44,7 +44,7 @@ var Message = function (data) {
         var messageItem = $('<li class="media CT-message-item"></li>');
 
         // Avatar
-        var avatar = '<a class="pull-left" href="' + (_isFromMe ? _recipientURL : _senderURL) + '"><img src="' + _userAvatarImg + '" alt="' + (_isFromMe ? _recipientName : _senderName) + '" class="media-object avatar"></a>';
+        var avatar = '<a class="pull-left" href="' + (_isFromMe ? _recipientURL : _senderURL) + '"><img src="/' + _userAvatarImg + '" alt="' + (_isFromMe ? _recipientName : _senderName) + '" class="media-object avatar"></a>';
 
         // Close button
         var deleteButton = '<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>';
@@ -115,9 +115,29 @@ $(document).ready(function() {
         $('#read-badge').text(readNumber + unreadNumber);
         $('#notification-circle').removeClass('notification-unread');
     });
+
+    // load inbox list
+    $.getJSON('/api/v1/received_message/', 
+        {format: 'json'}, 
+        function(json, textStatus) {
+            var obj = json["objects"];
+            var unreadNumber = 0;
+            for (var i = 0; i < obj.length; i++) {
+                var item = new Message(obj[i], false);
+                if (item.isUnread()) {
+                    unreadNumber ++;
+                }
+                var $item = item.tojQueryObject();
+                $('#inbox-list').append($item);
+                $item.fadeIn();
+            }
+            $('#inbox-badge').text(unreadNumber);
+    });
 });
 
 $('a[href="#inbox"]').on('show.bs.tab', function (e) {
+    console.log('inbox show');
+    debugger;
     $.getJSON('/api/v1/received_message/', 
         {format: 'json'}, 
         function(json, textStatus) {
@@ -136,6 +156,8 @@ $('a[href="#inbox"]').on('show.bs.tab', function (e) {
     });
 });
 $('a[href="#sent"]').on('show.bs.tab', function (e) {
+    console.log('sent show');
+    debugger;
     $.getJSON('/api/v1/sent_message/', 
         {format: 'json'}, 
         function(json, textStatus) {
@@ -143,12 +165,14 @@ $('a[href="#sent"]').on('show.bs.tab', function (e) {
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i]);
                 var $item = item.tojQueryObject();
-                $('#inbox-list').append($item);
+                $('#sent-list').append($item);
                 $item.fadeIn();
             }
     });
 });
 $('a[href="#trash"]').on('show.bs.tab', function (e) {
+    console.log('trash show');
+    debugger;
     $.getJSON('/api/v1/deleted_message/', 
         {format: 'json'}, 
         function(json, textStatus) {
@@ -156,7 +180,7 @@ $('a[href="#trash"]').on('show.bs.tab', function (e) {
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i]);
                 var $item = item.tojQueryObject();
-                $('#inbox-list').append($item);
+                $('#trash-list').append($item);
                 $item.fadeIn();
             }
     });

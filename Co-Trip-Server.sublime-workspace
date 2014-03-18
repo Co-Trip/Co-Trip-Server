@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"und",
+				"undefined"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"unre",
+				"unreadNumber"
+			],
+			[
+				"_se",
+				"_senderName"
+			],
+			[
+				"_re",
+				"_recipientName"
+			],
+			[
 				"background",
 				"background-image"
 			],
@@ -156,10 +176,6 @@
 				"fadeIn	.fadeIn()"
 			],
 			[
-				"if",
-				"ife	if … else"
-			],
-			[
 				"bac",
 				"background-image2"
 			],
@@ -256,34 +272,66 @@
 	"buffers":
 	[
 		{
-			"file": "registration/templates/registration/registration_form.html",
+			"file": "django_messages/templates/django_messages/base.html",
 			"settings":
 			{
-				"buffer_size": 1725,
+				"buffer_size": 1508,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "registration/templates/registration/login.html",
+			"file": "django_messages/templates/django_messages/messages.html",
 			"settings":
 			{
-				"buffer_size": 869,
+				"buffer_size": 1758,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "static/css/p_index.css",
+			"file": "django_messages/static/js/messages.js",
 			"settings":
 			{
-				"buffer_size": 2534,
+				"buffer_size": 6400,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "registration/templates/registration/base.html",
+			"file": "django_messages/templates/django_messages/compose.html",
 			"settings":
 			{
-				"buffer_size": 596,
+				"buffer_size": 290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "django_messages/templates/django_messages/inbox.html",
+			"settings":
+			{
+				"buffer_size": 1026,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "django_messages/static/css/messages.css",
+			"settings":
+			{
+				"buffer_size": 486,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "django_messages/templates/django_messages/outbox.html",
+			"settings":
+			{
+				"buffer_size": 863,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "django_messages/templates/django_messages/trash.html",
+			"settings":
+			{
+				"buffer_size": 932,
 				"line_ending": "Unix"
 			}
 		}
@@ -291,9 +339,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 93.0,
+		"height": 71.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"git push",
 				"Git: Push Current Branch"
@@ -337,14 +397,6 @@
 			[
 				"Snippet: ",
 				"Snippet: html"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"pack",
@@ -472,18 +524,21 @@
 	},
 	"file_history":
 	[
-		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/static/js/p_index.js",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/Co_Trip/templates/Co_Trip/public_index.html",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/notifications/templates/notifications/notice.html",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/Co_Trip/templates/base.html",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/base.html",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/registration_form.html",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/login.html",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/static/css/p_index.css",
+		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/static/js/p_index.js",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/static/css/Co-Trip.css",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/Co_Trip/templates/Co_Trip/index.html",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/manage.py",
-		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/registration_form.html",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/views.py",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/models.py",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/forms.py",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/plan/templates/plan/create.html",
-		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/base.html",
-		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/login.html",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/logout.html",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/templates/registration/login_error.html",
 		"/Users/tomhu/Dropbox/Project/Co-Trip/Develope/Back-End/registration/urls.py",
@@ -596,10 +651,7 @@
 		"/Users/tomhu/Downloads/Software/cocos2d-x-2.1.5/Bounce/proj.android/libs/armeabi/gdb.setup",
 		"/Users/tomhu/Downloads/Software/cocos2d-x-2.1.5/create-android-project.sh",
 		"/Users/tomhu/Downloads/insideViewChangeT45.js",
-		"/Users/tomhu/Library/Application Support/Sublime Text 2/Packages/User/PhpTidy.sublime-settings",
-		"/Users/tomhu/Library/Application Support/Sublime Text 2/Packages/User/PHP.sublime-settings",
-		"/Users/tomhu/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/tomhu/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
+		"/Users/tomhu/Library/Application Support/Sublime Text 2/Packages/User/PhpTidy.sublime-settings"
 	],
 	"find":
 	{
@@ -617,6 +669,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"nav?",
+			"^(a*)$",
+			"^(a*)t",
+			"^(a*t)",
+			"^(a*)",
+			"/*counts/",
 			"non_field_errors",
 			"control-label",
 			"dropdown",
@@ -678,23 +736,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "registration/templates/registration/registration_form.html",
+					"file": "django_messages/templates/django_messages/base.html",
 					"settings":
 					{
-						"buffer_size": 1725,
+						"buffer_size": 1508,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								1220,
+								1220
 							]
 						],
 						"settings":
@@ -743,6 +801,7 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
+							"is_preview": true,
 							"is_xml": false,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
@@ -757,18 +816,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "registration/templates/registration/login.html",
+					"file": "django_messages/templates/django_messages/messages.html",
 					"settings":
 					{
-						"buffer_size": 869,
+						"buffer_size": 1758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								704,
-								704
+								625,
+								625
 							]
 						],
 						"settings":
@@ -817,6 +876,155 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
+							"is_preview": true,
+							"is_xml": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "django_messages/static/js/messages.js",
+					"settings":
+					{
+						"buffer_size": 6400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4564,
+								4564
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1776.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "django_messages/templates/django_messages/compose.html",
+					"settings":
+					{
+						"buffer_size": 290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"is_preview": true,
 							"is_xml": false,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/HTML/HTML.tmLanguage"
@@ -828,19 +1036,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "static/css/p_index.css",
+					"buffer": 4,
+					"file": "django_messages/templates/django_messages/inbox.html",
 					"settings":
 					{
-						"buffer_size": 2534,
+						"buffer_size": 1026,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								116,
-								116
+								993,
+								967
 							]
 						],
 						"settings":
@@ -889,9 +1097,11 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
+							"is_preview": true,
+							"is_xml": false,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -901,11 +1111,158 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "registration/templates/registration/base.html",
+					"buffer": 5,
+					"file": "django_messages/static/css/messages.css",
 					"settings":
 					{
-						"buffer_size": 596,
+						"buffer_size": 486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								486,
+								486
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"is_preview": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "django_messages/templates/django_messages/outbox.html",
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								198,
+								198
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"is_preview": true,
+							"is_xml": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "django_messages/templates/django_messages/trash.html",
+					"settings":
+					{
+						"buffer_size": 932,
 						"regions":
 						{
 						},
