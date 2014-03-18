@@ -14,4 +14,5 @@ urlpatterns = patterns('',
     url(r'^delete/(?P<message_id>[\d]+)/$', delete, name='messages_delete'),
     url(r'^undelete/(?P<message_id>[\d]+)/$', undelete, name='messages_undelete'),
     url(r'^trash/$', trash, name='messages_trash'),
+    url(r'^test/$', test,),
 )

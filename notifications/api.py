@@ -27,7 +27,7 @@ class AllNotificationResource(ModelResource):
     def dehydrate(self, bundle):
         bundle.data['data'] = bundle.obj.data
         bundle.data['actor'] = bundle.obj.actor
-        bundle.data['actorURL'] = bundle.obj.actor.profile.get_absolute_url()
+        bundle.data['actorURL'] = 'accounts/profile/'+bundle.obj.actor.profile.get_absolute_url()
         bundle.data['timesince'] = bundle.obj.timesince()
         return bundle
 
@@ -53,7 +53,7 @@ class UnreadNotificationResource(ModelResource):
     def dehydrate(self, bundle):
         bundle.data['data'] = bundle.obj.data
         bundle.data['actor'] = bundle.obj.actor
-        bundle.data['actorURL'] = bundle.obj.actor.profile.get_absolute_url()
+        bundle.data['actorURL'] = 'accounts/profile/'+bundle.obj.actor.profile.get_absolute_url()
         bundle.data['timesince'] = bundle.obj.timesince()
         return bundle
 

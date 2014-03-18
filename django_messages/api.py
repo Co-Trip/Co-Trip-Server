@@ -37,7 +37,7 @@ class SentMessageResource(ModelResource):
         bundle.data['recipientName'] = bundle.obj.recipient.username
         bundle.data['senderURL'] = bundle.obj.sender.profile.get_absolute_url()
         bundle.data['recipientURL'] = bundle.obj.recipient.profile.get_absolute_url()
-        bundle.data['userAvatarImg'] = bundle.obj.recipient.profile.get_avatar_url(50)
+        bundle.data['userAvatarImg'] = 'accounts/profile/' + bundle.obj.recipient.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
         bundle.data['messageID'] = bundle.obj.id
         return bundle
@@ -67,7 +67,7 @@ class ReceivedMessageResource(ModelResource):
         bundle.data['recipientName'] = bundle.obj.recipient.username
         bundle.data['senderURL'] = bundle.obj.sender.profile.get_absolute_url()
         bundle.data['recipientURL'] = bundle.obj.recipient.profile.get_absolute_url()
-        bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
+        bundle.data['userAvatarImg'] = 'accounts/profile/' + bundle.obj.sender.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
         bundle.data['messageID'] = bundle.obj.id
 
@@ -79,6 +79,7 @@ class ReceivedMessageResource(ModelResource):
 
 
 class TrashMessageAuthorization(Authorization):
+
 
     def read_list(self, object_list, bundle):
         return object_list.filter(
@@ -94,25 +95,28 @@ class TrashMessageAuthorization(Authorization):
         return bundle.obj.sender == bundle.request.user or bundle.obj.recipient == bundle.request.user
 
 class TrashMessageResource(ModelResource):
+    messageSubject = fields.CharField(attribute='subject')
+    messageBody = fields.CharField(attribute='body')
 
     class Meta:
         queryset = Message.objects.all()
         resource_name = 'deleted_message'
         authorization = TrashMessageAuthorization()
+        fields = ['messageSubject', 'messageBody']
 
     def dehydrate(self, bundle):
         bundle.data['senderName'] = bundle.obj.sender.username
         bundle.data['recipientName'] = bundle.obj.recipient.username
         bundle.data['senderURL'] = bundle.obj.sender.profile.get_absolute_url()
         bundle.data['recipientURL'] = bundle.obj.recipient.profile.get_absolute_url()
-        bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
         bundle.data['messageURL'] = bundle.obj.get_absolute_url()
         bundle.data['messageID'] = bundle.obj.id
+
         if bundle.obj.sender == bundle.request.user:
-            bundle.data['userAvatarImg'] = bundle.obj.recipient.profile.get_avatar_url(50)
+            bundle.data['userAvatarImg'] = 'accounts/profile/'+bundle.obj.recipient.profile.get_avatar_url(50)
             bundle.data['isFromMe'] = True
         else:
-            bundle.data['userAvatarImg'] = bundle.obj.sender.profile.get_avatar_url(50)
+            bundle.data['userAvatarImg'] = 'accounts/profile/'+bundle.obj.sender.profile.get_avatar_url(50)
             bundle.data['isFromMe'] = False
             if bundle.obj.new():
                 bundle.data['isUnread'] = True
