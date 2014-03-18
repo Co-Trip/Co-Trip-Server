@@ -211,3 +211,6 @@ def view(request, message_id, template_name='django_messages/view.html'):
         'message': message,
     }, context_instance=RequestContext(request))
 view = login_required(view)
+
+def test(request):
+    return render_to_response('django_messages/messages.html',context_instance=RequestContext(request))
