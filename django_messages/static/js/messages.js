@@ -122,6 +122,7 @@ $(document).ready(function() {
         function(json, textStatus) {
             var obj = json["objects"];
             var unreadNumber = 0;
+            $('#inbox-list').empty();
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i], false);
                 if (item.isUnread()) {
@@ -136,13 +137,13 @@ $(document).ready(function() {
 });
 
 $('a[href="#inbox"]').on('show.bs.tab', function (e) {
-    console.log('inbox show');
-    debugger;
     $.getJSON('/api/v1/received_message/', 
         {format: 'json'}, 
         function(json, textStatus) {
             var obj = json["objects"];
             var unreadNumber = 0;
+            $('#inbox-list').empty();
+            $('#inbox-badge').empty();
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i], false);
                 if (item.isUnread()) {
@@ -156,12 +157,11 @@ $('a[href="#inbox"]').on('show.bs.tab', function (e) {
     });
 });
 $('a[href="#sent"]').on('show.bs.tab', function (e) {
-    console.log('sent show');
-    debugger;
     $.getJSON('/api/v1/sent_message/', 
         {format: 'json'}, 
         function(json, textStatus) {
             var obj = json["objects"];
+            $('#sent-list').empty();
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i]);
                 var $item = item.tojQueryObject();
@@ -171,12 +171,11 @@ $('a[href="#sent"]').on('show.bs.tab', function (e) {
     });
 });
 $('a[href="#trash"]').on('show.bs.tab', function (e) {
-    console.log('trash show');
-    debugger;
     $.getJSON('/api/v1/deleted_message/', 
         {format: 'json'}, 
         function(json, textStatus) {
             var obj = json["objects"];
+            $('#trash-list').empty();
             for (var i = 0; i < obj.length; i++) {
                 var item = new Message(obj[i]);
                 var $item = item.tojQueryObject();
