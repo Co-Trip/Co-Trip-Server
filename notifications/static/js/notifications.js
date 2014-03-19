@@ -20,6 +20,10 @@ var Notifis = function (data) {
     var _actorURL = data['actorURL'];
     var _hasDeleteButton = true;
 
+    if (_itemURL !== undefined) {
+        _verb.replace('新私信', '<a href="' + _itemURL + '">新私信</a>');
+    };
+
     this.tojQueryObject = function () {
         var notificationItem = $('<li class="media CT-notification-item"></li>');
 
