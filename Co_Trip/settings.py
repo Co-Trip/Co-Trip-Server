@@ -38,18 +38,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'django.contrib.comments',
     'django_comments',
     'plan_comment',
-    'ajax_select',
+    #'ajax_select',
     'django.contrib.humanize',
     'django.contrib.sites',
-    #'south'
     'registration',
     'plan',
     'traveller',
     'Co_Trip',
-    'cities_light',
+    'city',
     'guardian',
     'bootstrap3',
     'bootstrap3_datetime',
@@ -68,10 +66,7 @@ INSTALLED_APPS = (
 
 )
 
-AJAX_LOOKUP_CHANNELS = {
-    'cities_light_country': ('cities_light.lookups', 'CountryLookup'),
-    'cities_light_city': ('cities_light.contrib.ajax_selects_lookups', 'CityLookup'),
-}
+
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', # this is default
@@ -103,15 +98,8 @@ WSGI_APPLICATION = 'Co_Trip.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # 'OPTIONS': {
-        #     'read_default_file': 'databaseConf.cnf',
-        # },
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'USER': 'danielqiu',
-        # 'PASSWORD': '123456',
-        # 'NAME': 'CoTripDB',
-        # 'USER': 'danielqiu',
-        # 'PASSWORD': '',
+
 
     }
 }
@@ -143,7 +131,6 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'dajaxice.finders.DajaxiceFinder',
 )
 
@@ -161,10 +148,8 @@ AUTH_PROFILE_MODULE = 'traveller.Traveller'
 
 GUARDIAN_RAISE_403 = True
 
-# CITIES_LIGHT_TRANSLATION_LANGUAGES = ['zh']
-#CITIES_LIGHT_TRANSLATION_SOURCES = ['http://download.geonames.org/export/dump/CN.zip']
 
-ADMINS = (('qsz13', 'qsz1328@gmail.com'))
+#ADMINS = (('qsz13', 'qsz1328@gmail.com'))
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.

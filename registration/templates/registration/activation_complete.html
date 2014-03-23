@@ -1,9 +1,13 @@
-{% extends "registration/base.html" %}
+{% extends "base.html" %}
 
-{% block title %}Activation complete{% endblock %}
-
-{% block content %}
-<h1>Congratulations!</h1>
-<p>Your registration is now complete. Go to the site and start having fun!</p>
-<p><a href="/">Here</a> is the homepage.</p>
+{% block title %}激活完成{% endblock %}
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}registration.css">
+{% endblock %}
+{% block main_content %}
+    <div class="jumbotron text-center">
+<h3>恭喜！</h3>
+<p>您已成功注册，</p>
+<p>点击<a href="/plan/create">这里</a>开始制定您的第一份计划。</p>
+    </div>
 {% endblock %}

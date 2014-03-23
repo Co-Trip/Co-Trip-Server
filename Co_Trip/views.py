@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.template import loader, RequestContext
 from django.views.generic import TemplateView
 
@@ -14,3 +14,6 @@ def home(request):
 
 class AboutView(TemplateView):
     template_name = "Co_Trip/about.html"
+
+def permission_denied_view(TemplateView):
+    return render_to_response("Co_Trip/403.html")
