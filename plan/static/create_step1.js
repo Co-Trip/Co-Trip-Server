@@ -73,6 +73,10 @@ $('.form_date').datetimepicker({
             $(this).toggleClass('item-selected');
             $(this).find('.CT-item-checkbox').attr('checked', true);
         });
+        $('.CT-picker-item.city-item').click(function (event) {
+            $(this).toggleClass('item-selected');
+            $(this).find('.CT-item-checkbox').attr('checked', true);
+        });
 
         updateCityPickerList(1);
 
