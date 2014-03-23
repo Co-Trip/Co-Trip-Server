@@ -14,14 +14,14 @@ main > .row > div {
   height: 100%;
 }
 body {
-  overflow: hidden;
+  
 }
 main {
   padding-bottom: 80px;
   margin: 0 auto -80px;
 }
 footer {
-  margin-top: 0;
+  
 }
 
 main > .row > .col-sm-3,
