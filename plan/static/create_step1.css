@@ -48,21 +48,21 @@ footer {
  * Co-Trip Picker - Friend item
  * --------------------------------------------------
  */
-.CT-picker-item.friend-item > .CT-picker-item-body > * {
+.CT-picker-item > .CT-picker-item-body > * {
   opacity: 0.7;
   -webkit-transition: opacity ease-in-out 0.15s;
           transition: opacity ease-in-out 0.15s;
 }
-.CT-picker-item.friend-item > .CT-picker-item-body > .CT-item-check-icon {
+.CT-picker-item > .CT-picker-item-body > .CT-item-check-icon {
   opacity: 0;
 }
-.CT-picker-item.friend-item.item-selected > .CT-picker-item-body > * {
+.CT-picker-item.item-selected > .CT-picker-item-body > * {
   opacity: 1;
 }
-.CT-picker-item.friend-item > .CT-picker-item-body > .CT-picker-item-img:hover {
+.CT-picker-item > .CT-picker-item-body > .CT-picker-item-img:hover {
   opacity: 1;
 }
-.CT-picker-item.friend-item .CT-item-check-icon {
+.CT-picker-item .CT-item-check-icon {
   position: absolute;
   top: 60%;
   right: 0;

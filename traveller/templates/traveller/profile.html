@@ -21,8 +21,8 @@
               <p>Flowing: 123123</p>
             </div>
             <div>
-              <button class="btn btn-default">关注</button>
-                {% if is_current_user%}
+              <button class="btn btn-default" data-username="{{ user.username }}" id="follow-or-not" data-action="add">关注</button>
+{% if is_current_user%}
 
 
     <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
@@ -38,9 +38,16 @@
         </div>
       </header>
       <div class="row">
-        参与过的计划：
+
       </div>
-    </main>
+    创建过的计划：
+    {% for plan in created_plans %}
+    <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+    {% endfor %}
+            参与过的计划：
+    {% for plan in participated_plans %}
+    <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+    {% endfor %}
 {% endblock %}
 
 {% block js%}

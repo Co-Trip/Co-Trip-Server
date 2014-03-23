@@ -15,9 +15,9 @@ class ProvinceResource(ModelResource):
         limit = 40
 
     def dehydrate(self, bundle):
-        city = []
+        city = {}
         for c in bundle.obj.city_set.all():
-            city.append(c)
+            city[c.id] = c.city_name
 
         bundle.data['city'] = city
 
