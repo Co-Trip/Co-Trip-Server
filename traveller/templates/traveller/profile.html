@@ -38,13 +38,15 @@
         </div>
       </header>
       <div class="row">
-        参与过的计划：
-      </div>{{ created_plans }}
+
+      </div>
+    创建过的计划：
     {% for plan in created_plans %}
     <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
     {% endfor %}
-    {% for p in participated_plans %}
-    {{ p }}
+            参与过的计划：
+    {% for plan in participated_plans %}
+    <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
     {% endfor %}
 {% endblock %}
 
