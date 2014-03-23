@@ -3,10 +3,10 @@
 	"use strict";
 
 	var options = {
-		events_source: '/static/bootstrap-calendar/events.json.php',
+		events_source: 'events/',
 		view: 'month',
-		tmpl_path: '/static/bootstrap-calendar/tmpls/',
-		tmpl_cache: true,
+		tmpl_path: 'tmpls/',
+		tmpl_cache: false,
 		day: '2013-03-12',
 		modal: '#events-modal',
 		modal_type: 'template',
@@ -53,6 +53,14 @@
 		});
 	});
 
+	$('button[data-calendar-act]').each(function(index, el) {
+		var $this = $(this);
+		$this.click(function(event) {
+			var modal = $('#add-events-modal');
+			modal.modal('show');
+		});
+	});
+
 	$('#first_day').change(function(){
 		var value = $(this).val();
 		value = value.length ? parseInt(value) : null;
@@ -68,4 +76,35 @@
 		//e.preventDefault();
 		//e.stopPropagation();
 	});
+
+	var form = $('#add-events-form');
+	form.submit(function (event) {
+		event.preventDefault();
+		var data = {};
+		form.find('input[id]').each(function (index, el) {
+			data[$(this).attr('name')] = $(this).val();
+		});
+		$.ajax({
+			url: form.attr('action'),
+			type: 'POST',
+			dataType: 'json',
+			data: JSON.stringify(data),
+		})
+		.done(function () {
+			var modal = $('#add-events-modal');
+			modal.modal('hide');
+			calendar.view();
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		
+	});
+
+	$('#add-events-modal').on('hidden.bs.modal', function (e) {
+		form.find('input').each(function (index, el) {
+			$(this).val('');
+		});
+	})
+
 }(jQuery));

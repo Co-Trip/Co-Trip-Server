@@ -29,23 +29,13 @@ Date.prototype.format = function(format) //author: meizz
  * Datetimepicker init
  * --------------------------------------------------
  */
-$('.form_date').datetimepicker({
+$('.form_datetime').datetimepicker({
     language:  'zh-CN',
     weekStart: 1,
     todayBtn:  1,
     autoclose: 1,
     todayHighlight: 1,
-    startView: 2,
-    minView: 2,
     forceParse: 0,
+    showMeridian: 1,
     startDate: new Date().format('yyyy-MM-dd')
-});
-
-$(document).ready(function() {
-    $('.CT-picker-item.friend-item').click(function(event) {
-        $(this).toggleClass('item-selected');
-        $(this).find('.CT-item-checkbox').iCheck('toggle');
-    });
-
-    
 });
