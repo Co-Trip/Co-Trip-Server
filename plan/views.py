@@ -81,7 +81,7 @@ class PlanCreateStep1View(View):
                 for p in plan.participants.all():
                     assign_perm('edit_plan_permission', p.user, plan)
 
-            return HttpResponseRedirect('/plan/edit/' + str(plan.id))
+            return HttpResponseRedirect('/plan/edit/' + str(plan.id)+"/")
         return render(request, self.template_name, {'form': form,  'friends':participants_choice_list})
 
 

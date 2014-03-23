@@ -24,9 +24,9 @@ urlpatterns = patterns('',
 
                        url(r'create/$', RedirectView.as_view(url='step1/'),name='create'),
                        url(r'^create/step1/$', login_required(PlanCreateStep1View.as_view()), name='create_step1'),
-                       url(r'^edit/(?P<plan_id>\d+)$', permission_required_or_403('plan.edit_plan_permission', (Plan, 'id', 'plan_id'))
+                       url(r'^edit/(?P<plan_id>\d+)/$', permission_required_or_403('plan.edit_plan_permission', (Plan, 'id', 'plan_id'))
                         (PlanCreateStep2View.as_view()), name='create_step2'),
 
-                       url(r'^edit/(?P<plan_id>\d+)/events$', login_required(PlanEventView.as_view()), name='events')
+                       url(r'^edit/(?P<plan_id>\d+)/events/', login_required(PlanEventView.as_view()), name='events')
 
 )

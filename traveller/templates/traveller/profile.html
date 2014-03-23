@@ -11,17 +11,28 @@
       <header class="jumbotron">
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" src="{% get_avatar user 100 %}" alt="Zhangrui">
+            <img class="media-object" src="{% get_avatar user 100 %}" alt="{{ user.name }}">
           </a>
           <div class="media-body">
-            <h2 class="media-heading"></h2>
-            我是长腿
+            <h2 class="media-heading">{{ user.username }}</h2>
+
             <div class="pull-right">
               <p>Flower: 123</p>
               <p>Flowing: 123123</p>
             </div>
             <div>
               <button class="btn btn-default">关注</button>
+                {% if is_current_user%}
+
+
+    <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
+
+{% else %}
+    <p><br><br><br><br><br><a href="/follow/follower/add/{{ traveller.user.username }}">follow</a></p>
+{% endif %}
+
+
+
             </div>
           </div>
         </div>
