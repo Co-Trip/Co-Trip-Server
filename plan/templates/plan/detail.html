@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load comments %}
+{% load avatartags %}
 {% block css_link %}
     <!-- Bootstrap Calendar core CSS -->
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap-calendar/css/calendar.css">
@@ -78,7 +79,15 @@
 
     {% get_comment_list for main_plan as comment_list %}
     {% for comment in comment_list %}
-    <p>{{ comment }}</p>
+        <div class="media">
+            <a class="pull-left" href="{{ comment.user.get_absolute_url }}">
+                <img class="media-object img-thumbnail" style="width: 100px; height: 100px;" src="{%get_avatar comment.user 100%}" alt="">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">{{ comment.user_name }}  <small>{{ comment.submit_date }}</small></h4>
+                {{ comment.comment }}
+            </div>
+        </div>
     {% endfor %}
 
     {% if user.is_authenticated %}
@@ -95,7 +104,7 @@
         {{ form.security_hash }}
         <span style="display: none;">{{ form.honeypot }}</span>
         <input type="hidden" name="next" value="{% url 'plan_detail' main_plan.id %}" />
-        <input type="submit" value="Add comment" id="id_submit"/>
+        <input type="submit" class="btn btn-default" value="Add comment" id="id_submit"/>
       </form>
 
     {% else %}

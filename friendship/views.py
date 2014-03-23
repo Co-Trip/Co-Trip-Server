@@ -80,3 +80,13 @@ def all_users(request, template_name="friendship/user_actions.html"):
     users = user_model.objects.all()
 
     return render(request, template_name, {get_friendship_context_object_list_name(): users})
+
+def is_following(request, username):
+    target_user = get_object_or_404(user_model, username=username)
+    following = Follow.objects.following(request.user)
+    if target_user in following:
+        to_json = {"is_following": 1}
+        return HttpResponse(json.dumps(to_json), mimetype='application/json')
+    else:
+        to_json = {"is_following": 0}
+        return HttpResponse(json.dumps(to_json), mimetype='application/json')

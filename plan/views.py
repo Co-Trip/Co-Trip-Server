@@ -118,13 +118,12 @@ class PlanEventView(View):
         return HttpResponse(json.dumps(to_json), mimetype='application/json')
 
     def post(self, request, plan_id):
-        print request
+
         plan = Plan.objects.get(id=plan_id)
         event = Event()
 
         event.start_time = request.POST['start']
-        print event.start_time
-        print "aksjdhflkasjdhflkasjdhflakjsh"
+
         event.end_time = request.POST['end']
         event.title = request.POST['title']
         event.description = request.POST['description']
@@ -156,6 +155,21 @@ class PlanEditView(View):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('edit/success')
+        return render(request, self.template_name, {'form': form})
+
+
+class PlanDetailView(View):
+    form_class = PlanForm
+    template_name = 'plan/detail.html'
+
+
+    def get(self, request, plan_id):
+        plan = Plan.objects.get(id=plan_id)
+        form = self.form_class(instance=plan, current_user=request.user)
+
+        if request.user != plan.creator.user:
+            form.fields['participants_can_edit'].widget = HiddenInput()
+
         return render(request, self.template_name, {'form': form})
 
 
