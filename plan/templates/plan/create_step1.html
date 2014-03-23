@@ -68,10 +68,13 @@
                 </div><!-- /plan return transportation -->
 
                 <div class="form-group" id="plan-destination-city">
-                  <label for="id-destination-city" class="control-label">Destination city</label>
+                  <label for="id-destination-city" class="control-label">目的地</label>
                   <div class="">
-                    {{ form.destination_city }}
 
+                     {% for p in province_list %}
+
+                    {{ p }}
+                    {% endfor %}
                   </div>
                 </div><!-- /plan destination city -->
 
