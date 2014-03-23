@@ -13,15 +13,9 @@ main > .row,
 main > .row > div {
   height: 100%;
 }
-body {
-  
-}
 main {
   padding-bottom: 80px;
   margin: 0 auto -80px;
-}
-footer {
-  
 }
 
 main > .row > .col-sm-3,

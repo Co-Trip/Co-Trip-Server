@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load comments %}
+{% load avatartags %}
 {% block css_link %}
     <!-- Bootstrap Calendar core CSS -->
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap-calendar/css/calendar.css">
@@ -79,12 +80,12 @@
     {% get_comment_list for main_plan as comment_list %}
     {% for comment in comment_list %}
     <div class="media">
-      <a class="pull-left" href="#">
-        <img class="media-object" src="..." alt="...">
+      <a class="pull-left" href="{{ comment.user.get_absolute_url }}">
+        <img class="media-object img-thumbnail" style="width: 100px; height: 100px;" src="{%get_avatar comment.user 100%}" alt="">
       </a>
       <div class="media-body">
-        <h4 class="media-heading"></h4>
-        {{ comment }}
+        <h4 class="media-heading">{{ comment.user_name }}  <small>{{ comment.submit_date }}</small></h4>
+        {{ comment.comment }}
       </div>
     </div>
     {% endfor %}

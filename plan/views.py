@@ -118,13 +118,12 @@ class PlanEventView(View):
         return HttpResponse(json.dumps(to_json), mimetype='application/json')
 
     def post(self, request, plan_id):
-        print request
+
         plan = Plan.objects.get(id=plan_id)
         event = Event()
 
         event.start_time = request.POST['start']
-        print event.start_time
-        print "aksjdhflkasjdhflkasjdhflakjsh"
+
         event.end_time = request.POST['end']
         event.title = request.POST['title']
         event.description = request.POST['description']
@@ -159,6 +158,21 @@ class PlanEditView(View):
         return render(request, self.template_name, {'form': form})
 
 
+class PlanDetailView(View):
+    form_class = PlanForm
+    template_name = 'plan/detail.html'
+
+
+    def get(self, request, plan_id):
+        plan = Plan.objects.get(id=plan_id)
+        form = self.form_class(instance=plan, current_user=request.user)
+
+        if request.user != plan.creator.user:
+            form.fields['participants_can_edit'].widget = HiddenInput()
+
+        return render(request, self.template_name, {'form': form})
+
+
 def edit_success(request, plan_id):
     return HttpResponse(render(request, 'plan/success.html'))
 
@@ -185,13 +199,6 @@ def detail(request, plan_id):
 
     return render_to_response('plan/detail.html', context_instance=RequestContext(request),
                                   dictionary={'main_plan':main_plan})
-
-    # template = loader.get_template('plan/detail.html')
-    # context = RequestContext(request, {
-    #     'plan': plan,
-    # })
-    #
-    # return HttpResponse(template.render(context))
 
 
 

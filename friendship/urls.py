@@ -2,7 +2,7 @@ try:
     from django.conf.urls import url, patterns
 except ImportError:
     from django.conf.urls.defaults import url, patterns
-from friendship.views import followers, following, follower_add, follower_remove, all_users
+from friendship.views import followers, following, follower_add, follower_remove, all_users, is_following
 
 urlpatterns = patterns('',
     url(
@@ -30,5 +30,10 @@ urlpatterns = patterns('',
         regex=r'^follower/remove/(?P<followee_username>[\w-]+)/$',
         view=follower_remove,
         name='follower_remove',
+    ),
+    url(
+        regex=r'^follower/is_following/(?P<followee_username>[\w-]+)/$',
+        view=is_following,
+        name='is_following',
     ),
 )

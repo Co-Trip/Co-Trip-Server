@@ -116,35 +116,33 @@
         </div>
         <div class="col-sm-5">
           <div class="row CT-picker" id="friend-picker">
-
             <div class="page-header CT-picker-heading">
               选择好友
-                <div class="form-inline">
-                    <div class="form-group">
-            <div class="">
-              <div class="checkbox" id="plan-participants-can-edit">
-                <label for="id-participants-can-edit">
-                  <input type="checkbox" id="id-participants-can-edit" name="participants_can_edit" form="plan-form"> 同行人可修改此份旅行计划
-                </label>
-              </div>
-            </div>
-          </div><!-- /plan participants can edit -->
+              <div class="form-inline">
+                <div class="form-group">
+                  <div class="">
+                    <div class="checkbox" id="plan-participants-can-edit">
+                      <label for="id-participants-can-edit">
+                        <input type="checkbox" id="id-participants-can-edit" name="participants_can_edit" form="plan-form"> 同行人可修改此份旅行计划
+                      </label>
+                    </div>
+                  </div>
+                </div><!-- /plan participants can edit -->
 
-          <div class="form-group">
-            <div class="col-sm-offset-2">
-              <div class="checkbox" id="plan-is-public">
-                <label for="id-is-public">
-                  <input type="checkbox" id="id-is-public" name="is_public" form="plan-form"> 分享此份旅行计划
-                </label>
+                <div class="form-group">
+                  <div class="col-sm-offset-2">
+                    <div class="checkbox" id="plan-is-public">
+                      <label for="id-is-public">
+                        <input type="checkbox" id="id-is-public" name="is_public" form="plan-form"> 分享此份旅行计划
+                      </label>
+                    </div>
+                  </div>
+                </div><!-- /plan is public -->
               </div>
-            </div>
-          </div><!-- /plan is public -->
-                </div>
             </div><!-- .CT-picker-heading -->
 
             {%  for f in friends %}
-
-                <div class="col-sm-3 CT-picker-item friend-item">
+            <div class="col-sm-3 CT-picker-item friend-item">
               <div class="CT-picker-item-body">
                 <input name="participants" type="checkbox" class="CT-item-checkbox" form="plan-form" value="{{ f.id }}">
                 <div class="CT-item-check-icon">
@@ -156,19 +154,7 @@
                 </div>
               </div>
             </div><!-- #friend-item -->
-
-
-
-
-
-              {% endfor %}
-
-
-
-
-
-
-
+            {% endfor %}
           </div><!-- #friend-picker -->
         </div>
       </div>

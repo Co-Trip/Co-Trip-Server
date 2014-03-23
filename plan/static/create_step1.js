@@ -47,3 +47,4 @@ $(document).ready(function() {
         $(this).find('.CT-item-checkbox').attr('checked', true);
     });
 });
+
