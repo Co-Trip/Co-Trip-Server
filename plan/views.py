@@ -186,12 +186,5 @@ def detail(request, plan_id):
     return render_to_response('plan/detail.html', context_instance=RequestContext(request),
                                   dictionary={'main_plan':main_plan})
 
-    # template = loader.get_template('plan/detail.html')
-    # context = RequestContext(request, {
-    #     'plan': plan,
-    # })
-    #
-    # return HttpResponse(template.render(context))
-
 
 

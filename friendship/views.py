@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*
+import json
 
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from django.http import HttpResponse
 from notifications import notify
 
 try:
@@ -44,7 +46,7 @@ def follower_add(request, followee_username, template_name='friendship/follow/ad
     """ Create a following relationship """
     ctx = {'followee_username': followee_username}
 
-    if request.method == 'POST':
+    if request.method == 'GET':
         followee = user_model.objects.get(username=followee_username)
         follower = request.user
         try:
@@ -52,8 +54,11 @@ def follower_add(request, followee_username, template_name='friendship/follow/ad
             notify.send(follower, recipient=followee, verb=u'关注了你',)
         except AlreadyExistsError as e:
             ctx['errors'] = ["%s" % e]
-        else:
-            return redirect('friendship_following', username=follower.username)
+            to_json = {"success": 0}
+            return HttpResponse(json.dumps(to_json), mimetype='application/json')
+        to_json = {"success": 1}
+        return HttpResponse(json.dumps(to_json), mimetype='application/json')
+
 
     return render(request, template_name, ctx)
 
@@ -61,11 +66,12 @@ def follower_add(request, followee_username, template_name='friendship/follow/ad
 @login_required
 def follower_remove(request, followee_username, template_name='friendship/follow/remove.html'):
     """ Remove a following relationship """
-    if request.method == 'POST':
+    if request.method == 'GET':
         followee = user_model.objects.get(username=followee_username)
         follower = request.user
         Follow.objects.remove_follower(follower, followee)
-        return redirect('friendship_following', username=follower.username)
+        to_json = {"success": 1}
+        return HttpResponse(json.dumps(to_json), mimetype='application/json')
 
     return render(request, template_name, {'followee_username': followee_username})
 
