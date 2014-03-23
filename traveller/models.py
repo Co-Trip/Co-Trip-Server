@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User, AbstractBaseUser
 from django.forms.extras import SelectDateWidget
-from cities_light.models import City
+from city.models import City
 from django.db.models.signals import post_save
 from django.forms import ModelForm
 from django.db import models
@@ -63,7 +63,7 @@ class ProfileEditForm(ModelForm):
         except User.DoesNotExist:
             pass
 
-    city = forms.ModelChoiceField(queryset=City.objects.filter(country='48').all())
+    city = forms.ModelChoiceField(queryset=City.objects.all())
     username = forms.CharField(max_length=30, required=True, label='username')
     email = forms.EmailField(label="Email")
 

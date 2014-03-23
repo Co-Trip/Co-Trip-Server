@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block home_class %}active{% endblock %}
+
+{% block title %}
+Co-Trip
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="jumbotron">
+			<h1>welcome to Co-Trip</h1>
+		    <p>this is the home page for Co-Trip</p>
+
+	        <p>{{ user.username }}, welcome back
+          <p><a href="plan/create">create</a>.</p>
+          <p><a href="about">about</a>.</p>
+          <p><a href="follow/users">用户列表</a>.</p>
+          <p><a href="/messages">站内消息</a></p>
+		</div>
+
+
+{% endblock %}

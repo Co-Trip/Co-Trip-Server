@@ -26,6 +26,7 @@ def inbox(request, template_name='django_messages/inbox.html'):
     Optional Arguments:
         ``template_name``: name of the template to use.
     """
+    print "aklsdjfhlakjsdhflkajsdhlfjkhsdfasdfasdfasdfasdfasdfasdfasdf"
     message_list = Message.objects.inbox_for(request.user)
     return render_to_response(template_name, {
         'message_list': message_list,
@@ -84,6 +85,7 @@ def compose(request, recipient=None, form_class=ComposeForm,
                 success_url = request.GET['next']
             return HttpResponseRedirect(success_url)
     else:
+        print "alkjsdhfaksjdhflkajsdhflkajsdhflakjsdhflkajdhflkajsdhflajksdhflaksjdfhasdf"
         form = form_class()
         if recipient is not None:
             recipients = [u for u in User.objects.filter(**{'%s__in' % get_username_field(): [r.strip() for r in recipient.split('+')]})]
@@ -212,5 +214,5 @@ def view(request, message_id, template_name='django_messages/view.html'):
     }, context_instance=RequestContext(request))
 view = login_required(view)
 
-def test(request):
+def message(request):
     return render_to_response('django_messages/messages.html',context_instance=RequestContext(request))

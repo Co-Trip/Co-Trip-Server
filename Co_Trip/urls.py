@@ -33,7 +33,7 @@ urlpatterns = patterns('',
                        url('', include('social.apps.django_app.urls', namespace='social'))
 )
 
-# autocomplete_light.register(Traveller, TravellerAutocomplete)
+handler403 = 'Co_Trip.views.permission_denied_view'
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns += staticfiles_urlpatterns()

@@ -55,5 +55,6 @@ class UnreadNotificationResource(ModelResource):
         bundle.data['actor'] = bundle.obj.actor
         bundle.data['actorURL'] = 'accounts/profile/'+bundle.obj.actor.profile.get_absolute_url()
         bundle.data['timesince'] = bundle.obj.timesince()
+        bundle.data['slug'] = bundle.obj.slug
         return bundle
 

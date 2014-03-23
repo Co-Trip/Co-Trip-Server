@@ -7,14 +7,14 @@ from django.template.context import RequestContext
 from .utils import slug2id
 from notifications.models import Notification
 
-@login_required
-def all(request):
-    """
-    Index page for authenticated user
-    """
-    return render(request, 'notifications/list.html', {
-        'notifications': request.user.notifications.all(),
-    })
+# @login_required
+# def all(request):
+#     """
+#     Index page for authenticated user
+#     """
+#     return render(request, 'notifications/list.html', {
+#         'notifications': request.user.notifications.all(),
+#     })
 
     # actions = request.user.notifications.all()
     #
@@ -35,11 +35,11 @@ def all(request):
     #     'action_list': action_list,
     # }, context_instance=RequestContext(request))
 
-@login_required
-def unread(request):
-    return render(request, 'notifications/list.html', {
-        'notifications': request.user.notifications.unread()
-    })
+# @login_required
+# def unread(request):
+#     return render(request, 'notifications/list.html', {
+#         'notifications': request.user.notifications.unread()
+#     })
     
 @login_required
 def mark_all_as_read(request):
@@ -60,16 +60,21 @@ def mark_as_read(request, slug=None):
 
     return redirect('notifications:all')
 
+# @login_required
+# def mark_as_unread(request, slug=None):
+#     id = slug2id(slug)
+#
+#     notification = get_object_or_404(Notification, recipient=request.user, id=id)
+#     notification.mark_as_unread()
+#
+#     next = request.REQUEST.get('next')
+#
+#     if next:
+#         return redirect(next)
+#
+#     return redirect('notifications:all')
+
 @login_required
-def mark_as_unread(request, slug=None):
-    id = slug2id(slug)
+def notification(request):
 
-    notification = get_object_or_404(Notification, recipient=request.user, id=id)
-    notification.mark_as_unread()
-
-    next = request.REQUEST.get('next')
-
-    if next:
-        return redirect(next)
-
-    return redirect('notifications:all')
+    return render_to_response('notifications/notifications.html',context_instance=RequestContext(request))

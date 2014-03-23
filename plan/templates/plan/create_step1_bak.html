@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% load dajaxice_templatetags %}
+
+
+
+    {% block title %}创建旅行计划{% endblock %}
+
+
+ {% block css_link %}
+
+
+    <!-- Datetimepicker core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}external/datetimepicker/css/bootstrap-datetimepicker.css">
+
+    <!-- Form Validator core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}external/bootstrapvalidator/css/bootstrapValidator.css"/>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}create.css" />
+
+{% endblock %}
+
+
+  </head>
+
+     {% block main_content %}
+            <div class="row">
+        <form class="form-horizontal col-xs-12 col-sm-9 bootstrap-validator-form" action="" role="form" id="plan-form" method="POST" novalidate="novalidate">
+            {% csrf_token %}
+          <legend>创建旅行计划</legend>
+          <div class="form-group" id="plan-title">
+            <label for="id-title" class="col-sm-2 control-label">标题</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="id-title" name="title" placeholder="旅行计划的标题" required>
+            </div>
+          </div><!-- /plan title -->
+
+          <div class="form-group" id="plan-home-city">
+            <label for="id-home-city" class="col-sm-2 control-label">出发城市</label>
+            <div class="col-sm-10">
+                {{ form.home_city}}
+
+            </div>
+          </div><!-- /plan home city -->
+
+          <div class="form-group" id="plan-destination-city">
+            <label for="id-destination-city" class="col-sm-2 control-label">旅行城市</label>
+            <div class="col-sm-10">
+                    {{ form.destination_city }}
+              <p class="help-block"> 此处改为联动动态加载</p>
+            </div>
+          </div><!-- /plan destination city -->
+
+          <div class="form-group" id="plan-leaving-date">
+            <label for="id-leaving-date" class="col-sm-2 control-label">出发日期</label>
+            <div class="col-sm-10">
+              <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="id-leaving-date" data-link-format="yyyy-mm-dd">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+              <input type="hidden" id="id-leaving-date" name="leaving_date" value="" form="plan-form">
+            </div>
+          </div><!-- /plan leaving date -->
+
+          <div class="form-group" id="plan-leaving-transportation">
+            <label for="id-leaving-transportation" class="col-sm-2 control-label">出行工具</label>
+            <div class="col-sm-10">
+
+
+                {{ form.leaving_transportation }}
+
+
+            </div>
+          </div><!-- /plan leaving transportation -->
+
+          <div class="form-group" id="plan-return-date">
+            <label for="id-return-date" class="col-sm-2 control-label">返回日期</label>
+            <div class="col-sm-10">
+              <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="id-return-date" data-link-format="yyyy-mm-dd">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+              <input type="hidden" id="id-return-date" name="return_date" value="" form="plan-form">
+            </div>
+          </div><!-- /plan return date -->
+
+          <div class="form-group" id="plan-return-transportation">
+            <label for="id-return-transportation" class="col-sm-2 control-label">返程交通工具</label>
+            <div class="col-sm-10">
+
+                {{ form.return_transportation }}
+
+            </div>
+          </div><!-- /plan return transportation -->
+
+
+
+          <div class="form-group" id="plan-participants">
+            <label for="id-participants" class="col-sm-2 control-label">同行人</label>
+            <div class="col-sm-10">
+
+                {% for p in  form.participants %}
+
+                {{ p }}
+{% endfor %}
+
+
+
+              <p class="help-block"> 此处改为动态加载 </p>
+            </div>
+          </div><!-- /plan participants -->
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox" id="plan-participants-can-edit">
+                <label for="id-participants-can-edit">
+                  <input type="checkbox" id="id-participants-can-edit" name="participants_can_edit"> 同行人可修改此份旅行计划
+                </label>
+              </div>
+            </div>
+          </div><!-- /plan participants can edit -->
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox" id="plan-is-public">
+                <label for="id-is-public">
+                  <input type="checkbox" id="id-is-public" name="is_public"> 分享此份旅行计划
+                </label>
+              </div>
+            </div>
+          </div><!-- /plan is public -->
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default" id="plan-submit-button">创建</button>
+              <input type="reset" class="btn btn-danger">
+            </div>
+          </div><!-- /form button -->
+
+
+
+        </form>
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/span-->
+      </div>
+      {% endblock %}
+
+
+    {% block js %}
+        <!-- Datetimepicker core Javascript -->
+    <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <!-- Form Validator core CSS -->
+    <script type="text/javascript" src="{{ STATIC_URL }}external/bootstrapvalidator/js/bootstrapValidator.js"></script>
+
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="{{ STATIC_URL }}create.js"></script>
+    {% dajaxice_js_import %}
+    {% endblock %}
+
+
+
+

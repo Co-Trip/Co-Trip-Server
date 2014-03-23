@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tom Hu (h1994st@gmail.com)
+ * @date    2014-02-16 15:24:10
+ * @version 1.0
+ */
+body {
+  padding-top: 50px;
+}
+html, body, main, 
+main > .row, 
+main > .row > div {
+  height: 100%;
+}
+body {
+  overflow: hidden;
+}
+main {
+  padding-bottom: 80px;
+  margin: 0 auto -80px;
+}
+footer {
+  margin-top: 0;
+}
+
+/*
+ * Co-Trip Picker
+ * --------------------------------------------------
+ */
+.CT-picker {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; 
+  padding: 20px;
+}
+.CT-picker > .CT-picker-heading {
+  
+}
+.CT-picker-item .CT-picker-item-img {
+  width: 100%;
+}
+.CT-picker-item > .CT-picker-item-body {
+  margin-bottom: 20px;
+}
+
+/*
+ * Co-Trip Picker - Friend item
+ * --------------------------------------------------
+ */
+.CT-picker-item.friend-item > .CT-picker-item-body > * {
+  opacity: 0.7;
+  -webkit-transition: opacity ease-in-out 0.15s;
+          transition: opacity ease-in-out 0.15s;
+}
+.CT-picker-item.friend-item > .CT-picker-item-body > .CT-item-check-icon {
+  opacity: 0;
+}
+.CT-picker-item.friend-item.item-selected > .CT-picker-item-body > * {
+  opacity: 1;
+}
+.CT-picker-item.friend-item > .CT-picker-item-body > .CT-picker-item-img:hover {
+  opacity: 1;
+}
+.CT-picker-item.friend-item .CT-item-check-icon {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #1b7e5a;
+}
+.CT-item-checkbox {
+  position: absolute;
+  display: none;
+}
+
+
+
+.CT-picker-item.friend-item.item-selected
+|___.CT-picker-item-body
+    |___.CT-item-checkbox
+    |___.CT-item-check-icon
+    |___.CT-picker-item-img
+    |___.CT-picker-item-detail
