@@ -12,5 +12,8 @@ class City(models.Model):
 class Province(models.Model):
     province_name = models.CharField(max_length=16)
     province_sort = models.IntegerField()
+    def __unicode__(self):
+        return self.province_name
+
 
 

@@ -6,6 +6,7 @@ from django.shortcuts import render, render_to_response
 
 from django.utils.datetime_safe import datetime
 from django.views.generic import View
+from city.models import Province
 from friendship.models import Follow
 from plan.form import PlanForm
 from plan.models import Plan, Event
@@ -27,8 +28,9 @@ class PlanCreateStep1View(View):
         followers = Follow.objects.followers(request.user)
         followings = Follow.objects.following(request.user)
         participants_choice_list = list(set(followers+followings))
+        province_list = Province.objects.all()
 
-        return render(request, self.template_name, {'form': primary_form, 'friends':participants_choice_list})
+        return render(request, self.template_name, {'form': primary_form, 'friends':participants_choice_list, 'province_list':province_list})
 
     def post(self, request):
 
