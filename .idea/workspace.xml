@@ -198,9 +198,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/d4c81d74512f323849453bf6b01f661b.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/d92d5d0896d39b586f331d9baaabd351.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/upload/e1e0366fd01d391deff497bce5b91608.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/api.py" afterPath="$PROJECT_DIR$/city/api.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/templates/plan/create_step1.html" afterPath="$PROJECT_DIR$/plan/templates/plan/create_step1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/models.py" afterPath="$PROJECT_DIR$/city/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan/views.py" afterPath="$PROJECT_DIR$/plan/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traveller/templates/traveller/profile.html" afterPath="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Co_Trip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -234,10 +236,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/friendship/urls.py">
+      <file leaf-file-name="autocomplete_light_registry.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/autocomplete_light_registry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="105" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+            <state line="11" column="47" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="50" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="51" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.65211457" vertical-offset="167" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile_bak.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile_bak.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="66" selection-start="608" selection-end="608" vertical-scroll-proportion="-15.458333" vertical-offset="64" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
@@ -255,7 +284,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plan/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="139" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3180">
+            <state line="45" column="16" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3180">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -263,35 +292,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_step1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create_step1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plan/templates/plan/create_step1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="20" selection-start="3768" selection-end="3768" vertical-scroll-proportion="0.4459799" vertical-offset="770" max-vertical-offset="2985">
+            <state line="75" column="27" selection-start="3775" selection-end="3775" vertical-scroll-proportion="-14.791667" vertical-offset="770" max-vertical-offset="2985">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/friendship/api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan/templates/plan/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="107" selection-start="3556" selection-end="3556" vertical-scroll-proportion="-25.8" vertical-offset="0" max-vertical-offset="2430">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -308,19 +313,10 @@
       <file leaf-file-name="api.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/city/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="19" column="21" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="23" selection-start="4630" selection-end="4630" vertical-scroll-proportion="-36.0" vertical-offset="1914" max-vertical-offset="3495">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -352,7 +348,6 @@
         <option value="$PROJECT_DIR$/notifications/api.py" />
         <option value="$PROJECT_DIR$/traveller/models.py" />
         <option value="$PROJECT_DIR$/api/urls.py" />
-        <option value="$PROJECT_DIR$/city/api.py" />
         <option value="$PROJECT_DIR$/notifications/views.py" />
         <option value="$PROJECT_DIR$/notifications/urls.py" />
         <option value="$PROJECT_DIR$/django_messages/templates/django_messages/compose.html" />
@@ -380,7 +375,6 @@
         <option value="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/403.html" />
         <option value="$PROJECT_DIR$/Co_Trip/settings.py" />
         <option value="$PROJECT_DIR$/Co_Trip/templates/base.html" />
-        <option value="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
         <option value="$PROJECT_DIR$/Co_Trip/templates/Co_Trip/about.html" />
         <option value="$PROJECT_DIR$/plan/models.py" />
         <option value="$PROJECT_DIR$/plan/templates/plan/create_step2.html" />
@@ -392,16 +386,18 @@
         <option value="$PROJECT_DIR$/plan/urls.py" />
         <option value="$PROJECT_DIR$/plan/templates/plan/detail.html" />
         <option value="$PROJECT_DIR$/plan/views.py" />
-        <option value="$PROJECT_DIR$/plan/templates/plan/create_step1.html" />
         <option value="$PROJECT_DIR$/city/models.py" />
+        <option value="$PROJECT_DIR$/plan/templates/plan/create_step1.html" />
+        <option value="$PROJECT_DIR$/city/api.py" />
+        <option value="$PROJECT_DIR$/traveller/templates/traveller/profile.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1571" />
-    <option name="y" value="76" />
+    <option name="x" value="1584" />
+    <option name="y" value="91" />
     <option name="width" value="2224" />
-    <option name="height" value="1311" />
+    <option name="height" value="1248" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -445,6 +441,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traveller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traveller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traveller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,6 +541,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="city" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Co_Trip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -810,7 +856,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1571" y="76" width="2224" height="1311" extended-state="0" />
+    <frame x="1584" y="91" width="2224" height="1248" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -823,7 +869,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15507075" sideWeight="0.4105737" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31723028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33418152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1024,15 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="2145">
-          <folding>
-            <element signature="e#0#67#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plan/templatetags/plantags.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="33" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
@@ -1126,13 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile_bak.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="0.8064516" vertical-offset="0" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/templates/Co_Trip/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="16" selection-start="192" selection-end="192" vertical-scroll-proportion="0.14336918" vertical-offset="0" max-vertical-offset="2310">
@@ -1143,13 +1173,6 @@
     <entry file="file://$PROJECT_DIR$/plan/templates/plan/create_step2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="20" selection-start="0" selection-end="9548" vertical-scroll-proportion="0.567503" vertical-offset="245" max-vertical-offset="2955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="18" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.6272401" vertical-offset="0" max-vertical-offset="837">
           <folding />
         </state>
       </provider>
@@ -1177,31 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plan/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="92" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/city/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="820">
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plan/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="139" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3180">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/friendship/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="105" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
@@ -1209,25 +1207,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="37" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="635" max-vertical-offset="1455">
-          <folding>
-            <element signature="e#23#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Co_Trip/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="190" column="23" selection-start="4630" selection-end="4630" vertical-scroll-proportion="-36.0" vertical-offset="1914" max-vertical-offset="3495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/city/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
@@ -1254,7 +1236,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plan/templates/plan/create_step1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="20" selection-start="3768" selection-end="3768" vertical-scroll-proportion="0.4459799" vertical-offset="770" max-vertical-offset="2985">
+        <state line="75" column="27" selection-start="3775" selection-end="3775" vertical-scroll-proportion="-14.791667" vertical-offset="770" max-vertical-offset="2985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="16" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3180">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="92" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/city/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/city/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="37" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="635" max-vertical-offset="1455">
+          <folding>
+            <element signature="e#23#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/autocomplete_light_registry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="47" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="50" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile_bak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="66" selection-start="608" selection-end="608" vertical-scroll-proportion="-15.458333" vertical-offset="64" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traveller/templates/traveller/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="51" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.65211457" vertical-offset="167" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
