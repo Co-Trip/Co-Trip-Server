@@ -5,7 +5,7 @@
 	var options = {
 		events_source: 'events/',
 		view: 'month',
-		tmpl_path: 'tmpls/',
+		tmpl_path: 'static/bootstrap-calendar/tmpls/',
 		tmpl_cache: false,
 		day: '2013-03-12',
 		modal: '#events-modal',

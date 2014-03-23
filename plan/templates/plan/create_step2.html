@@ -90,7 +90,65 @@
           </div>
         </div>
       </div>
-
+      
+      <div class="modal fade" id="add-events-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">添加日程</h4>
+            </div>
+            <div class="modal-body" style="height: 400px">
+              <form action="events" method="POST" id="add-events-form" class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label for="event-title" class="col-sm-3 control-label">标题</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" id="event-title" name="title" placeholder="标题" form="add-events-form">
+                  </div>
+                </div><!-- /event-title -->
+                <div class="form-group" id="plan-return-date">
+                  <label for="event-start" class="col-sm-3 control-label">开始时间</label>
+                  <div class="col-sm-7">
+                    <div class="input-group date form_datetime" data-date="" data-date-format="yyyy MM dd - HH:ii" data-link-field="event-start">
+                      <input class="form-control" size="16" type="text" value="" readonly>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                    <input type="hidden" id="event-start" name="start" value="" form="add-events-form">
+                  </div>
+                </div><!-- /event-start -->
+                <div class="form-group" id="plan-return-date">
+                  <label for="event-end" class="col-sm-3 control-label">结束时间</label>
+                  <div class="col-sm-7">
+                    <div class="input-group date form_datetime" data-date="" data-date-format="yyyy MM dd - HH:ii" data-link-field="ievent-end">
+                      <input class="form-control" size="16" type="text" value="" readonly>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                    <input type="hidden" id="event-end" name="end" value="" form="add-events-form">
+                  </div>
+                </div><!-- /event-end -->
+                <div class="form-group">
+                  <label for="event-description" class="col-sm-3 control-label">日程详情</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" id="event-description" name="description" placeholder="日程详情">
+                  </div>
+                </div><!-- /event-description -->
+                <div class="form-group">
+                  <label for="event-spend" class="col-sm-3 control-label">花销</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" id="event-spend" name="spend" placeholder="花销">
+                  </div>
+                </div><!-- /event-spend -->
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" form="add-events-form">添加</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
   {% endblock %}
 
