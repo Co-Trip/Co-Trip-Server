@@ -4,6 +4,8 @@
     <!-- Bootstrap Calendar core CSS -->
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap-calendar/css/calendar.css">
 
+    <!-- Datetimepicker core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}external/datetimepicker/css/bootstrap-datetimepicker.css">
 
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}create_step2.css">
 {% endblock %}
@@ -93,6 +95,8 @@
   {% endblock %}
 
 {% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 
     <!-- Bootstrap Calendar components Javascript -->
     <script type="text/javascript" src="{{ STATIC_URL }}bootstrap-calendar/components/underscore/underscore.js"></script>
