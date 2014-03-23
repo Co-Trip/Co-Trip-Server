@@ -41,10 +41,43 @@ $('.form_date').datetimepicker({
     startDate: new Date().format('yyyy-MM-dd')
 });
 
-$(document).ready(function() {
-    $('.CT-picker-item.friend-item').click(function(event) {
-        $(this).toggleClass('item-selected');
-        $(this).find('.CT-item-checkbox').attr('checked', true);
-    });
-});
+(function ($) {
+    function updateCityPickerList(provinceID) {
+        var $cityPickerBody = $('#city-picker-body');
+        $cityPickerBody.empty();
+        $.getJSON('http://10.0.1.27:8000/api/v1/province/' + provinceID,
+            {format: 'json'},
+            function (json, textStatus) {
+                var cityList = json['city'];
+                for (var cityID in cityList) {
+                    var $pickerItem = $('<div class="col-sm-3 CT-picker-item city-item fade"></div>');
+                    var $pickerItemBody = $('<div class="thumbnail CT-picker-item-body"></div>');
+                    var $pickerItemImg = $('<img src="imgs/avatar/zr.jpg" alt="..." class="img-rounded CT-picker-item-img">');
+                    var $pickerItemDetail = $('<div class="caption CT-picker-item-detail"></div>');
 
+                    $pickerItemDetail.append('<h4>' + cityList[cityID] + '</h4><input name="city" type="checkbox" class="CT-item-checkbox" form="plan-form" value="' + cityID + '">');
+                    $pickerItemBody.append($pickerItemImg);
+                    $pickerItemBody.append($pickerItemDetail);
+                    $pickerItem.append($pickerItemBody);
+                    $pickerItem.hide();
+
+                    $cityPickerBody.append($pickerItem);
+                    $pickerItem.fadeIn();
+                }
+            }
+        );
+    }
+    $(document).ready(function() {
+        $('.CT-picker-item.friend-item').click(function (event) {
+            $(this).toggleClass('item-selected');
+            $(this).find('.CT-item-checkbox').attr('checked', true);
+        });
+
+        updateCityPickerList(1);
+
+        $('#id-destination-city').change(function (event) {
+            var provinceID = $(this).val();
+            updateCityPickerList(provinceID);
+        });
+    });
+})(jQuery)
