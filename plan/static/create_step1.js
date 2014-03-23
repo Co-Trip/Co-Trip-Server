@@ -43,6 +43,7 @@ $('.form_date').datetimepicker({
 
 (function ($) {
     function updateCityPickerList(provinceID) {
+        debugger;
         var $cityPickerBody = $('#city-picker-body');
         $cityPickerBody.empty();
         $.getJSON('http://10.0.1.27:8000/api/v1/province/' + provinceID,
