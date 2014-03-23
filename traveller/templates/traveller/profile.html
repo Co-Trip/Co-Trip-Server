@@ -1,51 +1,38 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load avatartags %}
-{% load friendshiptags %}
-{% load url from future %}
+{% block title %}我的主页{% endblock %}
 
-{% block title %}
-    我的主页
+{% block css_link %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}travevller/profile.css">
 {% endblock %}
 
 
 {% block main_content %}
-
-
-    <img src="{% get_avatar user 100 %}"/>
-
-    <p> {{ traveller.user.username }}</p>
-
-    <p>birthday {{ traveller.birthday}}</p>
-    <p>gender {{ traveller.gender  }}</p>
-
-    <p>followers:</p>
-    {% followers traveller.user %}
-
-    <p>following:</p>
-    {% following traveller.user %}
-
-
-    <br><br><br><br><p>created plans:</p>
-    {% for plan in created_plans %}
-    <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-    {% endfor %}
-
-    <p>participated plan:</p>
-    {% for plan in participated_plans %}
-    <p><a href=>{{ plan.title }}</a></p>
-    {% endfor %}
-
-{% if is_current_user%}
-
-
-    <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
-
-{% else %}
-    <p><br><br><br><br><br><a href="/follow/follower/add/{{ traveller.user.username }}">follow</a></p>
-{% endif %}
-
-
-
-
-
+      <header class="jumbotron">
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="{% get_avatar user 100 %}" alt="Zhangrui">
+          </a>
+          <div class="media-body">
+            <h2 class="media-heading"></h2>
+            我是长腿
+            <div class="pull-right">
+              <p>Flower: 123</p>
+              <p>Flowing: 123123</p>
+            </div>
+            <div>
+              <button class="btn btn-default">关注</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+        参与过的计划：
+      </div>
+    </main>
 {% endblock %}
+
+{% block js%}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/profile.js"></script>
+{% endblock %}
+

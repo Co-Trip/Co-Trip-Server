@@ -146,8 +146,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 AUTH_PROFILE_MODULE = 'traveller.Traveller'
 
-GUARDIAN_RAISE_403 = True
-
+GUARDIAN_RENDER_403 = True
+GUARDIAN_TEMPLATE_403="Co_Trip/403.html"
 
 #ADMINS = (('qsz13', 'qsz1328@gmail.com'))
 
@@ -224,3 +224,5 @@ SOCIAL_AUTH_WEIBO_SECRET = 'b5c980bf93d3751affd1241b9fe76ef8'
 API_LIMIT_PER_PAGE = 10
 
 NOTIFY_USE_JSONFIELD=True
+
+ALLOWED_HOSTS = ['162.243.22.29','127.0.0.1']
