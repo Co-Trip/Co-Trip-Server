@@ -52,7 +52,7 @@ $('.form_date').datetimepicker({
                 for (var cityID in cityList) {
                     var $pickerItem = $('<div class="col-sm-3 CT-picker-item city-item fade"></div>');
                     var $pickerItemBody = $('<div class="thumbnail CT-picker-item-body"></div>');
-                    var $pickerItemImg = $('<img src="imgs/avatar/zr.jpg" alt="..." class="img-rounded CT-picker-item-img">');
+                    var $pickerItemImg = $('<img src="" alt="..." class="img-rounded CT-picker-item-img">');
                     var $pickerItemDetail = $('<div class="caption CT-picker-item-detail"></div>');
 
                     $pickerItemDetail.append('<h4>' + cityList[cityID] + '</h4><input name="city" type="checkbox" class="CT-item-checkbox" form="plan-form" value="' + cityID + '">');
