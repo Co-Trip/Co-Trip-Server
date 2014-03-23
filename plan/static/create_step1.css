@@ -74,12 +74,3 @@ footer {
   position: absolute;
   display: none;
 }
-
-
-
-.CT-picker-item.friend-item.item-selected
-|___.CT-picker-item-body
-    |___.CT-item-checkbox
-    |___.CT-item-check-icon
-    |___.CT-picker-item-img
-    |___.CT-picker-item-detail

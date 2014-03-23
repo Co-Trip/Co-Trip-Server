@@ -22,7 +22,7 @@
             </div>
             <div>
               <button class="btn btn-default">关注</button>
-                {% if is_current_user%}
+{% if is_current_user%}
 
 
     <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
@@ -39,8 +39,8 @@
       </header>
       <div class="row">
         参与过的计划：
-      </div>
-    {% for p in created_plans %}
+      </div>{{ created_plans }}
+    {% for plan in created_plans %}
     <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
     {% endfor %}
     {% for p in participated_plans %}

@@ -41,7 +41,7 @@ class ProfileView(View):
         created_plans = traveller.create_plan_set.all()
         participated_plans = traveller.participate_plan_set.all()
 
-
+        print created_plans
         context = {'traveller': traveller, 'created_plans': created_plans, 'participated_plans': participated_plans,
                     'is_current_user':self.is_current_user}
 
