@@ -5,9 +5,9 @@
 	var options = {
 		events_source: 'events/',
 		view: 'month',
-		tmpl_path: 'static/bootstrap-calendar/tmpls/',
+		tmpl_path: '/static/bootstrap-calendar/tmpls/',
 		tmpl_cache: false,
-		day: '2013-03-12',
+		day: new Date().format('yyyy-MM-dd'),
 		modal: '#events-modal',
 		modal_type: 'template',
 		language: 'zh-CN',

@@ -103,7 +103,7 @@
                 <div class="form-group">
                   <label for="event-title" class="col-sm-3 control-label">标题</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control" id="event-title" name="title" placeholder="标题" form="add-events-form">
+                    <input type="text" class="form-control" id="event-title" name="title" placeholder="标题" form="add-events-form" required>
                   </div>
                 </div><!-- /event-title -->
                 <div class="form-group" id="plan-return-date">
@@ -114,7 +114,7 @@
                       <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                       <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                     </div>
-                    <input type="hidden" id="event-start" name="start" value="" form="add-events-form">
+                    <input type="hidden" id="event-start" name="start" value="" form="add-events-form" required>
                   </div>
                 </div><!-- /event-start -->
                 <div class="form-group" id="plan-return-date">
@@ -125,7 +125,7 @@
                       <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                       <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                     </div>
-                    <input type="hidden" id="event-end" name="end" value="" form="add-events-form">
+                    <input type="hidden" id="event-end" name="end" value="" form="add-events-form" required>
                   </div>
                 </div><!-- /event-end -->
                 <div class="form-group">
@@ -140,6 +140,19 @@
                     <input type="text" class="form-control" id="event-spend" name="spend" placeholder="花销">
                   </div>
                 </div><!-- /event-spend -->
+                <div class="form-group">
+                  <label for="event-class" class="col-sm-3 control-label">类型</label>
+                  <div class="col-sm-7">
+                    <select class="form-control" id="event-class" name="class" placeholder="花销" required>
+                      <option value="event-warning">吃饭</option>
+                      <option value="event-success">游览景点</option>
+                      <option value="event-info">睡觉</option>
+                      <option value="event-inverse">在路上</option>
+                      <option value="event-special">类型5</option>
+                      <option value="event-special">类型6</option>
+                    </select>
+                  </div>
+                </div><!-- /event-class -->
               </form>
             </div>
             <div class="modal-footer">
@@ -172,3 +185,5 @@
     <script type="text/javascript" src="{{ STATIC_URL }}create_step2.js"></script>
 
 {% endblock %}
+
+
