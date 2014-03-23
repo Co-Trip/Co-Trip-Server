@@ -41,7 +41,10 @@ class PlanCreateStep1View(View):
             plan = form.save(commit=False)
             plan.create_time = datetime.now()
             plan.creator = request.user.profile
-            participants_list = request.POST['participants']
+            try:
+                participants_list = request.POST['participants']
+            except:
+                participants_list=[]
             start_date = form.cleaned_data['leaving_date']
             end_date = form.cleaned_data['return_date']
             delta_days = end_date - start_date
@@ -109,18 +112,24 @@ class PlanEventView(View):
             d['spend'] = e.spend
             d['start'] = e.start_time
             d['end'] = e.end_time
+            d['class'] = e.event_class
             events.append(d)
         to_json = {"success": 1,"result":events}
         return HttpResponse(json.dumps(to_json), mimetype='application/json')
 
     def post(self, request, plan_id):
+        print request
         plan = Plan.objects.get(id=plan_id)
         event = Event()
+
         event.start_time = request.POST['start']
+        print event.start_time
+        print "aksjdhflkasjdhflkasjdhflakjsh"
         event.end_time = request.POST['end']
         event.title = request.POST['title']
-        event.description = request.POST['title']
+        event.description = request.POST['description']
         event.spend = request.POST['spend']
+        event.event_class = request.POST['class']
         event.main_plan = plan
         event.save()
         to_json = {"success": 1}
@@ -174,7 +183,7 @@ def detail(request, plan_id):
     except main_plan.DoesNotExist:
         raise Http404
 
-    return render_to_response('plan/create_step2.html', context_instance=RequestContext(request),
+    return render_to_response('plan/detail.html', context_instance=RequestContext(request),
                                   dictionary={'main_plan':main_plan})
 
     # template = loader.get_template('plan/detail.html')

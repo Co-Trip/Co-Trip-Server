@@ -81,14 +81,23 @@
 	form.submit(function (event) {
 		event.preventDefault();
 		var data = {};
-		form.find('input[id]').each(function (index, el) {
-			data[$(this).attr('name')] = $(this).val();
+		form.find('input[id], select').each(function (index, el) {
+            if ($(this).attr('type') === 'hidden') {
+                 data[$(this).attr('name')] = "" + Date.parse($(this).val());
+            } else {
+                if ($(this).attr('name') === 'spend') {
+                     data[$(this).attr('name')] = parseInt($(this).val());
+                } else {
+                     data[$(this).attr('name')] = $(this).val();
+                }
+
+            }
 		});
 		$.ajax({
 			url: form.attr('action'),
 			type: 'POST',
 			dataType: 'json',
-			data: JSON.stringify(data),
+			data: data,
 		})
 		.done(function () {
 			var modal = $('#add-events-modal');
@@ -102,7 +111,7 @@
 	});
 
 	$('#add-events-modal').on('hidden.bs.modal', function (e) {
-		form.find('input').each(function (index, el) {
+		form.find('input, select').each(function (index, el) {
 			$(this).val('');
 		});
 	})

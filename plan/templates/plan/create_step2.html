@@ -99,7 +99,7 @@
               <h4 class="modal-title">添加日程</h4>
             </div>
             <div class="modal-body" style="height: 400px">
-              <form action="events" method="POST" id="add-events-form" class="form-horizontal" role="form">
+              <form action="events/" method="POST" id="add-events-form" class="form-horizontal" role="form">
                 <div class="form-group">
                   <label for="event-title" class="col-sm-3 control-label">标题</label>
                   <div class="col-sm-7">
@@ -120,7 +120,7 @@
                 <div class="form-group" id="plan-return-date">
                   <label for="event-end" class="col-sm-3 control-label">结束时间</label>
                   <div class="col-sm-7">
-                    <div class="input-group date form_datetime" data-date="" data-date-format="yyyy MM dd - HH:ii" data-link-field="ievent-end">
+                    <div class="input-group date form_datetime" data-date="" data-date-format="yyyy MM dd - HH:ii" data-link-field="event-end">
                       <input class="form-control" size="16" type="text" value="" readonly>
                       <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                       <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -137,13 +137,14 @@
                 <div class="form-group">
                   <label for="event-spend" class="col-sm-3 control-label">花销</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control" id="event-spend" name="spend" placeholder="花销">
+                    <input type="number" min="0" class="form-control" id="event-spend" name="spend" placeholder="花销">
                   </div>
                 </div><!-- /event-spend -->
                 <div class="form-group">
                   <label for="event-class" class="col-sm-3 control-label">类型</label>
                   <div class="col-sm-7">
-                    <select class="form-control" id="event-class" name="class" placeholder="花销" required>
+                    <select class="form-control" id="event-class" name="class" placeholder="类型" required>
+                      <option>------</option>
                       <option value="event-warning">吃饭</option>
                       <option value="event-success">游览景点</option>
                       <option value="event-info">睡觉</option>
@@ -169,6 +170,8 @@
     <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}external/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 
+     <!-- Custom Javascript -->
+    <script type="text/javascript" src="{{ STATIC_URL }}create_step2.js"></script>
     <!-- Bootstrap Calendar components Javascript -->
     <script type="text/javascript" src="{{ STATIC_URL }}bootstrap-calendar/components/underscore/underscore.js"></script>
 
@@ -181,8 +184,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}bootstrap-calendar/js/app.js"></script>
 
 
-    <!-- Custom Javascript -->
-    <script type="text/javascript" src="{{ STATIC_URL }}create_step2.js"></script>
+
 
 {% endblock %}
 

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load comments %}
+{% block title %}{{ plan.title }}{% endblock %}
+
+{% block main_content %}
+
+<h1>{{ plan.title }}</h1>
+    <p>create_time: {{ plan.create_time }}</p>
+    <p>leaving_date: {{ plan.leaving_date }}</p>
+    <p>leaving_transportation: {{ plan.leaving_transportation }}</p>
+    <p>return_date: {{ plan.return_date }}</p>
+    <p>return_transportation: {{ plan.return_transportation }}</p>
+    <p>participants_number: {{ plan.participants_number}}</p>
+    <p>creator: {{ plan.creator.user.username}}</p>
+    <p>participants:</p>
+    {% for p in plan.participants.all %}
+        <p>{{ p }}</p>
+    {% endfor %}
+    <p><a href="/plan/explore/{{ plan.id }}/edit">edit</a></p>
+
+{%   for daily_plan in plan.daily_plan_set.all %}
+    <p>hotel: {{ daily_plan.hotel }}</p>
+{% endfor %}
+    {% get_comment_list for main_plan as comment_list %}
+{% for comment in comment_list %}
+    <p>{{ comment }}</p>
+{% endfor %}
+
+
+
+{% if user.is_authenticated %}
+    {% get_comment_form for main_plan as form %}
+    <form action="{% comment_form_target %}" method="POST">
+    {% csrf_token %}
+
+  <p><label for="id_comment">Comment: </label>{{ form.comment }}</p>
+
+  {{ form.content_type }}
+  {{ form.object_pk }}
+  {{ form.timestamp }}
+  {{ form.security_hash }}
+  <span style="display: none;">{{ form.honeypot }}</span>
+
+    <input type="hidden" name="next" value="{% url 'plan_detail' main_plan.id %}" />
+    <input type="submit" value="Add comment" id="id_submit" />
+    </form>
+{% else %}
+    <p>Please <a href="{% url 'auth_login' %}">log in</a> to leave a comment.</p>
+{% endif %}
+
+{% endblock %}

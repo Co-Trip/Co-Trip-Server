@@ -693,7 +693,6 @@ if(!String.prototype.formatNum) {
 			this.options.view = view;
 		}
 
-
 		this._init_position();
 		this._loadEvents();
 		this._render();
@@ -929,7 +928,6 @@ if(!String.prototype.formatNum) {
 		this['_update_' + this.options.view]();
 
 		this._update_modal();
-
 	};
 
 	Calendar.prototype._update_modal = function() {
@@ -976,6 +974,7 @@ if(!String.prototype.formatNum) {
 				modal
 					.on('show.bs.modal', function() {
 						var modal_body = $(this).find('.modal-body');
+						var modal_title = $(this).find('.modal-title');
 						switch(self.options.modal_type) {
 							case "iframe" :
 								var height = modal_body.height() - parseInt(modal_body.css('padding-top'), 10) - parseInt(modal_body.css('padding-bottom'), 10);
@@ -989,6 +988,8 @@ if(!String.prototype.formatNum) {
 								break;
 
 							case "template":
+								modal_title.text(event.title);
+								debugger;
 								self._loadTemplate("modal");
 								//	also serve calendar instance to underscore template to be able to access current language strings
 								modal_body.html(self.options.templates["modal"]({"event": event, "calendar": self}))
@@ -997,7 +998,7 @@ if(!String.prototype.formatNum) {
 
 						//	set the title of the bootstrap modal
 						if(_.isFunction(self.options.modal_title)) {
-							modal.find("h3").html(self.options.modal_title(event));
+							modal.find("h4").html(self.options.modal_title(event));
 						}
 					})
 					.data('handled.bootstrap-calendar', true).data('handled.event-id', event.id);

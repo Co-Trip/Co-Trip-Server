@@ -55,7 +55,7 @@ class Event(models.Model):
     title = models.CharField(max_length=256)
     spend = models.IntegerField()
     description = models.CharField(max_length=256)
-
+    event_class = models.CharField(max_length=20, null=True)
 
 
 
