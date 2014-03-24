@@ -1,7 +1,24 @@
+{% if plan_list|length %}
 
 
 
-{% for p in plan_list %}
+<div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+
+          <div>
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#home" data-toggle="tab">关注的行程</a></li>
+
+            </ul>
+          </div><!-- /.nav-tabs -->
+          <div class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+              <div class="row">
+          {% for p in plan_list %}
     {% load avatartags %}
 <div class="CT-feed-item col-xs-12" data-fid="0">
                   <div class="CT-avatar col-xs-3 col-sm-2">
@@ -21,8 +38,129 @@
                   </div>
                 </div><!--/feed item-->
 
-    {% empty %}
+              </div><!--/.row-->
+            </div>
 
-kasjlhdfklajshdflkjashdfkljashdlkj
-{% endfor %}
+          </div><!-- /.tab-content -->
+
+        </div><!--/span-->
+
+        </div><!--/span-->
+      </div><!--/row-->
+    {% endfor %}
+{% else %}
+
+    {% block header %}
+<!-- =====Carousel===== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="/static/imgs/background-image/2.jpg" alt="First slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>致旅行</h1>
+          <p>不出去走走</p>
+          <p>你会以为现在看到的</p>
+          <p>就是整个世界</p>
+          <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/static/imgs/background-image/3.jpg" alt="Second slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>致风景{{ STATIC_URL }}</h1>
+          <p>你看看风景</p>
+          <p>而我注视着你</p>
+          <p>为了让你邂逅最美的风景</p>
+          <p>我在这里，规划最难忘的旅行</p>
+          <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/static/imgs/background-image/4.jpg" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>致青春</h1>
+          <p>千里之行，始于足下</p>
+          <p>我们的旅行，从这里开启</p>
+            <p>一起走过的，见证了岁月的痕迹</p>
+            <p>但我们的青春，因为这里，永不散场</p>
+          <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div><!-- /.carousel -->
+{% endblock %}
+
+{% block main_content %}
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="img-circle" src="/static/imgs/background-image/2_1.jpg" style="width: 200px; height: 200px;" alt="Generic placeholder image">
+      <h2>旅行，从计划开始</h2>
+        <p>三五好友，规划旅行</p>
+        <p>收获友情，收获感动</p>
+    </div><!-- /.col-lg-4 -->
+       <div class="col-lg-4">
+      <img class="img-circle" src="/static/imgs/background-image/4_1.jpg" style="width: 200px; height: 200px;" alt="Generic placeholder image">
+      <h2>我的青春足迹</h2>
+      <p>旅行，途遇</p>
+        <p>最好的自己</p>
+        <p>在旅途中邂逅最好的自己</p>
+        <p>在旅途，我们只负责笑</p>
+        <p>阳光会为我们拍照</p>
+
+    </div><!-- /.col-lg-4 -->
+
+    <div class="col-lg-4">
+      <img class="img-circle" src="/static/imgs/background-image/3_1.jpg" style="width: 200px; height: 200px;" alt="Generic placeholder image">
+      <h2>邂逅最美的风景</h2>
+      <p>去旅行，让时光</p>
+        <p>留下属于我们的</p>
+        <p>永不磨灭的记忆</p>
+
+    </div><!-- /.col-lg-4 -->
+
+  </div><!-- /.row -->
+
+
+</div>
+    {% endblock %}
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
 

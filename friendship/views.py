@@ -34,7 +34,7 @@ def followers(request, username, template_name='friendship/follow/followers_list
 
 
 def following(request, username, template_name='friendship/follow/following_list.html'):
-    """ List who this user follows """
+    """  List who this user follows """
     user = get_object_or_404(user_model, username=username)
     following = Follow.objects.following(user)
 
@@ -59,7 +59,6 @@ def follower_add(request, followee_username, template_name='friendship/follow/ad
         to_json = {"success": 1}
         return HttpResponse(json.dumps(to_json), mimetype='application/json')
 
-
     return render(request, template_name, ctx)
 
 
@@ -81,12 +80,12 @@ def all_users(request, template_name="friendship/user_actions.html"):
 
     return render(request, template_name, {get_friendship_context_object_list_name(): users})
 
-def is_following(request, username):
-    target_user = get_object_or_404(user_model, username=username)
+def is_following(request, followee_username):
+    target_user = get_object_or_404(user_model, username=followee_username)
     following = Follow.objects.following(request.user)
-    if target_user in following:
-        to_json = {"is_following": 1}
+    if target_user.profile  in following:
+        to_json = {"result": 1}
         return HttpResponse(json.dumps(to_json), mimetype='application/json')
     else:
-        to_json = {"is_following": 0}
+        to_json = {"result": 0}
         return HttpResponse(json.dumps(to_json), mimetype='application/json')

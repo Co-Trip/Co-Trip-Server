@@ -21,6 +21,16 @@
             $.get('/follow/follower/' + $(this).data('action') + '/' + $(this).data('username'), function (data) {
                 alert(JSON.stringify(data));
             });
+            switch ($(this).data('action')) {
+                case 'add':
+                    $button.text('取消关注');
+                    $button.data('action', 'remove');
+                    break;
+                case 'remove':
+                    $button.text('关注');
+                    $button.data('action', 'add');
+                    break;
+            }
         });
     });
 })(jQuery)

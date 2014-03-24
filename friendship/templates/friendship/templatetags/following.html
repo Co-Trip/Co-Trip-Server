@@ -1,7 +1,7 @@
 <ul>
     {% for f in following %}
 
-   <a href='{{ f.profile.get_absolute_url }}'>{{ f.username }}</a>
+   <a href='{{ f.get_absolute_url }}'>{{ f.user.username }}</a>
 
     {% endfor %}
 </ul>

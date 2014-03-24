@@ -9,7 +9,6 @@ from django.db.models.signals import post_save
 from django.forms import ModelForm
 from django.db import models
 from django import forms
-# Create your models here.
 from upload_avatar.models import UploadAvatarMixIn
 from upload_avatar.signals import avatar_crop_done
 

@@ -1,7 +1,8 @@
+{% load avatartags %}
 <ul>
     {% for f in followers %}
 
-    <a href='{{ f.profile.get_absolute_url }}'>{{ f.username }}</a>
+    <a href='{{ f.get_absolute_url }}'><img src="{% get_avatar f.user 50 %}">{{ f.user.username }}</a>
 
     {% endfor %}
 </ul> 

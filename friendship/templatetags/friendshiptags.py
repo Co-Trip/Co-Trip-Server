@@ -12,7 +12,7 @@ def followers(user):
     """
     Simple tag to grab all followers
     """
-    #print Follow.objects.followers(user)
+    # print Follow.objects.followers(user)
     return {'followers': Follow.objects.followers(user)}
 
 
@@ -21,4 +21,6 @@ def following(user):
     """
     Simple tag to grab all users who follow the given user
     """
+
+
     return {'following': Follow.objects.following(user)}
