@@ -11,7 +11,7 @@ class TravellerResource(ModelResource):
         resource_name = 'traveller'
         serializer = Serializer()
     def dehydrate(self, bundle):
-        bundle.data['following'] =
+
 
         return bundle
 
