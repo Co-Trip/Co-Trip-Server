@@ -1,34 +1,40 @@
 {% extends 'base.html' %}
 {% load avatartags %}
+{% load friendshiptags %}
 {% block title %}我的主页{% endblock %}
 
 {% block css_link %}
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}travevller/profile.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}profile.css">
 {% endblock %}
 
 
 {% block main_content %}
-      <header class="jumbotron">
+
+    <header class="jumbotron">
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" src="{% get_avatar user 100 %}" alt="{{ user.name }}">
+            <img class="media-object" src="{% get_avatar user 100 %}" alt="{{ traveller.user.username }}">
           </a>
           <div class="media-body">
-            <h2 class="media-heading">{{ user.username }}</h2>
+            <h2 class="media-heading">{{ traveller.user.username }}</h2>
 
-            <div class="pull-right">
-              <p>Flower: 123</p>
-              <p>Flowing: 123123</p>
+            <div class="pull-middle">
+              <p>关注者:</p>
+                    {% following traveller.user %}
+
+              <p>粉丝:</p>
+                    {% followers traveller.user %}
+
             </div>
             <div>
-              <button class="btn btn-default" data-username="{{ user.username }}" id="follow-or-not" data-action="add">关注</button>
+
 {% if is_current_user%}
 
 
     <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
 
 {% else %}
-    <p><br><br><br><br><br><a href="/follow/follower/add/{{ traveller.user.username }}">follow</a></p>
+    <button class="btn btn-default" data-username="{{ traveller.user.username }}" id="follow-or-not" data-action="add">关注</button>
 {% endif %}
 
 
@@ -51,6 +57,6 @@
 {% endblock %}
 
 {% block js%}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/profile.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}profile.js"></script>
 {% endblock %}
 

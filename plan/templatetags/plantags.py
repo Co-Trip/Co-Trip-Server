@@ -14,9 +14,9 @@ def get_following_plan(user, ):
     followings = Follow.objects.following(user)
     plan_list = []
     for f in followings:
-        plan_list += user.profile.create_plan_set.filter(is_public=True)
-        plan_list += user.profile.participate_plan_set.filter(is_public=True)
-        plan_list = set(plan_list)
+        plan_list += list(user.profile.create_plan_set.filter(is_public=True))
+        plan_list += list(user.profile.participate_plan_set.filter(is_public=True))
+        plan_list = list(set(plan_list))
 
 
     return {'plan_list': plan_list}

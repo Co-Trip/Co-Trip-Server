@@ -11,9 +11,22 @@ class FollowerResource(ModelResource):
         queryset = Follow.objects.all()
         resource_name = 'follower'
         serializer = Serializer()
+        limit = 10
+
+    def dehydrate(self, bundle):
+        bundle.data['username'] = bundle.obj.follower.username
+
+        return bundle
+
 
 class FollowingResource(ModelResource):
     class Meta:
         queryset = Follow.objects.all()
-        resource_name = 'Following'
+        resource_name = 'following'
         serializer = Serializer()
+        limit = 10
+
+    def dehydrate(self, bundle):
+
+
+        return bundle
