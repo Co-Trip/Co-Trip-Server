@@ -77,14 +77,18 @@ $(document).ready(function() {
             var unreadNumber = 0;
             $('#unread-list').empty();
             $('#unread-badge').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Notifis(obj[i]);
-                if (item.isUnread()) {
-                    unreadNumber ++;
+            if (obj.length === 0) {
+                $('#unread-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-bell"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Notifis(obj[i]);
+                    if (item.isUnread()) {
+                        unreadNumber ++;
+                    }
+                    var $item = item.tojQueryObject();
+                    $('#unread-list').append($item);
+                    $item.fadeIn();
                 }
-                var $item = item.tojQueryObject();
-                $('#unread-list').append($item);
-                $item.fadeIn();
             }
             if (unreadNumber != 0) {
                 $('#unread-badge').text(unreadNumber);
@@ -102,14 +106,18 @@ $('a[href="#unread"]').on('show.bs.tab', function (e) {
             var unreadNumber = 0;
             $('#unread-list').empty();
             $('#unread-badge').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Notifis(obj[i]);
-                if (item.isUnread()) {
-                    unreadNumber ++;
+            if (obj.length === 0) {
+                $('#unread-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-bell"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Notifis(obj[i]);
+                    if (item.isUnread()) {
+                        unreadNumber ++;
+                    }
+                    var $item = item.tojQueryObject();
+                    $('#unread-list').append($item);
+                    $item.fadeIn();
                 }
-                var $item = item.tojQueryObject();
-                $('#unread-list').append($item);
-                $item.fadeIn();
             }
             if (unreadNumber != 0) {
                 $('#unread-badge').text(unreadNumber);
@@ -124,12 +132,16 @@ $('a[href="#all"]').on('show.bs.tab', function (e) {
         function(json, textStatus) {
             var obj = json["objects"];
             $('#all-list').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Notifis(obj[i]);
-                item.removeDeleteButton();
-                var $item = item.tojQueryObject();
-                $('#all-list').append($item);
-                $item.fadeIn();
+            if (obj.length === 0) {
+                $('#all-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-bell"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Notifis(obj[i]);
+                    item.removeDeleteButton();
+                    var $item = item.tojQueryObject();
+                    $('#all-list').append($item);
+                    $item.fadeIn();
+                }
             }
     });
 });
