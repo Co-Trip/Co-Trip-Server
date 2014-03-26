@@ -52,14 +52,24 @@
       </div>
 
       <div class="panel-footer">
-        创建过的计划：
-        {% for plan in created_plans %}
-        <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-        {% endfor %}
-        参与过的计划：
-        {% for plan in participated_plans %}
-        <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-        {% endfor %}
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>创建过的计划：</h4>
+            <div class="bs-callout bs-callout-info">
+              {% for plan in created_plans %}
+              <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <h4>参与过的计划：</h4>
+            <div class="bs-callout bs-callout-info">
+              {% for plan in participated_plans %}
+              <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
