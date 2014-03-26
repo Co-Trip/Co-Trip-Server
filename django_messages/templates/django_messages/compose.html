@@ -4,28 +4,33 @@
 {% block title %}发送站内信 | Co-Trip{% endblock %}
 {% block main_content %}
 
-<h1>{% trans "Compose Message"%}</h1>
+<!-- <h1>{% trans "Compose Message"%}</h1> -->
 <form action="" method="post" class="form form-horizontal">
+  <legend>发送站内信</legend>
   {% csrf_token %}
   <div class="form-group">
-    <label for="id_recipient" class="col-sm-2 control-label">收件人：</label>
-    <div class="col-sm-10">
+    <label for="id_recipient" class="col-sm-offset-2 col-sm-2 control-label">收件人：</label>
+    <div class="col-sm-6">
       <input type="text" class="form-control" id="id_recipient" name="recipient" placeholder="收件人">
     </div>
   </div>
   <div class="form-group">
-    <label for="id_subject" class="col-sm-2 control-label">主题：</label>
-    <div class="col-sm-10">
+    <label for="id_subject" class="col-sm-offset-2 col-sm-2 control-label">主题：</label>
+    <div class="col-sm-6">
       <input type="text" class="form-control" id="id_subject" name="subject" maxlength="120" placeholder="主题">
     </div>
   </div>
   <div class="form-group">
-    <label for="id_body" class="col-sm-2 control-label">正文：</label>
-    <div class="col-sm-10">
+    <label for="id_body" class="col-sm-offset-2 col-sm-2 control-label">正文：</label>
+    <div class="col-sm-6">
       <textarea cols="55" id="id_body" name="body" rows="12" class="form-control" placeholder="在这里输入内容～"></textarea>
     </div>
   </div>
-  <button type="submit" class="btn btn-danger">{% trans "Send" %}</button>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-6">
+      <button type="submit" class="btn btn-danger">{% trans "Send" %}</button>
+    </div>
+  </div>
 </form>
 
 {% endblock %}
