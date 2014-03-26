@@ -106,7 +106,7 @@ footer {
   letter-spacing: 4px;
 }
 .block form {
-  margin-right: 250px;
+  width: 75%;
 }
 .block form .form-control {
   font-size: 16px;
