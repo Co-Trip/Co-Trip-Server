@@ -103,14 +103,18 @@ $(document).ready(function() {
             var unreadNumber = 0;
             $('#inbox-list').empty();
             $('#inbox-badge').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i]);
-                if (item.isUnread()) {
-                    unreadNumber ++;
+            if (obj.length === 0) {
+                $('#inbox-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Message(obj[i]);
+                    if (item.isUnread()) {
+                        unreadNumber ++;
+                    }
+                    var $item = item.tojQueryObject();
+                    $('#inbox-list').append($item);
+                    $item.fadeIn();
                 }
-                var $item = item.tojQueryObject();
-                $('#inbox-list').append($item);
-                $item.fadeIn();
             }
             if (unreadNumber != 0) {
                 $('#inbox-badge').text(unreadNumber);
@@ -128,14 +132,18 @@ $('a[href="#inbox"]').on('show.bs.tab', function (e) {
             var unreadNumber = 0;
             $('#inbox-list').empty();
             $('#inbox-badge').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i]);
-                if (item.isUnread()) {
-                    unreadNumber ++;
+            if (obj.length === 0) {
+                $('#inbox-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Message(obj[i]);
+                    if (item.isUnread()) {
+                        unreadNumber ++;
+                    }
+                    var $item = item.tojQueryObject();
+                    $('#inbox-list').append($item);
+                    $item.fadeIn();
                 }
-                var $item = item.tojQueryObject();
-                $('#inbox-list').append($item);
-                $item.fadeIn();
             }
             if (unreadNumber != 0) {
                 $('#inbox-badge').text(unreadNumber);
@@ -150,11 +158,15 @@ $('a[href="#sent"]').on('show.bs.tab', function (e) {
         function(json, textStatus) {
             var obj = json["objects"];
             $('#sent-list').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i]);
-                var $item = item.tojQueryObject();
-                $('#sent-list').append($item);
-                $item.fadeIn();
+            if (obj.length === 0) {
+                $('#inbox-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Message(obj[i]);
+                    var $item = item.tojQueryObject();
+                    $('#sent-list').append($item);
+                    $item.fadeIn();
+                }
             }
     });
 });
@@ -164,11 +176,15 @@ $('a[href="#trash"]').on('show.bs.tab', function (e) {
         function(json, textStatus) {
             var obj = json["objects"];
             $('#trash-list').empty();
-            for (var i = 0; i < obj.length; i++) {
-                var item = new Message(obj[i]);
-                var $item = item.tojQueryObject();
-                $('#trash-list').append($item);
-                $item.fadeIn();
+            if (obj.length === 0) {
+                $('#inbox-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    var item = new Message(obj[i]);
+                    var $item = item.tojQueryObject();
+                    $('#trash-list').append($item);
+                    $item.fadeIn();
+                }
             }
     });
 });
