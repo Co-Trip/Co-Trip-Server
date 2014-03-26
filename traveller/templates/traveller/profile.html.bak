@@ -18,14 +18,7 @@
             <img class="media-object img-thumbnail" src="imgs/avatar/zr.jpg" alt="Zhangrui" style="width: 200px;">
           </div>
           <div class="media-body">
-            <h2 class="media-heading">
-              {{ traveller.user.username }}
-              {% if is_current_user%}
-                <a class="btn btn-default btn-sm pull-right" href="/accounts/profile/edit">edit</a>
-              {% else %}
-                <button class="pull-right btn btn-sm btn-success" data-username="{{ traveller.user.username }}" id="follow-or-not" data-action="add">关注</button>
-              {% endif %}
-            </h2>
+            <h2 class="media-heading">张睿</h2>
             <p>doubizhang@sse.net</p>
             <p>1994年2月30日</p>
             <p>男</p>
@@ -53,18 +46,56 @@
       </div>
 
       <div class="panel-footer">
-        创建过的计划：
-        {% for plan in created_plans %}
-        <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-        {% endfor %}
-        参与过的计划：
-        {% for plan in participated_plans %}
-        <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-        {% endfor %}
+        
       </div>
     </div>
   </div>
 </div>
+
+    <header class="jumbotron">
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="{% get_avatar user 100 %}" alt="{{ traveller.user.username }}">
+          </a>
+          <div class="media-body">
+            <h2 class="media-heading">{{ traveller.user.username }}</h2>
+
+            <div class="pull-middle">
+              <p>关注者:</p>
+                    {% following traveller.user %}
+
+              <p>粉丝:</p>
+                    {% followers traveller.user %}
+
+            </div>
+            <div>
+
+{% if is_current_user%}
+
+
+    <p><br><br><br><br><br><a href="/accounts/profile/edit">edit</a></p>
+
+{% else %}
+    <button class="btn btn-default" data-username="{{ traveller.user.username }}" id="follow-or-not" data-action="add">关注</button>
+{% endif %}
+
+
+
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+
+      </div>
+    创建过的计划：
+    {% for plan in created_plans %}
+    <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+    {% endfor %}
+            参与过的计划：
+    {% for plan in participated_plans %}
+    <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+    {% endfor %}
 {% endblock %}
 
 {% block js%}
