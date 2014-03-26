@@ -56,17 +56,25 @@
           <div class="col-sm-6">
             <h4>创建过的计划：</h4>
             <div class="bs-callout bs-callout-info">
-              {% for plan in created_plans %}
-              <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-              {% endfor %}
+              {% if created_plans | length %}
+                {% for plan in created_plans %}
+                <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+                {% endfor %}
+              {% else %}
+                <p>(暂无)</p>
+              {% endif %}
             </div>
           </div>
           <div class="col-sm-6">
             <h4>参与过的计划：</h4>
             <div class="bs-callout bs-callout-info">
-              {% for plan in participated_plans %}
-              <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
-              {% endfor %}
+              {% if participated_plans | length %}
+                {% for plan in participated_plans %}
+                <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
+                {% endfor %}
+              {% else %}
+                <p>(暂无)</p>
+              {% endif %}
             </div>
           </div>
         </div>
