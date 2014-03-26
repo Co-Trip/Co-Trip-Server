@@ -13,7 +13,7 @@ from tastypie.paginator import Paginator
 class SentMessageAuthorization(Authorization):
 
     def read_list(self, object_list, bundle):
-        return object_list.filter(sender=bundle.request.user)
+        return object_list.filter(sender=bundle.request.user, sender_deleted_at=None)
     def read_detail(self, object_list, bundle):
         if bundle.obj.sender == bundle.request.user:
             return True
@@ -47,7 +47,7 @@ class SentMessageResource(ModelResource):
 class ReceivedMessageAuthorization(Authorization):
 
     def read_list(self, object_list, bundle):
-        return object_list.filter(recipient=bundle.request.user)
+        return object_list.filter(recipient=bundle.request.user, recipient_deleted_at=None)
     def read_detail(self, object_list, bundle):
         return bundle.obj.recipient == bundle.request.user
 
