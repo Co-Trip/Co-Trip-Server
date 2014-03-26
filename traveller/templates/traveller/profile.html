@@ -56,7 +56,7 @@
           <div class="col-sm-6">
             <h4>创建过的计划：</h4>
             <div class="bs-callout bs-callout-info">
-              {% if created_plans | length %}
+              {% if created_plans %}
                 {% for plan in created_plans %}
                 <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
                 {% endfor %}
@@ -68,7 +68,7 @@
           <div class="col-sm-6">
             <h4>参与过的计划：</h4>
             <div class="bs-callout bs-callout-info">
-              {% if participated_plans | length %}
+              {% if participated_plans %}
                 {% for plan in participated_plans %}
                 <p><a href="{{ plan.get_absolute_url }}">{{ plan.title }}</a></p>
                 {% endfor %}
