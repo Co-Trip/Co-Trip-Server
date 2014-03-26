@@ -159,7 +159,7 @@ $('a[href="#sent"]').on('show.bs.tab', function (e) {
             var obj = json["objects"];
             $('#sent-list').empty();
             if (obj.length === 0) {
-                $('#inbox-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
+                $('#sent-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
             } else {
                 for (var i = 0; i < obj.length; i++) {
                     var item = new Message(obj[i]);
@@ -177,7 +177,7 @@ $('a[href="#trash"]').on('show.bs.tab', function (e) {
             var obj = json["objects"];
             $('#trash-list').empty();
             if (obj.length === 0) {
-                $('#inbox-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
+                $('#trash-list').append('<div class="messages-list-empty text-center"><div class="empty-icon" style="font-size: 220px; color: ;"><span class="glyphicon glyphicon-pushpin"></span></div><h2>还没有任何消息哦～</h2></div>');
             } else {
                 for (var i = 0; i < obj.length; i++) {
                     var item = new Message(obj[i]);
