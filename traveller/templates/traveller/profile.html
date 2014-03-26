@@ -15,7 +15,7 @@
       <div class="panel-heading" id="profile-panel-heading">
         <div class="media">
           <div class="pull-left">
-            <img class="media-object img-thumbnail" src="imgs/avatar/zr.jpg" alt="Zhangrui" style="width: 200px;">
+            <img class="media-object img-thumbnail" src="{% get_avatar user 100 %}" alt="{{ traveller.user.username }}">
           </div>
           <div class="media-body">
             <h2 class="media-heading">
@@ -32,7 +32,6 @@
             <p></p>
           </div>
         </div>
-        <button class="btn btn-lg btn-success btn-block">关注</button>
       </div>
 
       <div class="panel-body" id="profile-panel-body">
